@@ -70,8 +70,11 @@ productsDropdown.addEventListener('mouseleave', function () {
 });
 
 
-// Toggle mobile menu visibility
-document.getElementById("menu-toggle").addEventListener("click", function () {
-  const menu = document.getElementById("mobile-menu");
-  menu.classList.toggle("hidden");
-});
+        document.addEventListener("DOMContentLoaded", function () {
+          const toggleButton = document.getElementById("menu-toggle");
+          const mobileMenu = document.getElementById("mobile-menu");
+      
+          toggleButton.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+          });
+        });
