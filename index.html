@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/favicon.png" type="image/x-icon" />
+    <title>Mass Apson | Home</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/customer-carousel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body class="bg-white text-gray-800 font-sans">
+
+    <!-- Header -->
+    <header class="bg-[#005baa] text-white sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="index.html">
+                <img src="images/logo.png" alt="Apson Engineers Logo" class="h-10 w-auto" />
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-6 text-sm font-medium items-center">
+                <a href="index.html" class="hover:text-yellow-300">Home</a>
+                <a href="about-us.html" class="hover:text-yellow-300">About</a>
+
+                <!-- Products Hover Dropdown -->
+                <div class="relative group" id="products-dropdown">
+                    <a href="product-page.html"><span
+                            class="hover:text-yellow-300 flex items-center gap-1 cursor-pointer">
+                            Products
+                            <svg class="w-4 h-4 mt-[1px]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </span></a>
+                    <div class="absolute left-0 mt-2 w-40 bg-white text-[#005baa] rounded shadow-md py-2 z-40 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
+                        id="dropdown-menu">
+                        <a href="apson-products.html"
+                            class="block px-4 py-2 hover:bg-[#005baa] hover:text-white">Apson</a>
+                        <a href="bunri-products.html"
+                            class="block px-4 py-2 hover:bg-[#005baa] hover:text-white">Bunri</a>
+                        <a href="nikuni-products.html"
+                            class="block px-4 py-2 hover:bg-[#005baa] hover:text-white">Nikuni</a>
+                    </div>
+                </div>
+
+                <a href="gallery.html" class="hover:text-yellow-300">Gallery</a>
+                <a href="all-customers.html" class="hover:text-yellow-300">List of Customers</a>
+                <a href="#collaboration" class="hover:text-yellow-300">Collaboration</a>
+                <a href="contact.html" class="hover:text-yellow-300">Contact</a>
+            </nav>
+
+            <!-- CTA Button -->
+            <a href="#contact"
+                class="hidden md:inline-block bg-white text-[#005baa] px-4 py-2 rounded hover:bg-yellow-300 transition">Enquire
+                Now</a>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-toggle" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2">
+            <a href="index.html" class="block py-2 hover:text-yellow-300">Home</a>
+            <a href="about-us.html" class="block py-2 hover:text-yellow-300">About</a>
+
+            <!-- Mobile Dropdown -->
+            <div>
+                <button onclick="document.getElementById('mobile-products').classList.toggle('hidden')"
+                    class="block py-2 w-full text-left hover:text-yellow-300">Products</button>
+                <div id="mobile-products" class="hidden pl-4">
+                    <a href="apson-products.html" class="block py-1 hover:text-yellow-300">Apson</a>
+                    <a href="bunri-products.html" class="block py-1 hover:text-yellow-300">Bunri</a>
+                    <a href="nikuni-products.html" class="block py-1 hover:text-yellow-300">Nikuni</a>
+                </div>
+            </div>
+
+            <a href="gallery.html" class="block py-2 hover:text-yellow-300">Gallery</a>
+            <a href="all-customers.html" class="block py-2 hover:text-yellow-300">List of Customers</a>
+            <a href="#collaboration" class="block py-2 hover:text-yellow-300">Collaboration</a>
+            <a href="contact.html" class="block py-2 hover:text-yellow-300">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Banner Slideshow -->
+    <section class="relative overflow-hidden">
+        <div class="relative h-[80vh]" id="slider">
+            <!-- Slides -->
+            <div class="slide active" style="background-image: url('images/home-banner-1.jpg');"></div>
+            <div class="slide" style="background-image: url('images/home-banner-2.jpg');"></div>
+            <div class="slide" style="background-image: url('images/home-banner-3.jpg');"></div>
+            <div class="slide" style="background-image: url('images/home-banner-4.jpg');"></div>
+            <div class="slide" style="background-image: url('images/home-banner-5.jpg');"></div>
+            <div class="slide" style="background-image: url('images/home-banner-6.jpg');"></div>
+            <div class="slide" style="background-image: url('images/home-banner-7.jpg');"></div>
+            <div class="slide" style="background-image: url('images/home-banner-8.jpg');"></div>
+
+            <!-- Text Overlay (same for all slides) -->
+            <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center text-center px-4 z-20">
+                <div class="text-white">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-3">Engineering Tomorrow</h2>
+                    <p class="text-lg md:text-xl mb-4">Delivering trusted solutions for modern industries.</p>
+                    <a href="product-page.html"
+                        class="bg-yellow-300 text-[#005baa] px-6 py-3 rounded font-semibold hover:bg-yellow-400 transition">
+                        Explore Our Services
+                    </a>
+                </div>
+            </div>
+
+            <!-- Dots -->
+            <div class="absolute bottom-5 left-1/2 -translate-x-1/2 flex space-x-2 z-30">
+                <span class="dot w-3 h-3 bg-white rounded-full opacity-50 cursor-pointer"></span>
+                <span class="dot w-3 h-3 bg-white rounded-full opacity-50 cursor-pointer"></span>
+                <span class="dot w-3 h-3 bg-white rounded-full opacity-50 cursor-pointer"></span>
+                <span class="dot w-3 h-3 bg-white rounded-full opacity-50 cursor-pointer"></span>
+                <span class="dot w-3 h-3 bg-white rounded-full opacity-50 cursor-pointer"></span>
+                <span class="dot w-3 h-3 bg-white rounded-full opacity-50 cursor-pointer"></span>
+                <span class="dot w-3 h-3 bg-white rounded-full opacity-50 cursor-pointer"></span>
+                <span class="dot w-3 h-3 bg-white rounded-full opacity-50 cursor-pointer"></span>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Collaboration Products Slideshow Section -->
+    <section class="bg-gradient-to-br from-white via-[#516fc9] to-white py-16 px-4 sm:px-8 overflow-hidden">
+        <div class="max-w-7xl mx-auto text-center mb-12">
+            <h2 class="text-4xl sm:text-5xl font-extrabold text-[#294599] drop-shadow-md animate-pulse">
+                ✨ Our Exclusive Collaboration with <span class="text-black">BUNRI</span>
+            </h2>
+            <p class="mt-4 text-lg text-white max-w-2xl mx-auto">
+                We’re thrilled to announce our prestigious partnership with <strong class="text-black">BUNRI – Japan’s
+                    Leader in Coolant Filtration Technology</strong>. Only MASS APSON have Exclusiv rights.
+                <i>Together, we deliver cutting-edge solutions to industries across India with unmatched quality.</i>
+            </p>
+        </div>
+
+        <!-- Slideshow Wrapper -->
+        <div class="relative overflow-hidden">
+            <div id="product-slider" class="flex gap-8 animate-scroll whitespace-nowrap">
+                <!-- Product Card -->
+                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
+                    <img src="images/product-1.jpg" alt="Apson Product 1"
+                        class="w-full h-40 object-cover mb-2 rounded" />
+                    <h3 class="text-lg font-semibold text-[#294599]">Mass Apson Filtration Unit</h3>
+                    <p class="text-sm text-gray-600">Reliable, efficient coolant purification system.</p>
+                </div>
+
+                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
+                    <img src="images/bunri-1.webp" alt="Bunri Product 1"
+                        class="w-full h-40 object-cover mb-2 rounded" />
+                    <h3 class="text-lg font-semibold text-[#294599]">BUNRI Separator</h3>
+                    <p class="text-sm text-gray-600">Japanese tech for precise fluid separation.</p>
+                </div>
+
+                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
+                    <img src="images/product-2.jpg" alt="Apson Product 2"
+                        class="w-full h-40 object-cover mb-2 rounded" />
+                    <h3 class="text-lg font-semibold text-[#294599]">Apson Chip Filter</h3>
+                    <p class="text-sm text-gray-600">Powerful filtering for metal machining.</p>
+                </div>
+
+                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
+                    <img src="images/bunri-2.webp" alt="Bunri Product 2"
+                        class="w-full h-40 object-cover mb-2 rounded" />
+                    <h3 class="text-lg font-semibold text-[#294599]">BUNRI Drum Filter</h3>
+                    <p class="text-sm text-gray-600">Compact and high-performance filtration.</p>
+                </div>
+                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
+                    <img src="images/product-3.jpg" alt="Apson Product 2"
+                        class="w-full h-40 object-cover mb-2 rounded" />
+                    <h3 class="text-lg font-semibold text-[#294599]">Apson Chip Filter</h3>
+                    <p class="text-sm text-gray-600">Powerful filtering for metal machining.</p>
+                </div>
+
+                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
+                    <img src="images/bunri-3.webp" alt="Bunri Product 2"
+                        class="w-full h-40 object-cover mb-2 rounded" />
+                    <h3 class="text-lg font-semibold text-[#294599]">BUNRI Drum Filter</h3>
+                    <p class="text-sm text-gray-600">Compact and high-performance filtration.</p>
+                </div>
+
+                <!-- Duplicate cards to create infinite effect -->
+                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
+                    <img src="images/apson1.jpg" alt="Apson Product 1" class="w-full h-40 object-cover mb-2 rounded" />
+                    <h3 class="text-lg font-semibold text-[#294599]">Apson Filtration Unit</h3>
+                    <p class="text-sm text-gray-600">Reliable, efficient coolant purification system.</p>
+                </div>
+
+                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
+                    <img src="images/bunri1.jpg" alt="Bunri Product 1" class="w-full h-40 object-cover mb-2 rounded" />
+                    <h3 class="text-lg font-semibold text-[#294599]">BUNRI Separator</h3>
+                    <p class="text-sm text-gray-600">Japanese tech for precise fluid separation.</p>
+                </div>
+                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
+                    <img src="images/product-2.jpg" alt="Apson Product 2"
+                        class="w-full h-40 object-cover mb-2 rounded" />
+                    <h3 class="text-lg font-semibold text-[#294599]">Apson Chip Filter</h3>
+                    <p class="text-sm text-gray-600">Powerful filtering for metal machining.</p>
+                </div>
+
+                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
+                    <img src="images/bunri-2.webp" alt="Bunri Product 2"
+                        class="w-full h-40 object-cover mb-2 rounded" />
+                    <h3 class="text-lg font-semibold text-[#294599]">BUNRI Drum Filter</h3>
+                    <p class="text-sm text-gray-600">Compact and high-performance filtration.</p>
+                </div>
+                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
+                    <img src="images/product-3.jpg" alt="Apson Product 2"
+                        class="w-full h-40 object-cover mb-2 rounded" />
+                    <h3 class="text-lg font-semibold text-[#294599]">Apson Chip Filter</h3>
+                    <p class="text-sm text-gray-600">Powerful filtering for metal machining.</p>
+                </div>
+
+                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
+                    <img src="images/bunri-3.webp" alt="Bunri Product 2"
+                        class="w-full h-40 object-cover mb-2 rounded" />
+                    <h3 class="text-lg font-semibold text-[#294599]">BUNRI Drum Filter</h3>
+                    <p class="text-sm text-gray-600">Compact and high-performance filtration.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Button -->
+        <div class="text-center mt-12">
+            <a href="product-page.html"
+                class="inline-block bg-[#516fc9] text-white px-6 py-3 text-lg rounded shadow hover:bg-[#294599] transition">
+                Explore Full Range →
+            </a>
+        </div>
+    </section>
+
+
+    <!-- About Apson Engineers Section -->
+    <section class="bg-white py-16 px-4 md:px-12 lg:px-24 text-gray-800">
+        <div class="flex flex-col lg:flex-row items-center gap-10">
+
+            <!-- Image -->
+            <div class="lg:w-1/2 w-full">
+                <img src="images/home-about.png" alt="Apson Machine" class="w-[80%] rounded-xl shadow-lg" />
+            </div>
+
+            <!-- Text Content -->
+            <div class="lg:w-1/2 w-full">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#0096c7] mb-6"><span class="text-[#005baa]">About</span>
+                    Mass Apson</h2>
+                <p class="text-lg leading-relaxed mb-4">
+                    Mass Apson is a young & dynamic technology solution provider dealing in Coolant Tanks, Conveyors,
+                    Magnetic Separators, Paper Filters, Hydraulic Power Packs, and more.
+                    Founded in 2013 with a state-of-the-art facility in Faridabad, Haryana, we offer turnkey solutions
+                    from process engineering to execution.
+                </p>
+                <p class="text-lg leading-relaxed mb-4">
+                    We strive to be the premier engineering organization by achieving extraordinary results for our
+                    customers, building satisfying careers for our people, and earning a fair return on the value we
+                    deliver.
+                </p>
+            </div>
+        </div>
+
+        <!-- Core Values -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 mt-16">
+            <div class="p-6 bg-gray-50 border-l-4 border-yellow-500 rounded shadow hover:shadow-md transition">
+                <h3 class="text-xl font-semibold text-[#005baa] mb-2">Quality</h3>
+                <p>Committed to understanding customer needs and designing safe, user-friendly, and cost-effective
+                    products of consistent quality.</p>
+            </div>
+            <div class="p-6 bg-gray-50 border-l-4 border-yellow-500 rounded shadow hover:shadow-md transition">
+                <h3 class="text-xl font-semibold text-[#005baa] mb-2">Customer Service</h3>
+                <p>Extend excellent customer support and service at all times and ensure timely delivery.</p>
+            </div>
+            <div class="p-6 bg-gray-50 border-l-4 border-yellow-500 rounded shadow hover:shadow-md transition">
+                <h3 class="text-xl font-semibold text-[#005baa] mb-2">Expert</h3>
+                <p>Operate at the highest level in individual specialist markets.</p>
+            </div>
+            <div class="p-6 bg-gray-50 border-l-4 border-yellow-500 rounded shadow hover:shadow-md transition">
+                <h3 class="text-xl font-semibold text-[#005baa] mb-2">Passionate</h3>
+                <p>Grow long-term partnerships and collaborations with customers.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Footprints in India -->
+    <section class="bg-white py-16 px-4 md:px-12 lg:px-24 text-gray-800">
+        <div class="text-center mb-10">
+            <h2 class="text-3xl md:text-4xl font-bold text-[#005baa]">Our <span class="text-[#0096c7]">Footprints</span>
+                in India</h2>
+        </div>
+
+        <!-- Map Image -->
+        <div class="w-full flex justify-center">
+            <img src="images/india-map.png" alt="Apson Footprints Map" class="w-full max-w-6xl rounded-xl shadow-lg" />
+        </div>
+    </section>
+
+    <!-- Collaboration with BUNRI -->
+    <section class="relative bg-gradient-to-r from-white via-[#e8f3fb] to-white py-20 px-6 md:px-20 text-center"
+        style="background-image: url('images/collaboration1.jpg'); background-size: cover; background-position: center;">
+        <div class="absolute inset-0 bg-black opacity-40"></div> <!-- Overlay for readability -->
+
+        <div class="relative z-10 max-w-4xl mx-auto">
+            <!-- Badge -->
+            <div
+                class="inline-block px-4 py-2 mb-4 rounded-full bg-[#294599] text-white text-sm font-semibold tracking-wide animate-pulse">
+                Official Collaboration
+            </div>
+
+            <!-- Headline with animation -->
+            <h2
+                class="text-3xl md:text-4xl font-bold text-white mb-4 animate__animated animate__fadeIn animate__delay-1s">
+                Proud Collaboration with <span class="text-[#294599]">BUNRI Japan</span>
+            </h2>
+
+            <!-- Description with animation -->
+            <p class="text-lg text-white mb-8 leading-relaxed animate__animated animate__fadeIn animate__delay-1s">
+                Mass Apson Engineers is proud to be associated with <strong>BUNRI, Japan</strong>, a global leader in
+                filtration and separation technology. This collaboration enhances our capabilities in delivering
+                world-class engineering solutions.
+            </p>
+
+            <!-- BUNRI Logo with animation -->
+            <div class="flex justify-center items-center animate__animated animate__fadeIn animate__delay-2s">
+                <img src="images/bunri_logo.svg" alt="BUNRI Japan Logo" class="w-48 md:w-64 h-auto" />
+            </div>
+
+            <!-- Visit BUNRI Product Page Button -->
+            <a href="https://www.bunri.com/en/products/" target="_blank"
+                class="mt-6 inline-block text-white bg-[#516fc9] hover:bg-[#294599] px-6 py-2 rounded-full text-sm font-medium transition duration-300 animate__animated animate__fadeIn animate__delay-2s">
+                Explore BUNRI Products
+            </a>
+        </div>
+    </section>
+
+    <!-- Customer Carousel Section -->
+    <section class="bg-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex items-center justify-between mb-8">
+                <h2 class="text-3xl font-bold">
+                    <span class="text-[#00aeef]">Our</span> Customers
+                </h2>
+                <a href="all-customers.html"
+                    class="bg-[#00aeef] text-white px-4 py-2 rounded hover:bg-[#008fcc] transition">
+                    View All
+                </a>
+            </div>
+
+            <!-- Carousel Container -->
+            <div class="relative overflow-hidden">
+                <div id="customer-carousel" class="flex space-x-12 animate-scroll items-center">
+                    <!-- Replace src paths with your logo images -->
+                    <img src="images/c13.jpg" alt="Dana" class="h-16 w-auto object-contain" />
+                    <img src="images/c14.jpg" alt="ASK" class="h-16 w-auto object-contain" />
+                    <img src="images/c16.jpg" alt="Varroc" class="h-16 w-auto object-contain" />
+                    <img src="images/c17.jpg" alt="RICO" class="h-16 w-auto object-contain" />
+                    <img src="images/c2.jpg" alt="RSB" class="h-16 w-auto object-contain" />
+                    <img src="images/c21.jpg" alt="Sansera" class="h-16 w-auto object-contain" />
+                    <img src="images/c24.jpg" alt="Sansera" class="h-16 w-auto object-contain" />
+                    <img src="images/c28.jpg" alt="Sansera" class="h-16 w-auto object-contain" />
+                    <img src="images/c31.jpg" alt="Sansera" class="h-16 w-auto object-contain" />
+                    <img src="images/c34.jpg" alt="Sansera" class="h-16 w-auto object-contain" />
+                    <img src="images/c7.jpg" alt="Sansera" class="h-16 w-auto object-contain" />
+                    <img src="images/c9.jpg" alt="Sansera" class="h-16 w-auto object-contain" />
+                    <!-- Duplicated for infinite effect -->
+                    <img src="images/c13.jpg" alt="Dana" class="h-16 w-auto object-contain" />
+                    <img src="images/c14.jpg" alt="ASK" class="h-16 w-auto object-contain" />
+                    <img src="images/c16.jpg" alt="Varroc" class="h-16 w-auto object-contain" />
+                    <img src="images/c17.jpg" alt="RICO" class="h-16 w-auto object-contain" />
+                    <img src="images/c2.jpg" alt="RSB" class="h-16 w-auto object-contain" />
+                    <img src="images/c21.jpg" alt="Sansera" class="h-16 w-auto object-contain" />
+                    <img src="images/c24.jpg" alt="Sansera" class="h-16 w-auto object-contain" />
+                    <img src="images/c28.jpg" alt="Sansera" class="h-16 w-auto object-contain" />
+                    <img src="images/c31.jpg" alt="Sansera" class="h-16 w-auto object-contain" />
+                    <img src="images/c34.jpg" alt="Sansera" class="h-16 w-auto object-contain" />
+                    <img src="images/c7.jpg" alt="Sansera" class="h-16 w-auto object-contain" />
+                    <img src="images/c9.jpg" alt="Sansera" class="h-16 w-auto object-contain" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Group of Companies Section -->
+    <section class="bg-[#005baa] py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-white mb-10">
+                Group of <span class="text-[#00aeef]">Companies</span>
+            </h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+                <!-- Company Card -->
+                <div class="bg-white rounded-xl shadow-md p-4 hover:shadow-xl transition duration-300">
+                    <img src="images/gc1.jpg" alt="Mass Global Trading" class="h-20 mx-auto mb-4 object-contain">
+                    <p class="text-gray-700 font-medium text-sm">Mass Global Trading Co</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-md p-4 hover:shadow-xl transition duration-300">
+                    <img src="images/gc2.jpg" alt="ASE" class="h-20 mx-auto mb-4 object-contain">
+                    <p class="text-gray-700 font-medium text-sm">Automation Systems & Engineering</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-md p-4 hover:shadow-xl transition duration-300">
+                    <img src="images/gc3.jpg" alt="Devashish Engineering" class="h-20 mx-auto mb-4 object-contain">
+                    <p class="text-gray-700 font-medium text-sm">Devashish Engineering Products LLP</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-md p-4 hover:shadow-xl transition duration-300">
+                    <img src="images/gc4.jpg" alt="Advance Engineering" class="h-20 mx-auto mb-4 object-contain">
+                    <p class="text-gray-700 font-medium text-sm">Advance Engineering</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-white text-gray-800 pt-12 shadow-md border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10 border-b border-gray-300 pb-8">
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="text-lg font-semibold text-[#00aeef] mb-4">Quick Links</h4>
+                <div class="space-y-2">
+                    <a href="index.html" class="block hover:text-[#00aeef] transition">Home</a>
+                    <a href="about-us.html" class="block hover:text-[#00aeef] transition">About</a>
+                    <a href="product-page.html" class="block hover:text-[#00aeef] transition">Products</a>
+                    <a href="contact.html" class="block hover:text-[#00aeef] transition">Contact</a>
+                </div>
+            </div>
+
+            <!-- Address -->
+            <div>
+                <h4 class="text-lg font-semibold text-[#00aeef] mb-2">Corporate office</h4>
+                <p class="text-gray-700 leading-relaxed">
+                    Plot No -21, Gazipur Industrial Area,<br>
+                    Sukhli Nehar, Sohna Road, Gazipur, Nit,<br>
+                    Faridabad, Haryana, India 121005
+                </p>
+
+                <h4 class="text-lg font-semibold text-[#00aeef] mt-4 mb-2">Manufacturing</h4>
+                <p class="text-gray-700 leading-relaxed">
+                    SB-R/1L/04/025 & 026A, 1ST FLOOR<br>
+                    M3M URBANA SECTOR-67 <br>
+                    GURGAON-122102 <br>
+                    Tel No. 0124-4966065
+                </p>
+            </div>
+        </div>
+
+        <!-- Social & Copyright -->
+        <div class="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between text-sm">
+            <div class="flex gap-4 mb-4 md:mb-0 text-[#00aeef]">
+                <a href="#" class="hover:text-blue-600 transition" aria-label="Facebook"><i
+                        class="fab fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-blue-400 transition" aria-label="Twitter"><i
+                        class="fab fa-twitter"></i></a>
+                <a href="#" class="hover:text-pink-500 transition" aria-label="Instagram"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-red-600 transition" aria-label="YouTube"><i
+                        class="fab fa-youtube"></i></a>
+                <a href="#" class="hover:text-blue-700 transition" aria-label="LinkedIn"><i
+                        class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="text-gray-500 text-center md:text-right">
+                Developed and Designed by
+                <a href="https://www.theneedleads.com/" target="_blank"
+                    class="font-semibold text-gray-700 hover:text-blue-700 transition">
+                    Needleads Technologies</a>.
+            </div>
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>

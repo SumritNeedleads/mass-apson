@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Detail</title>
+    <link rel="icon" href="images/favicon.png" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="bg-white text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-[#005baa] text-white sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="index.html">
+                <img src="images/logo.png" alt="Apson Engineers Logo" class="h-10 w-auto" />
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-6 text-sm font-medium items-center">
+                <a href="index.html" class="hover:text-yellow-300">Home</a>
+                <a href="about-us.html" class="hover:text-yellow-300">About</a>
+
+                <!-- Products Hover Dropdown -->
+                <div class="relative group" id="products-dropdown">
+                    <a href="product-page.html"><span
+                            class="hover:text-yellow-300 flex items-center gap-1 cursor-pointer">
+                            Products
+                            <svg class="w-4 h-4 mt-[1px]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </span></a>
+                    <div class="absolute left-0 mt-2 w-40 bg-white text-[#005baa] rounded shadow-md py-2 z-40 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
+                        id="dropdown-menu">
+                        <a href="apson-products.html"
+                            class="block px-4 py-2 hover:bg-[#005baa] hover:text-white">Apson</a>
+                        <a href="bunri-products.html"
+                            class="block px-4 py-2 hover:bg-[#005baa] hover:text-white">Bunri</a>
+                        <a href="nikuni-products.html"
+                            class="block px-4 py-2 hover:bg-[#005baa] hover:text-white">Nikuni</a>
+                    </div>
+                </div>
+
+                <a href="gallery.html" class="hover:text-yellow-300">Gallery</a>
+                <a href="all-customers.html" class="hover:text-yellow-300">List of Customers</a>
+                <a href="#collaboration" class="hover:text-yellow-300">Collaboration</a>
+                <a href="contact.html" class="hover:text-yellow-300">Contact</a>
+            </nav>
+
+            <!-- CTA Button -->
+            <a href="#contact"
+                class="hidden md:inline-block bg-white text-[#005baa] px-4 py-2 rounded hover:bg-yellow-300 transition">Enquire
+                Now</a>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-toggle" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2">
+            <a href="index.html" class="block py-2 hover:text-yellow-300">Home</a>
+            <a href="about-us.html" class="block py-2 hover:text-yellow-300">About</a>
+
+            <!-- Mobile Dropdown -->
+            <div>
+                <button onclick="document.getElementById('mobile-products').classList.toggle('hidden')"
+                    class="block py-2 w-full text-left hover:text-yellow-300">Products</button>
+                <div id="mobile-products" class="hidden pl-4">
+                    <a href="apson-products.html" class="block py-1 hover:text-yellow-300">Apson</a>
+                    <a href="bunri-products.html" class="block py-1 hover:text-yellow-300">Bunri</a>
+                    <a href="nikuni-products.html" class="block py-1 hover:text-yellow-300">Nikuni</a>
+                </div>
+            </div>
+
+            <a href="gallery.html" class="block py-2 hover:text-yellow-300">Gallery</a>
+            <a href="all-customers.html" class="block py-2 hover:text-yellow-300">List of Customers</a>
+            <a href="#collaboration" class="block py-2 hover:text-yellow-300">Collaboration</a>
+            <a href="contact.html" class="block py-2 hover:text-yellow-300">Contact</a>
+        </div>
+    </header>
+
+
+    <section class="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1   md:grid-cols-2 gap-10 items-start">
+        <!-- Product Image -->
+        <div class="flex flex-col items-start mt-20">
+            <img src="images/cfas-1.webp" alt="Phoenix NEO" class="w-full">
+        </div>
+
+        <!-- Product Details -->
+        <div>
+            <h1 id="product-title" class="text-3xl md:text-4xl font-bold text-[#005baa] mb-4">Cyclone Filter Apollo S (APS)
+            </h1>
+
+            <h3 class="text-xl font-semibold text-gray-800 mb-3">
+                Cyclone-type secondary processing unit that you can use extensively regardless of magnetic or non-magnetic materials. <br>
+                Compatible with fine cutting chips and grinding sludge.<br>
+                The defoaming mechanism supplies the non-foaming clean liquid. <br>
+                The main body has been downsized while maintaining the filtration accuracy and defoaming mechanism of the old type.
+            </h3>
+
+            <h3 class="text-xl font-bold text-gray-800 mb-3 md:mt-4">Features</h3>
+            <ul id="product-features" class="list-disc list-inside text-gray-700 space-y-2">
+                <li>Cyclone-type secondary filtration equipment that deals with coolant containing fine chips and sludge.</li>
+                <li>It has a built-in defoaming mechanism that suppresses the foaming of clean liquid.</li>
+                <li>By combining this equipment with the settlement tank or the settlement tank for conveyor type, drained chips and sludge can be discharged.</li>
+                <li>By standardizing the “drain part exchange type” for wear countermeasures, even if the drain discharge part wears over time due to sludge of hard materials, you can use it for a long time by replacing parts.</li>
+                <li>The main unit has been made approximately 40% smaller while maintaining the filtration accuracy and defoaming mechanism of the old type. As a result, the motor capacity of the supply pump can be reduced by 40-50%.</li>
+                <li>This product does not use any consumables such as cartridge filters or paper filters, so no industrial waste is generated.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="bg-gray-50 py-12 px-4">
+        <div class="max-w-5xl mx-auto">
+            <!-- Specification Tags -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Coolant</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Water soluble</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Oil-based</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Category</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm">	Magnetic material</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm">Non-magnetic material</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Processing Details</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm">Grinding</span>
+                        <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm">Cutting</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Work Material</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">FC/FCD</span>
+                        <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">Steel</span>
+                        <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">Aluminum</span>
+                        <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">Stainless</span>
+                        <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">Copper</span>
+                        <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">Titanium</span>
+                        <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">Carbide</span>
+                        <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">Mixed chips (aluminum + FC or sintered metal)</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Chip Shape</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-pink-100 text-pink-700 rounded-full text-sm">Sandy</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Grinding Chip Size</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-teal-100 text-teal-700 rounded-full text-sm">Ultrafine particles (5 μm to 10 μm)</span>
+                        <span class="px-3 py-1 bg-teal-100 text-teal-700 rounded-full text-sm">Fine particles (10 μm to 100 μm)</span>
+                        <span class="px-3 py-1 bg-teal-100 text-teal-700 rounded-full text-sm">Coarse particles (0.1 mm to 0.5 mm)</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Machine Tool</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Grinding
+                            machine</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Tool grinding
+                            machine</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Machining center</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">NC lathes</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Induction hardening machine</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Cutting specialized machine</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Washing machine</span>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <img src="images/cfas-2.webp" alt="PXK Sludge Distribution" class="w-full h-auto rounded shadow">
+            </div>
+
+            <div class="text-center">
+                <h2 class="text-2xl font-bold text-[#005baa] mb-4">Product Introduction Video</h2>
+                <div class="aspect-w-16 aspect-h-9 max-w-3xl mx-auto rounded-lg overflow-hidden shadow-lg">
+                    <iframe width="800" height="390" src="https://www.youtube.com/embed/m15xFBq_PRA" title="&quot;Cyclone filter APOLLO-S APS&quot;  Product introduction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white py-12 px-4">
+        <div class="max-w-6xl mx-auto">
+
+            <h2 class="text-3xl font-bold text-[#005baa] mb-4  border-[#005baa] w-fit">Mechanism</h2>
+
+            <div class="text-center">
+                <img src="images/cfas-3.webp" alt="PXK Sludge Distribution" class="w-full h-auto rounded shadow">
+            </div>
+
+            <ol class="list-decimal list-inside text-gray-700 space-y-4 mb-8 text-base md:text-lg">
+                <li>
+                    The dirty liquid flows into the main body due to the action of the APOLLO supply pump.
+                </li>
+                <li>
+                    The dirty liquid is rotated at high speed inside the main body, and chips and sludge are separated by centrifugal force.
+                </li>
+                <li>
+                    The separated chips and sludge are discharged from the drain port at the bottom of the main body.
+                </li>
+                <li>
+                    The foam is taken out of the clean liquid when it passes through the gas-liquid separation pipe and sent to the outside of the main body.
+                </li>
+            </ol>
+
+            <div class="text-center">
+                <img src="images/cfas-4.webp" alt="PXK Sludge Distribution" class="w-full h-auto rounded shadow">
+            </div>
+
+            <div class="text-center md:mt-4">
+                <img src="images/cfas-5.webp" alt="PXK Sludge Distribution" class="w-full h-auto rounded shadow">
+            </div>
+
+        </div>
+    </section>
+
+    <section class="bg-white py-12 px-4">
+        <div class="max-w-6xl mx-auto">
+
+            <h2 class="text-3xl font-bold text-[#005baa] mb-4  border-[#005baa] w-fit">Before-and-after coolant status by filtration</h2>
+            <div class="text-center">
+                <img src="images/cfas-6.webp" alt="PXK Sludge Distribution" class="w-full h-auto rounded shadow">
+            </div>
+
+        </div>
+    </section>
+    
+    <section class="bg-white py-12 px-4">
+        <div class="max-w-6xl mx-auto">
+
+            <h2 class="text-3xl font-bold text-[#005baa] mb-4  border-[#005baa] w-fit">Comparison of removal rate with other companies' cyclones</h2>
+            <div class="text-center">
+                <img src="images/cfas-7.webp" alt="PXK Sludge Distribution" class="w-full h-auto rounded shadow">
+            </div>
+
+        </div>
+    </section>
+
+    <section class="bg-white py-12 px-4">
+        <div class="max-w-6xl mx-auto">
+
+            <h2 class="text-3xl font-bold text-[#005baa] mb-4  border-[#005baa] w-fit">Specifications</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <div class="text-center">
+                    <h3 class="font-bold mb-2">Dimensional drawing</h3>
+                    <img src="images/cfas-8.webp" alt="PXK Sludge Distribution" class="w-full h-auto rounded shadow">
+                </div>
+
+                <div class="text-center">
+                    <h3 class="font-bold mb-2">Dimension table</h3>
+                    <img src="images/cfas-9.webp" alt="PXH Sludge Distribution" class="w-full h-auto rounded shadow">
+                </div>
+			</div>
+
+            <h3 class="text-2xl font-semibold text-[#005baa] mb-4 w-fit md:mt-3">Filtration accuracy</h3>
+            <p class="text-lg text-gray-800">10 μm 90% or more</p>
+            <p class="text-sm text-gray-500 md:mt-2">
+                * The filtration accuracy is based on the results of our experiments, and does not imply that this level of accuracy is guaranteed.
+            </p>
+
+            <h3 class="text-2xl font-semibold text-[#005baa] mb-4 md:mt-4 w-fit">Sludge distribution status</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="">
+                    <p class="text-lg text-gray-800">
+                        Machine tool: Grinding machine <br>
+                        Coolant: Water soluble <br>
+                        Processing flow rate: 100 L/min <br>
+                        Chip material: Steel <br>
+                    </p>
+                </div>
+                <div class="text-center">
+                    <img src="images/cfas-10.webp" alt="PXH Sludge Distribution" class="w-full h-auto rounded shadow">
+                </div>
+            </div>
+
+            <h3 class="text-2xl font-semibold text-[#005baa] mb-4 md:mt-4 border-[#005baa] w-fit">Processing flow rate</h3>
+            <p class="text-lg md:mt-4 text-gray-800">Water soluble</p>
+            <ul class="list-disc list-inside text-gray-800 space-y-2 mb-2 md:mt-3 text-base md:text-sm">
+                <li>APS-05  48 to 51 L/min</li>
+                <li>APS-1　95 to 105 L/min</li>
+                <li>APS-2　180 to 200 L/min</li>
+            </ul>
+
+            <h3 class="text-2xl font-semibold text-[#005baa] mb-4 md:mt-4 border-[#005baa] w-fit">Product weight</h3>
+            <ul class="list-disc list-inside text-gray-800 space-y-2 mb-2 md:mt-3 text-base md:text-sm">
+                <li>APS-05+SH　41kg</li>
+                <li>APS-1＋SH　45㎏</li>
+                <li>APS-2＋SH　61㎏</li>
+            </ul>
+            <p class="text-sm text-gray-500">
+                * The product weight varies depending on the specifications, options, etc.
+            </p>
+
+            <h3 class="text-2xl font-semibold text-[#005baa] mb-4 md:mt-4 border-[#005baa] w-fit">Paint color</h3>
+            <p class="text-gray-800 space-y-2 mb-2 md:mt-6 text-base md:text-lg">Medium metallic (Approximate color: Munsell No. N-6.7)</p>
+            <p class="text-sm text-gray-500">
+                * For information about the specified color, please consult us.
+            </p>
+
+            <h3 class="text-2xl font-semibold text-[#005baa] mb-4 md:mt-4 border-[#005baa] w-fit">Drive motor</h3>
+            <p class="text-gray-800 space-y-2 mb-2 md:mt-6 text-base md:text-lg">25W (Settlement tank for conveyor type)</p>
+
+            <h3 class="text-2xl font-semibold text-[#005baa] mb-4 md:mt-4 border-[#005baa] w-fit">Supply pump</h3>
+            <ul class="list-disc list-inside text-gray-800 space-y-2 mb-2 md:mt-3 text-base md:text-sm">
+                <li>APS-05  55 L/min×0.22 MPa or more</li>
+                <li>APS-1　110 L/min×0.23 MPa or more</li>
+                <li>APS-2　210 L/min×0.26 MPa or more</li>
+            </ul>
+            <p class="text-sm text-gray-500">
+                * For details on how to select the supply pump, please contact us.
+            </p>
+        </div>
+    </section>
+
+    <section class="bg-white py-12 px-4">
+        <div class="max-w-6xl mx-auto">
+
+            <h2 class="text-3xl font-bold text-[#005baa] mb-4  border-[#005baa] w-fit">Model code</h2>
+
+            <div>
+                <img src="images/cfas-11.webp" alt="Comparison with Old Models Table"
+                    class="w-full h-auto rounded shadow-md">
+            </div>
+
+
+        </div>
+    </section>
+
+    <section class="bg-white py-12 px-4">
+        <div class="max-w-6xl mx-auto">
+
+            <h2 class="text-3xl font-bold text-[#005baa] mb-4  border-[#005baa] w-fit">Product Photo (Example)</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="text-center">
+                    <img src="images/cfas-12.webp" alt="PXK Sludge Distribution" class="w-full h-auto rounded shadow">
+                    <h3 class="font-bold mb-2">Standard With settlement tank</h3>
+                </div>
+
+                <div class="text-center">
+                    <img src="images/cfas-13.webp" alt="PXH Sludge Distribution" class="w-full h-auto rounded shadow">
+                    <h3 class="font-bold mb-2">Standard With settlement tank for conveyor type</h3>
+                </div>
+
+                <div class="text-center">
+                    <img src="images/cfas-14.webp" alt="PXN Sludge Distribution" class="w-full h-auto rounded shadow">
+                    <h3 class="font-bold mb-2">Unit with through pump</h3>
+                </div>
+			</div>
+        </div>
+    </section>
+
+    <section class="bg-white py-12 px-4">
+        <div class="max-w-6xl mx-auto">
+
+            <h2 class="text-3xl font-bold text-[#005baa] mb-4  border-[#005baa] w-fit">Comparison</h2>
+
+            <h3 class="text-2xl font-semibold text-[#005baa] mb-4 md:mt-4 border-[#005baa] w-fit">Settlement tank for conveyor type</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <div class="text-center">
+                    <img src="images/cfas-15.webp" alt="PXK Sludge Distribution" class="w-full h-auto rounded shadow">
+                </div>
+
+                <div class="text-center">
+                    <img src="images/cfas-16.webp" alt="PXH Sludge Distribution" class="w-full h-auto rounded shadow">
+                    <p class="text-sm text-gray-500">
+                        *Optional drain type box is also available.
+                    </p>
+                </div>
+			</div>
+
+            <h3 class="text-2xl font-semibold text-[#005baa] mb-4 md:mt-4 border-[#005baa] w-fit">Settlement tank for conveyor type</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <div class="text-center">
+                    <img src="images/cfas-17.webp" alt="PXK Sludge Distribution" class="w-full h-auto rounded shadow">
+                </div>
+
+                <div class="text-center">
+                    
+                </div>
+			</div>
+
+            <p class="text-sm text-gray-500">
+                * Photos are product images for illustration purposes only. Specifications differ from the actual product.
+            </p>
+            <hr>
+            <p class="text-sm text-gray-500 md:mt-3">
+                * The filtration accuracy is based on the results of our experiments, and does not imply that this level of accuracy is guaranteed. <br>
+                * The specifications and dimensions are subject to change without notice <br>
+                * When the oil viscosity exceeds 10 mm 2/s, please consult us. <br>
+                * For details on how to select the supply pump, please contact us. <br>
+                * For information about custom products other than standard products, please consult us.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- Footer Section -->
+    <footer class="bg-white text-gray-800 pt-12 shadow-md border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10 border-b border-gray-300 pb-8">
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="text-lg font-semibold text-[#00aeef] mb-4">Quick Links</h4>
+                <div class="space-y-2">
+                    <a href="index.html" class="block hover:text-[#00aeef] transition">Home</a>
+                    <a href="about-us.html" class="block hover:text-[#00aeef] transition">About</a>
+                    <a href="product-page.html" class="block hover:text-[#00aeef] transition">Products</a>
+                    <a href="contact.html" class="block hover:text-[#00aeef] transition">Contact</a>
+                </div>
+            </div>
+
+            <!-- Address -->
+            <div>
+                <h4 class="text-lg font-semibold text-[#00aeef] mb-2">Corporate office</h4>
+                <p class="text-gray-700 leading-relaxed">
+                    Plot No -21, Gazipur Industrial Area,<br>
+                    Sukhli Nehar, Sohna Road, Gazipur, Nit,<br>
+                    Faridabad, Haryana, India 121005
+                </p>
+
+                <h4 class="text-lg font-semibold text-[#00aeef] mt-4 mb-2">Manufacturing</h4>
+                <p class="text-gray-700 leading-relaxed">
+                    SB-R/1L/04/025 & 026A, 1ST FLOOR<br>
+                    M3M URBANA SECTOR-67 <br>
+                    GURGAON-122102 <br>
+                    Tel No. 0124-4966065
+                </p>
+            </div>
+        </div>
+
+        <!-- Social & Copyright -->
+        <div class="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between text-sm">
+            <div class="flex gap-4 mb-4 md:mb-0 text-[#00aeef]">
+                <a href="#" class="hover:text-blue-600 transition" aria-label="Facebook"><i
+                        class="fab fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-blue-400 transition" aria-label="Twitter"><i
+                        class="fab fa-twitter"></i></a>
+                <a href="#" class="hover:text-pink-500 transition" aria-label="Instagram"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-red-600 transition" aria-label="YouTube"><i
+                        class="fab fa-youtube"></i></a>
+                <a href="#" class="hover:text-blue-700 transition" aria-label="LinkedIn"><i
+                        class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="text-gray-500 text-center md:text-right">
+                Developed and Designed by
+                <a href="https://www.theneedleads.com/" target="_blank"
+                    class="font-semibold text-gray-700 hover:text-blue-700 transition">
+                    Needleads Technologies</a>.
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

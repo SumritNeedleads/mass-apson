@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Magnetic Drum Conveyor</title>
+    <link rel="icon" href="images/favicon.png" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="bg-white text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-[#005baa] text-white sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="index.html">
+                <img src="images/logo.png" alt="Apson Engineers Logo" class="h-10 w-auto" />
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-6 text-sm font-medium items-center">
+                <a href="index.html" class="hover:text-yellow-300">Home</a>
+                <a href="about-us.html" class="hover:text-yellow-300">About</a>
+
+                <!-- Products Hover Dropdown -->
+                <div class="relative group" id="products-dropdown">
+                    <a href="product-page.html"><span
+                            class="hover:text-yellow-300 flex items-center gap-1 cursor-pointer">
+                            Products
+                            <svg class="w-4 h-4 mt-[1px]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </span></a>
+                    <div class="absolute left-0 mt-2 w-40 bg-white text-[#005baa] rounded shadow-md py-2 z-40 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
+                        id="dropdown-menu">
+                        <a href="apson-products.html"
+                            class="block px-4 py-2 hover:bg-[#005baa] hover:text-white">Apson</a>
+                        <a href="bunri-products.html"
+                            class="block px-4 py-2 hover:bg-[#005baa] hover:text-white">Bunri</a>
+                        <a href="nikuni-products.html"
+                            class="block px-4 py-2 hover:bg-[#005baa] hover:text-white">Nikuni</a>
+                    </div>
+                </div>
+
+                <a href="gallery.html" class="hover:text-yellow-300">Gallery</a>
+                <a href="all-customers.html" class="hover:text-yellow-300">List of Customers</a>
+                <a href="#collaboration" class="hover:text-yellow-300">Collaboration</a>
+                <a href="contact.html" class="hover:text-yellow-300">Contact</a>
+            </nav>
+
+            <!-- CTA Button -->
+            <a href="#contact"
+                class="hidden md:inline-block bg-white text-[#005baa] px-4 py-2 rounded hover:bg-yellow-300 transition">Enquire
+                Now</a>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-toggle" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2">
+            <a href="index.html" class="block py-2 hover:text-yellow-300">Home</a>
+            <a href="about-us.html" class="block py-2 hover:text-yellow-300">About</a>
+
+            <!-- Mobile Dropdown -->
+            <div>
+                <button onclick="document.getElementById('mobile-products').classList.toggle('hidden')"
+                    class="block py-2 w-full text-left hover:text-yellow-300">Products</button>
+                <div id="mobile-products" class="hidden pl-4">
+                    <a href="apson-products.html" class="block py-1 hover:text-yellow-300">Apson</a>
+                    <a href="bunri-products.html" class="block py-1 hover:text-yellow-300">Bunri</a>
+                    <a href="nikuni-products.html" class="block py-1 hover:text-yellow-300">Nikuni</a>
+                </div>
+            </div>
+
+            <a href="gallery.html" class="block py-2 hover:text-yellow-300">Gallery</a>
+            <a href="all-customers.html" class="block py-2 hover:text-yellow-300">List of Customers</a>
+            <a href="#collaboration" class="block py-2 hover:text-yellow-300">Collaboration</a>
+            <a href="contact.html" class="block py-2 hover:text-yellow-300">Contact</a>
+        </div>
+    </header>
+
+    <!-- Dynamic Product Detail Section -->
+    <section class="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1   md:grid-cols-2 gap-10 items-start">
+        <!-- Product Image -->
+        <div class="flex flex-col items-start mt-20">
+            <img src="images/mdc-1.webp" alt="Phoenix NEO" class="w-full">
+        </div>
+
+        <!-- Product Details -->
+        <div>
+            <h1 id="product-title" class="text-3xl md:text-4xl font-bold text-[#005baa] mb-4">Magnetic Drum Conveyor</h1>
+            <p id="product-description" class="text-gray-700 mb-6">
+                Powerful magnetic drum conveyor MMS <br>
+                Super strong magnetic drum conveyor M10 <br>
+                Powerful magnetic drum conveyor HMS <br>
+                #30 Super strong magnetic drum conveyor M10 <br>
+            </p>
+
+            <h3 class="text-xl font-semibold text-gray-800 mb-3">
+                Microfiltration conveyor equipped with powerful magnetic drum. <br>
+                Optimum for cutting chip processing of castings and iron.
+            </h3>
+
+            <h3 class="text-xl font-bold text-gray-800 mb-3">Features</h3>
+            <ul id="product-features" class="list-disc list-inside text-gray-700 space-y-2">
+                <li>No mist is generated by the in-liquid filtration, which helps improve the environment in the factory.</li>
+                <li>80 to 90% of chips settle near the dirty fluid inlet, so the magnetic drum provides efficient filtration.</li>
+                <li>Since the power source is the geared motor of the conveyor, it helps reduce power consumption.The chain scraper and magnetic drum are driven by the same geared motor.</li>
+                <li>The chip discharge port of the conveyor has a structure that drains liquid, which ensures that chips are drained before being discharged.This processing reduces the load to carry out coolant (means that coolant is discharged together with chips).</li>
+                <li>Optimal design with consideration for maintenance.</li>
+                <li>This product does not use any consumables such as cartridge filters or paper filters, so no industrial waste is generated.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Product Specifications and Video Section -->
+    <section class="bg-gray-50 py-12 px-4">
+        <div class="max-w-5xl mx-auto">
+            <!-- Specification Tags -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Coolant</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Water soluble</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Oil-based</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Category</h3>
+                    <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm">Magnetic material</span>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Processing Details</h3>
+                    <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm">Cutting</span>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Work Material</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">FC/FCD</span>
+                        <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">Steel</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Chip Shape</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-teal-100 text-teal-700 rounded-full text-sm">Sandy</span>
+                        <span class="px-3 py-1 bg-teal-100 text-teal-700 rounded-full text-sm">Cottony</span>
+                        <span class="px-3 py-1 bg-teal-100 text-teal-700 rounded-full text-sm">Granular</span>
+                        <span class="px-3 py-1 bg-teal-100 text-teal-700 rounded-full text-sm">Needle-shaped</span>
+                        <span class="px-3 py-1 bg-teal-100 text-teal-700 rounded-full text-sm">Small curl-shaped (50 mm or less)</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Grinding Chip Size</h3>
+                    <div class="flex flex-wrap gap-2">
+                    </div>
+                </div>
+
+                <div class="md:col-span-2">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Machine Tool</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Machining center</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">#30 Machining center</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Broaching machine</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Gear cutting machine</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Gun drill machine</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Cutting specialized machine</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Washing machine</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Video -->
+            <div class="text-center">
+                <h2 class="text-2xl font-bold text-[#005baa] mb-4">Product Introduction Video</h2>
+                <div class="aspect-w-16 aspect-h-9 max-w-3xl mx-auto rounded-lg overflow-hidden shadow-lg">
+                    <iframe width="800" height="390" src="https://www.youtube.com/embed/bI1j5sj73Wg" title="&quot;Super strong magnetic drum conveyor M10&quot;  Product introduction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white py-12 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-[#005baa] mb-8  border-[#005baa] w-fit">Features by model</h2>
+            
+            <p class="font-bold">MMS</p>
+            <ul class="list-disc list-inside text-gray-800 space-y-2 mb-2 text-base md:text-sm">
+                <li>Standard coolant conveyor that filters cutting chips of magnetic materials.</li>
+            </ul>
+            <p class="font-bold">M10</p>
+            <ul class="list-disc list-inside text-gray-800 space-y-2 mb-2 text-base md:text-sm">
+                <li>Optimum for castings that generate fine chips because the magnetic force of the magnetic drum is higher than that of MMS.</li>
+                <li>This product does not require any secondary processing, and supports high-pressure pumps of up to 3 MPa.</li>
+            </ul>
+            <p class="font-bold">HMS</p>
+            <ul class="list-disc list-inside text-gray-800 space-y-2 mb-2 text-base md:text-sm">
+                <li>The height of the main body in the filtration section is suppressed to capture chips using the magnet on the bottom of the conveyor instead of the magnetic drum, enabling this product to be installed in the frontage of a low-floor machine.</li>
+            </ul>
+            <p class="font-bold">M10（#30）</p>
+            <ul class="list-disc list-inside text-gray-800 space-y-2 mb-2 text-base md:text-sm">
+                <li>Magnetic drum conveyor for machining center #30.</li>
+                <li>This product does not require any secondary processing, and supports high-pressure pumps of up to 3 MPa.</li>
+            </ul>
+            <div class="mb-8">
+                <img src="images/mdc-2.webp" alt="Mechanism Diagram 1"
+                    class="w-full rounded-lg shadow-md">
+            </div>
+        </div>
+    </section>
+
+    <!-- Mechanism Section -->
+    <section class="bg-white py-12 px-4">
+        <div class="max-w-6xl mx-auto">
+            <!-- Section Heading -->
+            <h2 class="text-3xl font-bold text-[#005baa] mb-8  border-[#005baa] w-fit">Mechanism</h2>
+            <h3 class="text-2xl font-semibold text-[#005baa] mb-4 border-b-2 border-[#005baa] w-fit">MMS・M10・M10（#30）</h3>
+            <div class="mb-8">
+                <img src="images/mdc-3.jpg" alt="Mechanism Diagram 1"
+                    class="w-full rounded-lg shadow-md">
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <div class="text-center">
+                    <img src="images/mdc-4.jpg" alt="PXK Sludge Distribution" class="w-full h-auto rounded shadow">
+                    <h3 class="font-bold mb-2">MMS</h3>
+                </div>
+
+                <div class="text-center">
+                    <img src="images/mdc-5.jpg" alt="PXH Sludge Distribution" class="w-full h-auto rounded shadow">
+                    <h3 class="font-bold mb-2">M10</h3>
+                </div>
+			</div>
+
+            <!-- Description Steps -->
+            <ol class="list-decimal list-inside text-gray-700 space-y-4 mb-8 text-base md:text-lg">
+                <li>
+                    The dirty liquid flows onto the conveyor, and 80 to 90% of chips settle on the bottom of the conveyor.
+                </li>
+                <li>
+                    10 to 20% of chips that do not settle are captured by the magnetic drum.The captured chips are demagnetized at the part of the magnetic drum that is not magnetic, and settle on the bottom of the conveyor.
+                </li>
+                <li>
+                    The dirty liquid passes through the magnetic drum to become a clean liquid, which is supplied to the clean tank.
+                </li>
+                <li>
+                    The settled chips are conveyed by the scraper and discharged to the outside of the main body.
+                </li>
+            </ol>
+
+            <h3 class="text-2xl font-semibold text-[#005baa] mb-4 border-b-2 border-[#005baa] w-fit">HMS</h3>
+
+            <!-- Mechanism Image 2 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- PXK -->
+                <div class="text-center">
+                    <img src="images/mdc-6.jpg" alt="PXK Sludge Distribution" class="w-full h-auto rounded shadow">
+                </div>
+
+                <!-- PXH -->
+                <div class="text-center">
+                    <img src="images/mdc-7.jpg" alt="PXH Sludge Distribution" class="w-full h-auto rounded shadow">
+                </div>
+            </div>
+
+            <ol class="list-decimal list-inside text-gray-700 space-y-4 mb-8 text-base md:text-lg md:mt-3">
+                <li>The dirty liquid flows onto the conveyor.</li>
+                <li>
+                    Chips are captured by the magnet installed on the bottom of the conveyor.
+                </li>
+                <li>
+                    Chips captured by the magnet on the bottom of the conveyor are conveyed by the scraper.
+                </li>
+                <li>
+                    Chips are temporarily stored in the conveyor outlet, drained, and then discharged.
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="bg-gray-50 py-12 px-4">
+        <div class="max-w-6xl mx-auto">
+            <!-- Section Heading -->
+            <h2 class="text-3xl font-bold text-[#005baa] mb-6  border-[#005baa] w-fit">Specifications</h2>
+
+            <h3 class="text-2xl font-semibold text-[#005baa] mb-4 border-b-2 border-[#005baa] w-fit">MMS・M10</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- PXK -->
+                <div class="text-center">
+                    <h3 class="font-bold mb-2">Dimensional drawing</h3>
+                    <img src="images/mdc-8.webp" alt="PXK Sludge Distribution"
+                        class="w-full h-auto rounded shadow">
+                </div>
+
+                <!-- PXH -->
+                <div class="text-center">
+                    <h3 class="font-bold mb-2">Dimension table</h3>
+                    <img src="images/mdc-9.webp" alt="PXH Sludge Distribution"
+                        class="w-full h-auto rounded shadow">
+                </div>
+            </div>
+
+            <h3 class="text-2xl font-semibold text-[#005baa] mb-4 border-b-2 border-[#005baa] w-fit">HMS</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- PXK -->
+                <div class="text-center">
+                    <h3 class="font-bold mb-2">Dimensional drawing</h3>
+                    <img src="images/mdc-10.webp" alt="PXK Sludge Distribution"
+                        class="w-full h-auto rounded shadow">
+                </div>
+
+                <!-- PXH -->
+                <div class="text-center">
+                    <h3 class="font-bold mb-2">Dimension table</h3>
+                    <img src="images/mdc-11.webp" alt="PXH Sludge Distribution"
+                        class="w-full h-auto rounded shadow">
+                </div>
+            </div>
+
+            <h3 class="text-2xl font-semibold text-[#005baa] mb-4 border-b-2 border-[#005baa] w-fit">M10（♯30）</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- PXK -->
+                <div class="text-center">
+                    <h3 class="font-bold mb-2">Dimensional drawing</h3>
+                    <img src="images/mdc-12.webp" alt="PXK Sludge Distribution"
+                        class="w-full h-auto rounded shadow">
+                </div>
+
+                <!-- PXH -->
+                <div class="text-center">
+                    <h3 class="font-bold mb-2">Dimension table</h3>
+                    <img src="images/mdc-13.webp" alt="PXH Sludge Distribution"
+                        class="w-full h-auto rounded shadow">
+                </div>
+            </div>
+
+            <h3 class="text-2xl font-semibold text-[#005baa] mb-4 border-b-2 border-[#005baa] w-fit">Filtration accuracy</h3>
+            <ul class="list-disc list-inside text-gray-800 space-y-2 mb-2 text-base md:text-sm">
+                <li>MMS &nbsp; 20μm 90％ or more</li>
+                <li>M10 &nbsp; 10μm 90％ or more</li>
+                <li>HMS &nbsp; 30μm 90％ or more</li>
+                <li>M10(#30) &nbsp; 10μm 90％ or more</li>
+            </ul>
+            <p class="text-sm text-gray-500">
+                * The filtration accuracy is based on the results of our experiments, and does not imply that this level of accuracy is guaranteed.
+            </p>
+
+            <h3 class="text-2xl font-semibold text-[#005baa] mb-4 md:mt-4 border-[#005baa] w-fit">Particle size distribution</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- PXK -->
+                <div class="text-center">
+                    <img src="images/mdc-14.webp" alt="PXK Sludge Distribution" class="w-full h-auto rounded shadow">
+                    <h3 class="font-bold mb-2">MMS</h3>
+                </div>
+
+                <!-- PXH -->
+                <div class="text-center">
+                    <img src="images/mdc-15.webp" alt="PXH Sludge Distribution" class="w-full h-auto rounded shadow">
+                    <h3 class="font-bold mb-2">M10</h3>
+                </div>
+
+                <!-- PXN -->
+                <div class="text-center">
+                    <img src="images/mdc-16.webp" alt="PXN Sludge Distribution" class="w-full h-auto rounded shadow">
+                    <h3 class="font-bold mb-2">HMS</h3>
+                </div>
+            </div>
+            <p class="text-sm font-semibold md:mt-4 text-gray-800">
+                Machine tool: Inner diameter grinding machine Coolant: Water soluble Processing flow rate: 60 L/min <br>
+                Chip material: Steel
+            </p>
+
+            <h3 class="text-2xl font-semibold text-[#005baa] mb-4 md:mt-4 border-[#005baa] w-fit">Processing flow rate</h3>
+            <p class="text-lg md:mt-4 text-gray-800">Water soluble</p>
+            <ul class="list-disc list-inside text-gray-800 space-y-2 mb-2 md:mt-3 text-base md:text-sm">
+                <li>M10-1（M10-45HLA-235(11-1.5)）　150L/min</li>
+                <li>M10-2（M10-55HLA-245(11-2)）　　200L/min</li>
+                <li>M10-3（M10-70HLA-260(11-3)）　　300L/min</li>
+            </ul>
+            <ul class="list-disc list-inside text-gray-800 space-y-2 mb-2  md:mt-6 text-base md:text-sm">
+                <li>HMS-1（HMS30HLA-245）　100L/min</li>
+                <li>HMS-2（HMS40HLA-280）　200L/min</li>
+                <li>HMS-3（HMS50HLA-280）　300L/min</li>
+            </ul>
+            <ul class="list-disc list-inside text-gray-800 space-y-2 mb-2 md:mt-6 text-base md:text-sm">
+                <li>#30-M10-2（M10-2F-C-CBS）　200L/min</li>
+            </ul>
+            <p class="text-sm text-gray-500">
+                * For details, please check the product dimensions. <br>
+                * The product weight varies depending on the specifications, options, etc.
+            </p>
+
+            <h3 class="text-2xl font-semibold text-[#005baa] mb-4 md:mt-4 border-[#005baa] w-fit">Paint color</h3>
+            <p class="text-gray-800 space-y-2 mb-2 md:mt-6 text-base md:text-lg">Silver gray (Munsell No. N-8.0)</p>
+            <p class="text-sm text-gray-500">
+                *Please contact us for specific colors.
+            </p>
+
+            <h3 class="text-2xl font-semibold text-[#005baa] mb-2 md:mt-4 border-[#005baa] w-fit">Drive motor</h3>
+            <ul class="list-disc list-inside text-gray-800 space-y-2 mb-2 md:mt-2 text-base md:text-sm">
+                <li>M10, MMS, HMS 100W</li>
+                <li>M10 (#30) 25W</li>
+            </ul>
+
+            <h3 class="text-2xl font-semibold text-[#005baa] mb-2 md:mt-4 border-[#005baa] w-fit">Options</h3>
+            <ul class="list-disc list-inside text-gray-800 space-y-2 mb-2 md:mt-2 text-base md:text-sm">
+                <li>Chain Bucket Skimmer CBS</li>
+                <li>Terminal box</li>
+                <li>Terminal boxControl panel/operation box</li>
+            </ul>
+            <p class="text-sm text-gray-500">
+                *Please contact us for details.
+            </p>    
+        </div>
+    </section>
+
+    <section class="bg-white py-12 px-4">
+        <div class="max-w-6xl mx-auto">
+
+            <h2 class="text-3xl font-bold text-[#005baa] mb-4  border-[#005baa] w-fit">Model code explanation</h2>
+
+            <h3 class="text-2xl font-semibold text-[#005baa] mb-2 md:mt-4 border-[#005baa] w-fit">M10・MMS</h3>
+            <div>
+                <img src="images/mdc-17.webp" alt="Comparison with Old Models Table" class="w-full h-auto rounded shadow-md">
+            </div>
+
+            <h3 class="text-2xl font-semibold text-[#005baa] mb-2 md:mt-4 border-[#005baa] w-fit">HMS</h3>
+            <div>
+                <img src="images/mdc-18.webp" alt="Comparison with Old Models Table" class="w-full h-auto rounded shadow-md">
+            </div>
+
+        </div>
+    </section>
+
+    <section class="bg-white py-12 px-4">
+        <div class="max-w-6xl mx-auto">
+
+            <h2 class="text-3xl font-bold text-[#005baa] mb-4  border-[#005baa] w-fit">Product Photos</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="text-center">
+                    <img src="images/mdc-19.webp" alt="PXK Sludge Distribution" class="w-full h-auto rounded shadow">
+                    <h3 class="font-bold mb-2">MMS/M10 Option (CBS)</h3>
+                </div>
+
+                <div class="text-center">
+                    <img src="images/mdc-20.webp" alt="PXH Sludge Distribution" class="w-full h-auto rounded shadow">
+                    <h3 class="font-bold mb-2">HMS</h3>
+                </div>
+
+                <div class="text-center">
+                    <img src="images/mdc-21.webp" alt="PXN Sludge Distribution" class="w-full h-auto rounded shadow">
+                    <h3 class="font-bold mb-2">M10 (#30) Option (CBS)</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white py-12 px-4">
+        <div class="max-w-6xl mx-auto">
+
+            <h2 class="text-3xl font-bold text-[#005baa] mb-4  border-[#005baa] w-fit">Chip discharge image MMS・M10・M10(#30)</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="text-center">
+                    <img src="images/mdc-22.webp" alt="PXK Sludge Distribution" class="w-full h-auto rounded shadow">
+                    <h3 class="font-bold mb-2">MMS</h3>
+                </div>
+
+                <div class="text-center">
+                    <img src="images/mdc-23.webp" alt="PXH Sludge Distribution" class="w-full h-auto rounded shadow">
+                    <h3 class="font-bold mb-2">M10</h3>
+                </div>
+
+                <div class="text-center">
+                    <img src="images/mdc-24.webp" alt="PXN Sludge Distribution" class="w-full h-auto rounded shadow">
+                    <h3 class="font-bold mb-2">HMS</h3>
+                </div>
+			</div>
+            <p class="text-sm text-gray-500">
+                *The image is for illustrative purposes only. The specifications may differ from the actual product.
+            </p>
+            <hr>
+            <p class="text-sm text-gray-500 md:mt-3">
+                *Filtration accuracy is based on our own experiments, and we do not guarantee effectiveness. <br>
+                *Specifications and dimensions are subject to change without notice. <br>
+                *Please consult us if you are using oil-based products. <br>
+                *Please contact us for custom-made products other than standard products. <br>
+            </p>
+
+        </div>
+    </section>
+
+    
+    <!-- Footer Section -->
+    <footer class="bg-white text-gray-800 pt-12 shadow-md border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10 border-b border-gray-300 pb-8">
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="text-lg font-semibold text-[#00aeef] mb-4">Quick Links</h4>
+                <div class="space-y-2">
+                    <a href="index.html" class="block hover:text-[#00aeef] transition">Home</a>
+                    <a href="about-us.html" class="block hover:text-[#00aeef] transition">About</a>
+                    <a href="product-page.html" class="block hover:text-[#00aeef] transition">Products</a>
+                    <a href="contact.html" class="block hover:text-[#00aeef] transition">Contact</a>
+                </div>
+            </div>
+
+            <!-- Address -->
+            <div>
+                <h4 class="text-lg font-semibold text-[#00aeef] mb-2">Corporate office</h4>
+                <p class="text-gray-700 leading-relaxed">
+                    Plot No -21, Gazipur Industrial Area,<br>
+                    Sukhli Nehar, Sohna Road, Gazipur, Nit,<br>
+                    Faridabad, Haryana, India 121005
+                </p>
+
+                <h4 class="text-lg font-semibold text-[#00aeef] mt-4 mb-2">Manufacturing</h4>
+                <p class="text-gray-700 leading-relaxed">
+                    SB-R/1L/04/025 & 026A, 1ST FLOOR<br>
+                    M3M URBANA SECTOR-67 <br>
+                    GURGAON-122102 <br>
+                    Tel No. 0124-4966065
+                </p>
+            </div>
+        </div>
+
+        <!-- Social & Copyright -->
+        <div class="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between text-sm">
+            <div class="flex gap-4 mb-4 md:mb-0 text-[#00aeef]">
+                <a href="#" class="hover:text-blue-600 transition" aria-label="Facebook"><i
+                        class="fab fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-blue-400 transition" aria-label="Twitter"><i
+                        class="fab fa-twitter"></i></a>
+                <a href="#" class="hover:text-pink-500 transition" aria-label="Instagram"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-red-600 transition" aria-label="YouTube"><i
+                        class="fab fa-youtube"></i></a>
+                <a href="#" class="hover:text-blue-700 transition" aria-label="LinkedIn"><i
+                        class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="text-gray-500 text-center md:text-right">
+                Developed and Designed by
+                <a href="https://www.theneedleads.com/" target="_blank"
+                    class="font-semibold text-gray-700 hover:text-blue-700 transition">
+                    Needleads Technologies</a>.
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery | Mass Apson</title>
+  <link rel="icon" href="images/favicon.png" type="image/x-icon" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="bg-white text-gray-800 font-sans">
+
+  <!-- Header -->
+  <header class="bg-[#005baa] text-white sticky top-0 z-50 shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="index.html">
+        <img src="images/logo.png" alt="Apson Engineers Logo" class="h-10 w-auto" />
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex space-x-6 text-sm font-medium items-center">
+        <a href="index.html" class="hover:text-yellow-300">Home</a>
+        <a href="about-us.html" class="hover:text-yellow-300">About</a>
+
+        <!-- Products Hover Dropdown -->
+        <div class="relative group" id="products-dropdown">
+          <a href="product-page.html"><span class="hover:text-yellow-300 flex items-center gap-1 cursor-pointer">
+              Products
+              <svg class="w-4 h-4 mt-[1px]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </span></a>
+          <div
+            class="absolute left-0 mt-2 w-40 bg-white text-[#005baa] rounded shadow-md py-2 z-40 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
+            id="dropdown-menu">
+            <a href="apson-products.html" class="block px-4 py-2 hover:bg-[#005baa] hover:text-white">Apson</a>
+            <a href="bunri-products.html" class="block px-4 py-2 hover:bg-[#005baa] hover:text-white">Bunri</a>
+            <a href="nikuni-products.html" class="block px-4 py-2 hover:bg-[#005baa] hover:text-white">Nikuni</a>
+          </div>
+        </div>
+
+        <a href="gallery.html" class="hover:text-yellow-300">Gallery</a>
+        <a href="all-customers.html" class="hover:text-yellow-300">List of Customers</a>
+        <a href="#collaboration" class="hover:text-yellow-300">Collaboration</a>
+        <a href="contact.html" class="hover:text-yellow-300">Contact</a>
+      </nav>
+
+      <!-- CTA Button -->
+      <a href="#contact"
+        class="hidden md:inline-block bg-white text-[#005baa] px-4 py-2 rounded hover:bg-yellow-300 transition">Enquire
+        Now</a>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2">
+      <a href="index.html" class="block py-2 hover:text-yellow-300">Home</a>
+      <a href="about-us.html" class="block py-2 hover:text-yellow-300">About</a>
+
+      <!-- Mobile Dropdown -->
+      <div>
+        <button onclick="document.getElementById('mobile-products').classList.toggle('hidden')"
+          class="block py-2 w-full text-left hover:text-yellow-300">Products</button>
+        <div id="mobile-products" class="hidden pl-4">
+          <a href="apson-products.html" class="block py-1 hover:text-yellow-300">Apson</a>
+          <a href="bunri-products.html" class="block py-1 hover:text-yellow-300">Bunri</a>
+          <a href="nikuni-products.html" class="block py-1 hover:text-yellow-300">Nikuni</a>
+        </div>
+      </div>
+
+      <a href="gallery.html" class="block py-2 hover:text-yellow-300">Gallery</a>
+      <a href="all-customers.html" class="block py-2 hover:text-yellow-300">List of Customers</a>
+      <a href="#collaboration" class="block py-2 hover:text-yellow-300">Collaboration</a>
+      <a href="contact.html" class="block py-2 hover:text-yellow-300">Contact</a>
+    </div>
+  </header>
+
+  
+  <!-- Apson Products Section -->
+  <section class="max-w-7xl mx-auto px-4 py-12">
+    <h1 class="text-3xl font-bold text-[#005baa] mb-8 text-center">BUNRI Products</h1>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <!-- Product Card -->
+      <a href="bunri-product-1.html" class="bg-white rounded shadow hover:shadow-lg transition p-4">
+        <img src="images/MSP-1.webp" alt="Product 1" class="w-full h-40 object-cover rounded mb-3">
+        <h3 class="text-lg font-semibold text-[#005baa]">Magnetic Separator Phoenix NEO</h3>
+      </a>
+
+      <!-- Repeat for more products -->
+      <a href="bunri-product-2.html" class="bg-white rounded shadow hover:shadow-lg transition p-4">
+        <img src="images/products/apson2.jpg" alt="Product 2" class="w-full h-40 object-cover rounded mb-3">
+        <h3 class="text-lg font-semibold text-[#005baa]">Magnetic Drum Conveyor</h3>
+      </a>
+
+      <a href="bunri-product-3.html" class="bg-white rounded shadow hover:shadow-lg transition p-4">
+        <img src="images/products/apson2.jpg" alt="Product 2" class="w-full h-40 object-cover rounded mb-3">
+        <h3 class="text-lg font-semibold text-[#005baa]">Magnetic Drum Conveyor</h3>
+      </a>
+
+      <a href="bunri-product-4.html" class="bg-white rounded shadow hover:shadow-lg transition p-4">
+        <img src="images/products/apson2.jpg" alt="Product 2" class="w-full h-40 object-cover rounded mb-3">
+        <h3 class="text-lg font-semibold text-[#005baa]">Magnetic Drum Conveyor</h3>
+      </a>
+
+      <a href="bunri-product-5.html" class="bg-white rounded shadow hover:shadow-lg transition p-4">
+        <img src="images/products/apson2.jpg" alt="Product 2" class="w-full h-40 object-cover rounded mb-3">
+        <h3 class="text-lg font-semibold text-[#005baa]">Magnetic Drum Conveyor</h3>
+      </a>
+
+      <a href="bunri-product-6.html" class="bg-white rounded shadow hover:shadow-lg transition p-4">
+        <img src="images/products/apson2.jpg" alt="Product 2" class="w-full h-40 object-cover rounded mb-3">
+        <h3 class="text-lg font-semibold text-[#005baa]">Magnetic Drum Conveyor</h3>
+      </a>
+
+      <a href="bunri-product-7.html" class="bg-white rounded shadow hover:shadow-lg transition p-4">
+        <img src="images/products/apson2.jpg" alt="Product 2" class="w-full h-40 object-cover rounded mb-3">
+        <h3 class="text-lg font-semibold text-[#005baa]">Magnetic Drum Conveyor</h3>
+      </a>
+
+      <a href="bunri-product-8.html" class="bg-white rounded shadow hover:shadow-lg transition p-4">
+        <img src="images/products/apson2.jpg" alt="Product 2" class="w-full h-40 object-cover rounded mb-3">
+        <h3 class="text-lg font-semibold text-[#005baa]">Magnetic Drum Conveyor</h3>
+      </a>
+
+      <a href="bunri-product-9.html" class="bg-white rounded shadow hover:shadow-lg transition p-4">
+        <img src="images/products/apson2.jpg" alt="Product 2" class="w-full h-40 object-cover rounded mb-3">
+        <h3 class="text-lg font-semibold text-[#005baa]">Magnetic Drum Conveyor</h3>
+      </a>
+
+      <a href="bunri-product-10.html" class="bg-white rounded shadow hover:shadow-lg transition p-4">
+        <img src="images/products/apson2.jpg" alt="Product 2" class="w-full h-40 object-cover rounded mb-3">
+        <h3 class="text-lg font-semibold text-[#005baa]">Magnetic Drum Conveyor</h3>
+      </a>
+
+      <a href="bunri-product-11.html" class="bg-white rounded shadow hover:shadow-lg transition p-4">
+        <img src="images/products/apson2.jpg" alt="Product 2" class="w-full h-40 object-cover rounded mb-3">
+        <h3 class="text-lg font-semibold text-[#005baa]">Magnetic Drum Conveyor</h3>
+      </a>
+
+      <a href="bunri-product-12.html" class="bg-white rounded shadow hover:shadow-lg transition p-4">
+        <img src="images/products/apson2.jpg" alt="Product 2" class="w-full h-40 object-cover rounded mb-3">
+        <h3 class="text-lg font-semibold text-[#005baa]">Magnetic Drum Conveyor</h3>
+      </a>
+
+      <a href="bunri-product-13.html" class="bg-white rounded shadow hover:shadow-lg transition p-4">
+        <img src="images/products/apson2.jpg" alt="Product 2" class="w-full h-40 object-cover rounded mb-3">
+        <h3 class="text-lg font-semibold text-[#005baa]">Magnetic Drum Conveyor</h3>
+      </a>
+
+
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="bg-white text-gray-800 pt-12 shadow-md border-t border-gray-200">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10 border-b border-gray-300 pb-8">
+
+      <!-- Quick Links -->
+      <div>
+        <h4 class="text-lg font-semibold text-[#00aeef] mb-4">Quick Links</h4>
+        <div class="space-y-2">
+          <a href="index.html" class="block hover:text-[#00aeef] transition">Home</a>
+          <a href="about-us.html" class="block hover:text-[#00aeef] transition">About</a>
+          <a href="product-page.html" class="block hover:text-[#00aeef] transition">Products</a>
+          <a href="contact.html" class="block hover:text-[#00aeef] transition">Contact</a>
+        </div>
+      </div>
+
+      <!-- Address -->
+      <div>
+        <h4 class="text-lg font-semibold text-[#00aeef] mb-2">Corporate office</h4>
+        <p class="text-gray-700 leading-relaxed">
+          Plot No -21, Gazipur Industrial Area,<br>
+          Sukhli Nehar, Sohna Road, Gazipur, Nit,<br>
+          Faridabad, Haryana, India 121005
+        </p>
+
+        <h4 class="text-lg font-semibold text-[#00aeef] mt-4 mb-2">Manufacturing</h4>
+        <p class="text-gray-700 leading-relaxed">
+          SB-R/1L/04/025 & 026A, 1ST FLOOR<br>
+          M3M URBANA SECTOR-67 <br>
+          GURGAON-122102 <br>
+          Tel No. 0124-4966065
+        </p>
+      </div>
+    </div>
+
+    <!-- Social & Copyright -->
+    <div class="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between text-sm">
+      <div class="flex gap-4 mb-4 md:mb-0 text-[#00aeef]">
+        <a href="#" class="hover:text-blue-600 transition" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="hover:text-blue-400 transition" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="hover:text-pink-500 transition" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="hover:text-red-600 transition" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="hover:text-blue-700 transition" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      <div class="text-gray-500 text-center md:text-right">
+        Developed and Designed by
+        <a href="https://www.theneedleads.com/" target="_blank"
+          class="font-semibold text-gray-700 hover:text-blue-700 transition">
+          Needleads Technologies</a>.
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
