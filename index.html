@@ -334,7 +334,7 @@
             </div>
 
             <!-- Visit BUNRI Product Page Button -->
-            <a href="bunri-products.html" target="_blank"
+            <a href="bunri-products.html"
                 class="mt-6 inline-block text-white bg-[#516fc9] hover:bg-[#294599] px-6 py-2 rounded-full text-sm font-medium transition duration-300 animate__animated animate__fadeIn animate__delay-2s">
                 Explore BUNRI Products
             </a>
@@ -479,6 +479,16 @@
     </footer>
 
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const toggleButton = document.getElementById("menu-toggle");
+          const mobileMenu = document.getElementById("mobile-menu");
+      
+          toggleButton.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+          });
+        });
+      </script>
 
 </body>
 
