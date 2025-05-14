@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Magnetic Sweeper / Magnetic Plate SW/MSW/PL</title>
-    <link rel="icon" href="images/favicon.png" type="image/x-icon" />
+    <title>Bunri Filter RBF</title>
+    <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -16,18 +16,18 @@
     <header class="bg-[#005baa] text-white sticky top-0 z-50 shadow-md">
         <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
             <!-- Logo -->
-            <a href="index.html">
-                <img src="images/logo.png" alt="Apson Engineers Logo" class="h-10 w-auto" />
+            <a href="/index.html">
+                <img src="/images/logo.png" alt="Apson Engineers Logo" class="h-10 w-auto" />
             </a>
 
             <!-- Desktop Navigation -->
             <nav class="hidden md:flex space-x-6 text-sm font-medium items-center">
-                <a href="index.html" class="hover:text-yellow-300">Home</a>
-                <a href="about-us.html" class="hover:text-yellow-300">About</a>
+                <a href="/index.html" class="hover:text-yellow-300">Home</a>
+                <a href="/about-us.html" class="hover:text-yellow-300">About</a>
 
                 <!-- Products Hover Dropdown -->
                 <div class="relative group" id="products-dropdown">
-                    <a href="product-page.html"><span
+                    <a href="/product-page.html"><span
                             class="hover:text-yellow-300 flex items-center gap-1 cursor-pointer">
                             Products
                             <svg class="w-4 h-4 mt-[1px]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -37,23 +37,23 @@
                         </span></a>
                     <div class="absolute left-0 mt-2 w-40 bg-white text-[#005baa] rounded shadow-md py-2 z-40 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
                         id="dropdown-menu">
-                        <a href="apson-products.html"
+                        <a href="/apson-products.html"
                             class="block px-4 py-2 hover:bg-[#005baa] hover:text-white">Apson</a>
-                        <a href="bunri-products.html"
+                        <a href="/bunri-products.html"
                             class="block px-4 py-2 hover:bg-[#005baa] hover:text-white">Bunri</a>
-                        <a href="nikuni-products.html"
+                        <a href="/nikuni-products.html"
                             class="block px-4 py-2 hover:bg-[#005baa] hover:text-white">Nikuni</a>
                     </div>
                 </div>
 
-                <a href="gallery.html" class="hover:text-yellow-300">Gallery</a>
-                <a href="all-customers.html" class="hover:text-yellow-300">List of Customers</a>
-                <a href="#collaboration" class="hover:text-yellow-300">Collaboration</a>
-                <a href="contact.html" class="hover:text-yellow-300">Contact</a>
+                <a href="/gallery.html" class="hover:text-yellow-300">Gallery</a>
+                <a href="/all-customers.html" class="hover:text-yellow-300">List of Customers</a>
+                <a href="/#collaboration" class="hover:text-yellow-300">Collaboration</a>
+                <a href="/contact.html" class="hover:text-yellow-300">Contact</a>
             </nav>
 
             <!-- CTA Button -->
-            <a href="#contact"
+            <a href="/#contact"
                 class="hidden md:inline-block bg-white text-[#005baa] px-4 py-2 rounded hover:bg-yellow-300 transition">Enquire
                 Now</a>
 
@@ -67,24 +67,24 @@
 
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2">
-            <a href="index.html" class="block py-2 hover:text-yellow-300">Home</a>
-            <a href="about-us.html" class="block py-2 hover:text-yellow-300">About</a>
+            <a href="/index.html" class="block py-2 hover:text-yellow-300">Home</a>
+            <a href="/about-us.html" class="block py-2 hover:text-yellow-300">About</a>
 
             <!-- Mobile Dropdown -->
             <div>
                 <button onclick="document.getElementById('mobile-products').classList.toggle('hidden')"
                     class="block py-2 w-full text-left hover:text-yellow-300">Products</button>
                 <div id="mobile-products" class="hidden pl-4">
-                    <a href="apson-products.html" class="block py-1 hover:text-yellow-300">Apson</a>
-                    <a href="bunri-products.html" class="block py-1 hover:text-yellow-300">Bunri</a>
-                    <a href="nikuni-products.html" class="block py-1 hover:text-yellow-300">Nikuni</a>
+                    <a href="/apson-products.html" class="block py-1 hover:text-yellow-300">Apson</a>
+                    <a href="/bunri-products.html" class="block py-1 hover:text-yellow-300">Bunri</a>
+                    <a href="/nikuni-products.html" class="block py-1 hover:text-yellow-300">Nikuni</a>
                 </div>
             </div>
 
-            <a href="gallery.html" class="block py-2 hover:text-yellow-300">Gallery</a>
-            <a href="all-customers.html" class="block py-2 hover:text-yellow-300">List of Customers</a>
-            <a href="#collaboration" class="block py-2 hover:text-yellow-300">Collaboration</a>
-            <a href="contact.html" class="block py-2 hover:text-yellow-300">Contact</a>
+            <a href="/gallery.html" class="block py-2 hover:text-yellow-300">Gallery</a>
+            <a href="/all-customers.html" class="block py-2 hover:text-yellow-300">List of Customers</a>
+            <a href="/#collaboration" class="block py-2 hover:text-yellow-300">Collaboration</a>
+            <a href="/contact.html" class="block py-2 hover:text-yellow-300">Contact</a>
         </div>
     </header>
 
@@ -92,36 +92,31 @@
     <section class="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1   md:grid-cols-2 gap-10 items-start">
         <!-- Product Image -->
         <div class="flex flex-col items-start mt-20">
-            <img src="images/msmp-1.webp" alt="Phoenix NEO" class="w-full">
+            <img src="/images/bfrbf-1.webp" alt="Phoenix NEO" class="w-full">
         </div>
 
         <!-- Product Details -->
         <div>
-            <h1 id="product-title" class="text-3xl md:text-4xl font-bold text-[#005baa] mb-4">Magnetic Sweeper / Magnetic Plate SW/MSW/PL</h1>
+            <h1 id="product-title" class="text-3xl md:text-4xl font-bold text-[#005baa] mb-4">Bunri Filter RBF</h1>
 
             <h3 class="text-xl font-semibold text-gray-800 mb-3">
-                Magnet application equipment that collects cut ting chips and grinding sludge from magnetic materials.<br>
-                Optimum for cleaning insides of coolant tanks and places that are out of reach.
+                Bag-filter-type filtration unit with a simple structure and high-precision filtration.<br>
+                Optimum as a secondary filtration filter for cutting and grinding.
             </h3>
 
             <h3 class="text-xl font-bold text-gray-800 mb-3 md:mt-4">Features</h3>
-            <h3 class="text-2xl font-semibold text-[#005baa] mb-4 md:mt-4 border-[#005baa] w-fit">PL</h3>
             <ul id="product-features" class="list-disc list-inside text-gray-700 space-y-2">
-                <li>Available to remove cutting chips and grinding sludge from the coolant tank and hydraulic tank.</li>
-                <li>This unit can be installed either horizontally or vertically.
+                <li>Bag filter for tank set.Set up as a set of two filters.When clogged, filters can be replaced one by
+                    one by switching the inflow to the main body with the three-way valve, thereby, enabling continuous
+                    operation.</li>
+                <li>The punching filter is always in contact with the scraping board and rotates to prevent clogging.
                 </li>
-            </ul>
-
-            <h3 class="text-2xl font-semibold text-[#005baa] mb-4 md:mt-4 border-[#005baa] w-fit">SW</h3>
-            <ul id="product-features" class="list-disc list-inside text-gray-700 space-y-2">
-                <li>Suitable for cleaning the inside of the coolant tank and places that are out of reach.</li>
-            </ul>
-
-            <h3 class="text-2xl font-semibold text-[#005baa] mb-4 md:mt-4 border-[#005baa] w-fit">MSW</h3>
-            <ul id="product-features" class="list-disc list-inside text-gray-700 space-y-2">
-                <li>Compact and high magnetic force type compared to SW.</li>
-                <li>Optimum for cleaning magnetic chips and sludge in narrow spaces such as the T-groove of the machine table.
-                </li>
+                <li>Optimum as a secondary filtration filter for cutting and grinding chips and sludge.</li>
+                <li>You can check whether the filter is clogged using the pressure gauge at the top of the main body or
+                    the pressure sensor of the inflow pipe.</li>
+                <li>The outlet side of the clean liquid is an open type, which does not require air bleeding.Therefore,
+                    you can easily handle and safely use this product.</li>
+                <li>No need for clean liquid piping.</li>
             </ul>
         </div>
     </section>
@@ -143,6 +138,8 @@
                     <div class="flex flex-wrap gap-2">
                         <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm">Magnetic
                             material</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm">Non-Magnetic
+                            material</span>
                     </div>
                 </div>
 
@@ -159,7 +156,14 @@
                     <div class="flex flex-wrap gap-2">
                         <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">FC/FCD</span>
                         <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">Steel</span>
+                        <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">Aluminum</span>
+                        <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">Stainless</span>
+                        <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">Copper</span>
+                        <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">Titanium</span>
                         <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">Carbide</span>
+                        <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">Magnesium</span>
+                        <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">Mixed chips (aluminum
+                            + FC or sintered metal)</span>
                     </div>
                 </div>
 
@@ -170,8 +174,6 @@
                         <span class="px-3 py-1 bg-pink-100 text-pink-700 rounded-full text-sm">Cottony</span>
                         <span class="px-3 py-1 bg-pink-100 text-pink-700 rounded-full text-sm">Granular</span>
                         <span class="px-3 py-1 bg-pink-100 text-pink-700 rounded-full text-sm">Needle-shaped</span>
-                        <span class="px-3 py-1 bg-pink-100 text-pink-700 rounded-full text-sm">Small curl-shaped (50 mm or less)</span>
-                        <span class="px-3 py-1 bg-pink-100 text-pink-700 rounded-full text-sm">Small curl-shaped (51 mm to 100 mm)</span>
                     </div>
                 </div>
 
@@ -202,7 +204,6 @@
                             machine</span>
                         <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Machining
                             center</span>
-                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">#30 Machining center</span>
                         <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Broaching
                             machine</span>
                         <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">NC lathes</span>
@@ -238,28 +239,26 @@
     <section class="bg-white py-12 px-4">
         <div class="max-w-6xl mx-auto">
 
-            <h2 class="text-3xl font-bold text-[#005baa] mb-4  border-[#005baa] w-fit">Dimensional drawing and dimension table</h2>
+            <h2 class="text-3xl font-bold text-[#005baa] mb-4  border-[#005baa] w-fit">Mechanism</h2>
 
 
-            <h3 class="text-2xl font-semibold text-[#005baa] mb-4 md:mt-4 border-[#005baa] w-fit">SW</h3>
             <div class="text-center">
-                <img src="images/msmp-2.webp" alt="PXK Sludge Distribution" class="w-full h-auto rounded shadow">
+                <img src="/images/bfrbf-2.webp" alt="PXK Sludge Distribution" class="w-full h-auto rounded shadow">
             </div>
 
-            <h3 class="text-2xl font-semibold text-[#005baa] mb-4 md:mt-4 border-[#005baa] w-fit">MSW</h3>
             <div class="text-center mt-2 md:mt-4">
-                <img src="images/msmp-3.webp" alt="PXK Sludge Distribution" class="w-full h-auto rounded shadow">
-            </div>
-            
-            <h3 class="text-2xl font-semibold text-[#005baa] mb-4 md:mt-4 border-[#005baa] w-fit">PL</h3>
-            <div class="text-center mt-2 md:mt-4">
-                <img src="images/msmp-4.webp" alt="PXK Sludge Distribution" class="w-full h-auto rounded shadow">
+                <img src="/images/bfrbf-3.webp" alt="PXK Sludge Distribution" class="w-full h-auto rounded shadow">
             </div>
 
-            <p class="text-sm text-gray-500 md:mt-2">
-               * The specifications and dimensions are subject to change without notice.
-            </p>
-
+            <ol class="list-decimal list-inside text-gray-700 space-y-4 mb-8 text-base md:text-lg">
+                <li>
+                    The dirty liquid pumped by the coolant pump flows in from the top of the main body.
+                </li>
+                <li>
+                    The dirty liquid is filtered by the filter, and the clean liquid is supplied to the clean tank from
+                    the bottom of the main body.
+                </li>
+            </ol>
         </div>
     </section>
 
@@ -268,29 +267,46 @@
 
             <h2 class="text-3xl font-bold text-[#005baa] mb-4  border-[#005baa] w-fit">Specifications</h2>
 
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
+
+                <div class="text-center">
+                    <h3 class="text-2xl font-semibold text-[#005baa] mb-4 md:mt-4 border-[#005baa] w-fit">Dimensional
+                        drawing</h3>
+                    <img src="/images/bfrbf-4.webp" alt="PXK Sludge Distribution" class="w-full h-auto rounded shadow">
+                </div>
+
+
+                <div class="text-center">
+                    <h3 class="text-2xl font-semibold text-[#005baa] mb-4 md:mt-4 border-[#005baa] w-fit">Dimension
+                        table</h3>
+                    <img src="/images/bfrbf-5.webp" alt="PXH Sludge Distribution" class="w-full h-auto rounded shadow">
+                </div>
+            </div>
+
+            <h3 class="text-2xl font-semibold text-[#005baa] mb-4 w-fit md:mt-3">Filtration accuracy / Processing flow
+                rate / Model code</h3>
+
+            <div class="text-center">
+                <img src="/images/bfrbf-6.webp" alt="PXH Sludge Distribution" class="w-full h-auto rounded shadow">
+            </div>
+
+            <p class="text-sm text-gray-500 md:mt-2">
+                * The filtration accuracy is based on the results of our experiments, and does not imply that this level
+                of accuracy is guaranteed.
+            </p>
 
             <h3 class="text-2xl font-semibold text-[#005baa] mb-4 md:mt-4 border-[#005baa] w-fit">Product weight</h3>
             <ul class="list-disc list-inside text-gray-800 space-y-2 mb-2 md:mt-3 text-base md:text-sm">
-                <li>SW-A　1.5kg</li>
-                <li>SW-B　2.0kg</li>
-                <li>SW-C　2.8kg</li> <br> <br>
-                <li>MSW-A　0.3kg</li>
-                <li>MSW-B　0.5kg</li>
-                <li>MSW-C　0.8kg</li> <br> <br>
-                <li>PL0808　0.5kg</li>
-                <li>PL1010　0.8kg</li>
-                <li>PL1520　2.2kg</li>
-                <li>PL2025　3.7kg</li>
-                <li>PL2030　4.5kg</li>
+                <li>RBF-1　25kg</li>
+                <li>RBF-2　32kg</li>
             </ul>
+            <p class="text-sm text-gray-500">
+                * The product weight varies depending on the specifications, options, etc.
+            </p>
 
             <h3 class="text-2xl font-semibold text-[#005baa] mb-4 md:mt-4 border-[#005baa] w-fit">Paint color</h3>
-            <ul class="list-disc list-inside text-gray-800 space-y-2 mb-2 md:mt-3 text-base md:text-sm">
-                <li>SW　Silver gray (Munsell No. N-8.0)</li>
-                <li>MSW　Silver gray (Munsell No. N-8.0)</li>
-                <li>PL　Silver gray (Munsell No. N-8.0)</li>
-            </ul>
+            <p class="text-gray-800 space-y-2 mb-2 md:mt-6 text-base md:text-lg">Silver gray (Munsell No. N-8.0)</p>
             <p class="text-sm text-gray-500">
                 * For information about the specified color, please consult us.
             </p>
@@ -305,51 +321,27 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 
                 <div class="text-center">
-                    <img src="images/msmp-5.webp" alt="PXK Sludge Distribution" class="w-full h-auto rounded shadow">
-                    <h3 class="font-bold mb-2">SW</h3>
+                    <img src="/images/bfrbf-7.webp" alt="PXK Sludge Distribution" class="w-full h-auto rounded shadow">
+                    <h3 class="font-bold mb-2">Main body</h3>
                 </div>
 
                 <div class="text-center">
-                    <img src="images/msmp-6.webp" alt="PXH Sludge Distribution" class="w-full h-auto rounded shadow">
-                    <h3 class="font-bold mb-2">MSW</h3>
+                    <img src="/images/bfrbf-8.webp" alt="PXH Sludge Distribution" class="w-full h-auto rounded shadow">
+                    <h3 class="font-bold mb-2">Basket section</h3>
                 </div>
 
                 <div class="text-center">
-                    <img src="images/msmp-7.webp" alt="PXN Sludge Distribution" class="w-full h-auto rounded shadow">
-                    <h3 class="font-bold mb-2">PL</h3>
+                    <img src="/images/bfrbf-9.webp" alt="PXN Sludge Distribution" class="w-full h-auto rounded shadow">
+                    <h3 class="font-bold mb-2">Unit</h3>
                 </div>
 			</div>
-        </div>
-    </section>
-    
-    <section class="bg-white py-12 px-4">
-        <div class="max-w-6xl mx-auto">
-
-            <h2 class="text-3xl font-bold text-[#005baa] mb-4  border-[#005baa] w-fit">Chip (sludge) recovery image</h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                
-                <div class="text-center">
-                    <img src="images/msmp-8.webp" alt="PXK Sludge Distribution" class="w-full h-auto rounded shadow">
-                    <h3 class="font-bold mb-2">SW・MSW</h3>
-                </div>
-
-                <div class="text-center">
-                    <img src="images/msmp-9.webp" alt="PXH Sludge Distribution" class="w-full h-auto rounded shadow">
-                    <h3 class="font-bold mb-2">SW・MSW</h3>
-                </div>
-
-                <div class="text-center">
-                    <img src="images/msmp-10.webp" alt="PXN Sludge Distribution" class="w-full h-auto rounded shadow">
-                    <h3 class="font-bold mb-2">PL</h3>
-                </div>
-			</div>
-            <p class="text-sm text-gray-500 md:mt-3">
-                * Photos are product images for illustration purposes only. Specifications differ from the actual product.
-            </p>
             <hr>
             <p class="text-sm text-gray-500 md:mt-3">
+                * The filtration accuracy is based on the results of our experiments, and does not imply that this level
+                of accuracy is guaranteed. <br>
                 * The specifications and dimensions are subject to change without notice. <br>
+                * When the oil viscosity exceeds 50 mm 2/s, please consult us. <br>
+                * For details on how to select the supply pump, please contact us. <br>
                 * For information about custom products other than standard products, please consult us.
             </p>
 
@@ -364,10 +356,10 @@
             <div>
                 <h4 class="text-lg font-semibold text-[#00aeef] mb-4">Quick Links</h4>
                 <div class="space-y-2">
-                    <a href="index.html" class="block hover:text-[#00aeef] transition">Home</a>
-                    <a href="about-us.html" class="block hover:text-[#00aeef] transition">About</a>
-                    <a href="product-page.html" class="block hover:text-[#00aeef] transition">Products</a>
-                    <a href="contact.html" class="block hover:text-[#00aeef] transition">Contact</a>
+                    <a href="/index.html" class="block hover:text-[#00aeef] transition">Home</a>
+                    <a href="/about-us.html" class="block hover:text-[#00aeef] transition">About</a>
+                    <a href="/product-page.html" class="block hover:text-[#00aeef] transition">Products</a>
+                    <a href="/contact.html" class="block hover:text-[#00aeef] transition">Contact</a>
                 </div>
             </div>
 
