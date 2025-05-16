@@ -23,12 +23,12 @@
 
       <!-- Desktop Navigation -->
       <nav class="hidden md:flex space-x-6 text-sm font-medium items-center">
-        <a href="index.html" class="hover:text-yellow-300">Home</a>
-        <a href="about-us.html" class="hover:text-yellow-300">About</a>
+        <a href="index.html" class="hover:scale-110">Home</a>
+        <a href="about-us.html" class="hover:scale-110">About</a>
 
         <!-- Products Hover Dropdown -->
         <div class="relative group" id="products-dropdown">
-          <a href="product-page.html"><span class="hover:text-yellow-300 flex items-center gap-1 cursor-pointer">
+          <a href="product-page.html"><span class="hover:scale-110 flex items-center gap-1 cursor-pointer">
               Products
               <svg class="w-4 h-4 mt-[1px]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -43,16 +43,16 @@
           </div>
         </div>
 
-        <a href="gallery.html" class="hover:text-yellow-300">Gallery</a>
-        <a href="all-customers.html" class="hover:text-yellow-300">List of Customers</a>
-        <a href="#collaboration" class="hover:text-yellow-300">Collaboration</a>
-        <a href="contact.html" class="hover:text-yellow-300">Contact</a>
+        <a href="gallery.html" class="hover:scale-110">Gallery</a>
+        <a href="all-customers.html" class="hover:scale-110">List of Customers</a>
+        <a href="#collaboration" class="hover:scale-110">Collaboration</a>
+        <a href="contact.html" class="hover:scale-110">Contact</a>
       </nav>
 
       <!-- CTA Button -->
-      <a href="#contact"
-        class="hidden md:inline-block bg-white text-[#005baa] px-4 py-2 rounded hover:bg-yellow-300 transition">Enquire
-        Now</a>
+      <a href="/contact.html"
+                class="hidden md:inline-block bg-white text-[#005baa] px-4 py-2 rounded hover:bg-[#003c70] hover:text-white transition">Enquire
+                Now</a>
 
       <!-- Mobile Menu Button -->
       <button id="menu-toggle" class="md:hidden focus:outline-none">
@@ -64,24 +64,24 @@
 
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2">
-      <a href="index.html" class="block py-2 hover:text-yellow-300">Home</a>
-      <a href="about-us.html" class="block py-2 hover:text-yellow-300">About</a>
+      <a href="index.html" class="block py-2 hover:scale-110">Home</a>
+      <a href="about-us.html" class="block py-2 hover:scale-110">About</a>
 
       <!-- Mobile Dropdown -->
       <div>
         <button onclick="document.getElementById('mobile-products').classList.toggle('hidden')"
-          class="block py-2 w-full text-left hover:text-yellow-300">Products</button>
+          class="block py-2 w-full text-left hover:scale-110">Products</button>
         <div id="mobile-products" class="hidden pl-4">
-          <a href="apson-products.html" class="block py-1 hover:text-yellow-300">Apson</a>
-          <a href="bunri-products.html" class="block py-1 hover:text-yellow-300">Bunri</a>
-          <a href="nikuni-products.html" class="block py-1 hover:text-yellow-300">Nikuni</a>
+          <a href="apson-products.html" class="block py-1 hover:scale-110">Apson</a>
+          <a href="bunri-products.html" class="block py-1 hover:scale-110">Bunri</a>
+          <a href="nikuni-products.html" class="block py-1 hover:scale-110">Nikuni</a>
         </div>
       </div>
 
-      <a href="gallery.html" class="block py-2 hover:text-yellow-300">Gallery</a>
-      <a href="all-customers.html" class="block py-2 hover:text-yellow-300">List of Customers</a>
-      <a href="#collaboration" class="block py-2 hover:text-yellow-300">Collaboration</a>
-      <a href="contact.html" class="block py-2 hover:text-yellow-300">Contact</a>
+      <a href="gallery.html" class="block py-2 hover:scale-110">Gallery</a>
+      <a href="all-customers.html" class="block py-2 hover:scale-110">List of Customers</a>
+      <a href="#collaboration" class="block py-2 hover:scale-110">Collaboration</a>
+      <a href="contact.html" class="block py-2 hover:scale-110">Contact</a>
     </div>
   </header>
 
@@ -95,56 +95,56 @@
     <div class="flex items-center justify-between mb-6">
       <h2 class="text-2xl font-medium text-[#005baa]">APSON's Products</h2>
       <a href="apson-products.html"
-        class="text-white bg-[#005baa] px-5 py-2 rounded hover:bg-orange-600 transition">View All</a>
+        class="text-white bg-[#005baa] px-5 py-2 rounded hover:bg-[#003c70] transition">View All</a>
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
 
       <!-- Clickable Product Card -->
       <a href="product.html?id=hydraulic-power-pack"
         class="block border rounded-lg shadow hover:shadow-md transition p-4 text-center hover:scale-[1.02] duration-300">
-        <img src="images/product-1.jpg" alt="Product 1" class="w-full h-40 object-cover mb-4 rounded" />
+        <img src="images/product-1.jpg" alt="Product 1" class="w-full h-40 object-contain mb-4 rounded" />
         <h3 class="font-semibold text-lg mb-1">Product Title 1</h3>
         <p class="text-sm text-gray-600">Short description of the product.</p>
       </a>
       <a href="product.html?id=cooling-tower"
         class="block border rounded-lg shadow hover:shadow-md transition p-4 text-center hover:scale-[1.02] duration-300">
-        <img src="images/product-2.jpg" alt="Product 2" class="w-full h-40 object-cover mb-4 rounded" />
+        <img src="images/product-2.jpg" alt="Product 2" class="w-full h-40 object-contain mb-4 rounded" />
         <h3 class="font-semibold text-lg mb-1">Product Title 2</h3>
         <p class="text-sm text-gray-600">Short description of the product.</p>
       </a>
       <a href="product2.html"
         class="block border rounded-lg shadow hover:shadow-md transition p-4 text-center hover:scale-[1.02] duration-300">
-        <img src="images/product-3.jpg" alt="Product 2" class="w-full h-40 object-cover mb-4 rounded" />
+        <img src="images/product-3.jpg" alt="Product 2" class="w-full h-40 object-contain mb-4 rounded" />
         <h3 class="font-semibold text-lg mb-1">Product Title 2</h3>
         <p class="text-sm text-gray-600">Short description of the product.</p>
       </a>
       <a href="product2.html"
         class="block border rounded-lg shadow hover:shadow-md transition p-4 text-center hover:scale-[1.02] duration-300">
-        <img src="images/product-4.jpg" alt="Product 2" class="w-full h-40 object-cover mb-4 rounded" />
+        <img src="images/product-4.jpg" alt="Product 2" class="w-full h-40 object-contain mb-4 rounded" />
         <h3 class="font-semibold text-lg mb-1">Product Title 2</h3>
         <p class="text-sm text-gray-600">Short description of the product.</p>
       </a>
       <a href="product2.html"
         class="block border rounded-lg shadow hover:shadow-md transition p-4 text-center hover:scale-[1.02] duration-300">
-        <img src="images/product-5.jpg" alt="Product 2" class="w-full h-40 object-cover mb-4 rounded" />
+        <img src="images/product-5.jpg" alt="Product 2" class="w-full h-40 object-contain mb-4 rounded" />
         <h3 class="font-semibold text-lg mb-1">Product Title 2</h3>
         <p class="text-sm text-gray-600">Short description of the product.</p>
       </a>
       <a href="product2.html"
         class="block border rounded-lg shadow hover:shadow-md transition p-4 text-center hover:scale-[1.02] duration-300">
-        <img src="images/product-6.jpg" alt="Product 2" class="w-full h-40 object-cover mb-4 rounded" />
+        <img src="images/product-6.jpg" alt="Product 2" class="w-full h-40 object-contain mb-4 rounded" />
         <h3 class="font-semibold text-lg mb-1">Product Title 2</h3>
         <p class="text-sm text-gray-600">Short description of the product.</p>
       </a>
       <a href="product2.html"
         class="block border rounded-lg shadow hover:shadow-md transition p-4 text-center hover:scale-[1.02] duration-300">
-        <img src="images/product-7.jpg" alt="Product 2" class="w-full h-40 object-cover mb-4 rounded" />
+        <img src="images/product-7.jpg" alt="Product 2" class="w-full h-40 object-contain mb-4 rounded" />
         <h3 class="font-semibold text-lg mb-1">Product Title 2</h3>
         <p class="text-sm text-gray-600">Short description of the product.</p>
       </a>
       <a href="product2.html"
         class="block border rounded-lg shadow hover:shadow-md transition p-4 text-center hover:scale-[1.02] duration-300">
-        <img src="images/product-8.jpg" alt="Product 2" class="w-full h-40 object-cover mb-4 rounded" />
+        <img src="images/product-8.jpg" alt="Product 2" class="w-full h-40 object-contain mb-4 rounded" />
         <h3 class="font-semibold text-lg mb-1">Product Title 2</h3>
         <p class="text-sm text-gray-600">Short description of the product.</p>
       </a>
@@ -156,50 +156,50 @@
     <div class="flex items-center justify-between mb-6">
       <h2 class="text-2xl font-medium text-[#005baa]">BUNRI's Products</h2>
       <a href="bunri-products.html"
-        class="text-white bg-[#005baa] px-5 py-2 rounded hover:bg-orange-600 transition">View All</a>
+        class="text-white bg-[#005baa] px-5 py-2 rounded hover:bg-[#003c70] transition">View All</a>
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
 
       <!-- Clickable Product Card -->
       <a href="/bunri products/bunri-product-1.html"
         class="block border rounded-lg shadow hover:shadow-md transition p-4 text-center hover:scale-[1.02] duration-300">
-        <img src="images/MSP-1.webp" alt="Bunri Product 1" class="w-full h-40 object-cover mb-4 rounded" />
+        <img src="images/MSP-1.webp" alt="Bunri Product 1" class="w-full h-40 object-contain mb-4 rounded" />
         <h3 class="font-semibold text-lg mb-1">Magnetic Separator Phoenix NEO</h3>
         <!-- <p class="text-sm text-gray-600">Short description of the product.</p> -->
       </a>
       <a href="/bunri products/bunri-product-2.html"
         class="block border rounded-lg shadow hover:shadow-md transition p-4 text-center hover:scale-[1.02] duration-300">
-        <img src="images/mdc-1.webp" alt="Bunri Product 2" class="w-full h-40 object-cover mb-4 rounded" />
+        <img src="images/mdc-1.webp" alt="Bunri Product 2" class="w-full h-40 object-contain mb-4 rounded" />
         <h3 class="font-semibold text-lg mb-1">Magnetic Drum Conveyor</h3>
       </a>
       <a href="/bunri products/bunri-product-3.html"
         class="block border rounded-lg shadow hover:shadow-md transition p-4 text-center hover:scale-[1.02] duration-300">
-        <img src="images/mfc-1.webp" alt="Bunri Product 2" class="w-full h-40 object-cover mb-4 rounded" />
+        <img src="images/mfc-1.webp" alt="Bunri Product 2" class="w-full h-40 object-contain mb-4 rounded" />
         <h3 class="font-semibold text-lg mb-1">Microfiltration filter conveyor BAL</h3>
       </a>
       <a href="/bunri products/bunri-product-4.html"
         class="block border rounded-lg shadow hover:shadow-md transition p-4 text-center hover:scale-[1.02] duration-300">
-        <img src="images/rfcal-1.webp" alt="Bunri Product 2" class="w-full h-40 object-cover mb-4 rounded" />
+        <img src="images/rfcal-1.webp" alt="Bunri Product 2" class="w-full h-40 object-contain mb-4 rounded" />
         <h3 class="font-semibold text-lg mb-1">Rolling Filter Conveyor AL/ALL/SKA</h3>
       </a>
       <a href="/bunri products/bunri-product-5.html"
         class="block border rounded-lg shadow hover:shadow-md transition p-4 text-center hover:scale-[1.02] duration-300">
-        <img src="images/rfcsal-1.webp" alt="Bunri Product 2" class="w-full h-40 object-cover mb-4 rounded" />
+        <img src="images/rfcsal-1.webp" alt="Bunri Product 2" class="w-full h-40 object-contain mb-4 rounded" />
         <h3 class="font-semibold text-lg mb-1">Rolling Filter Conveyor SAL</h3>
       </a>
       <a href="/bunri products/bunri-product-6.html"
         class="block border rounded-lg shadow hover:shadow-md transition p-4 text-center hover:scale-[1.02] duration-300">
-        <img src="images/rfcmal-1.webp" alt="Bunri Product 2" class="w-full h-40 object-cover mb-4 rounded" />
+        <img src="images/rfcmal-1.webp" alt="Bunri Product 2" class="w-full h-40 object-contain mb-4 rounded" />
         <h3 class="font-semibold text-lg mb-1">Rolling Filter Conveyor MAL</h3>
       </a>
       <a href="/bunri products/bunri-product-7.html"
         class="block border rounded-lg shadow hover:shadow-md transition p-4 text-center hover:scale-[1.02] duration-300">
-        <img src="images/upfcs-1.webp" alt="Bunri Product 2" class="w-full h-40 object-cover mb-4 rounded" />
+        <img src="images/upfcs-1.webp" alt="Bunri Product 2" class="w-full h-40 object-contain mb-4 rounded" />
         <h3 class="font-semibold text-lg mb-1">Ultra-precision Filtration Coolant System</h3>
       </a>
       <a href="/bunri products/bunri-product-8.html"
         class="block border rounded-lg shadow hover:shadow-md transition p-4 text-center hover:scale-[1.02] duration-300">
-        <img src="images/cbs-1.webp" alt="Bunri Product 2" class="w-full h-40 object-cover mb-4 rounded" />
+        <img src="images/cbs-1.webp" alt="Bunri Product 2" class="w-full h-40 object-contain mb-4 rounded" />
         <h3 class="font-semibold text-lg mb-1">Chain Bucket Skimmer CBP・CBS</h3>
       </a>
       <!-- Add more cards as needed -->
@@ -211,60 +211,33 @@
     <div class="flex items-center justify-between mb-6">
       <h2 class="text-2xl font-medium text-[#005baa]">NIKUNI's Products</h2>
       <a href="nikuni-products.html"
-        class="text-white bg-[#005baa] px-5 py-2 rounded hover:bg-orange-600 transition">View All</a>
+        class="text-white bg-[#005baa] px-5 py-2 rounded hover:bg-[#003c70] transition">View All</a>
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
 
       <!-- Clickable Product Card -->
-      <a href="bunri-product1.html"
+      <a href="nikuni products/filtrastion products/nikuni-product-1.html"
         class="block border rounded-lg shadow hover:shadow-md transition p-4 text-center hover:scale-[1.02] duration-300">
-        <img src="images/bunri-1.webp" alt="Bunri Product 1" class="w-full h-40 object-cover mb-4 rounded" />
-        <h3 class="font-semibold text-lg mb-1">BUNRI Product 1</h3>
-        <p class="text-sm text-gray-600">Short description of the product.</p>
+        <img src="images/vdf-1.jpg" alt="Bunri Product 1" class="w-full h-40 object-contain mb-4 rounded" />
+        <h3 class="font-semibold text-lg mb-1">Vortex Dynamic Filter</h3>
+      </a>
+      <a href="nikuni products/filtrastion products/nikuni-product-2.html"
+        class="block border rounded-lg shadow hover:shadow-md transition p-4 text-center hover:scale-[1.02] duration-300">
+        <img src="images/dpv-1.jpg" alt="Bunri Product 2" class="w-full h-40 object-contain mb-4 rounded" />
+        <h3 class="font-semibold text-lg mb-1">Special Drump-pod for Fine Sludge wih VDF (DPV)</h3>
       </a>
       <a href="bunri-product2.html"
         class="block border rounded-lg shadow hover:shadow-md transition p-4 text-center hover:scale-[1.02] duration-300">
-        <img src="images/bunri-2.webp" alt="Bunri Product 2" class="w-full h-40 object-cover mb-4 rounded" />
+        <img src="images/bunri-3.webp" alt="Bunri Product 2" class="w-full h-40 object-contain mb-4 rounded" />
         <h3 class="font-semibold text-lg mb-1">BUNRI Product 2</h3>
         <p class="text-sm text-gray-600">Short description of the product.</p>
       </a>
       <a href="bunri-product2.html"
         class="block border rounded-lg shadow hover:shadow-md transition p-4 text-center hover:scale-[1.02] duration-300">
-        <img src="images/bunri-3.webp" alt="Bunri Product 2" class="w-full h-40 object-cover mb-4 rounded" />
+        <img src="images/bunri-4.webp" alt="Bunri Product 2" class="w-full h-40 object-contain mb-4 rounded" />
         <h3 class="font-semibold text-lg mb-1">BUNRI Product 2</h3>
         <p class="text-sm text-gray-600">Short description of the product.</p>
       </a>
-      <a href="bunri-product2.html"
-        class="block border rounded-lg shadow hover:shadow-md transition p-4 text-center hover:scale-[1.02] duration-300">
-        <img src="images/bunri-4.webp" alt="Bunri Product 2" class="w-full h-40 object-cover mb-4 rounded" />
-        <h3 class="font-semibold text-lg mb-1">BUNRI Product 2</h3>
-        <p class="text-sm text-gray-600">Short description of the product.</p>
-      </a>
-      <a href="bunri-product2.html"
-        class="block border rounded-lg shadow hover:shadow-md transition p-4 text-center hover:scale-[1.02] duration-300">
-        <img src="images/bunri-5.webp" alt="Bunri Product 2" class="w-full h-40 object-cover mb-4 rounded" />
-        <h3 class="font-semibold text-lg mb-1">BUNRI Product 2</h3>
-        <p class="text-sm text-gray-600">Short description of the product.</p>
-      </a>
-      <a href="bunri-product2.html"
-        class="block border rounded-lg shadow hover:shadow-md transition p-4 text-center hover:scale-[1.02] duration-300">
-        <img src="images/bunri-6.webp" alt="Bunri Product 2" class="w-full h-40 object-cover mb-4 rounded" />
-        <h3 class="font-semibold text-lg mb-1">BUNRI Product 2</h3>
-        <p class="text-sm text-gray-600">Short description of the product.</p>
-      </a>
-      <a href="bunri-product2.html"
-        class="block border rounded-lg shadow hover:shadow-md transition p-4 text-center hover:scale-[1.02] duration-300">
-        <img src="images/bunri-7.webp" alt="Bunri Product 2" class="w-full h-40 object-cover mb-4 rounded" />
-        <h3 class="font-semibold text-lg mb-1">BUNRI Product 2</h3>
-        <p class="text-sm text-gray-600">Short description of the product.</p>
-      </a>
-      <a href="bunri-product2.html"
-        class="block border rounded-lg shadow hover:shadow-md transition p-4 text-center hover:scale-[1.02] duration-300">
-        <img src="images/bunri-8.webp" alt="Bunri Product 2" class="w-full h-40 object-cover mb-4 rounded" />
-        <h3 class="font-semibold text-lg mb-1">BUNRI Product 2</h3>
-        <p class="text-sm text-gray-600">Short description of the product.</p>
-      </a>
-      <!-- Add more cards as needed -->
     </div>
   </section>
 
@@ -274,37 +247,37 @@
 
       <!-- Quick Links -->
       <div>
-        <h4 class="text-lg font-semibold text-[#00aeef] mb-4">Quick Links</h4>
+        <h4 class="text-lg font-semibold text-[#005baa] mb-4">Quick Links</h4>
         <div class="space-y-2">
-          <a href="index.html" class="block hover:text-[#00aeef] transition">Home</a>
-          <a href="about-us.html" class="block hover:text-[#00aeef] transition">About</a>
-          <a href="product-page.html" class="block hover:text-[#00aeef] transition">Products</a>
-          <a href="contact.html" class="block hover:text-[#00aeef] transition">Contact</a>
+          <a href="index.html" class="block hover:text-[#005baa] transition">Home</a>
+          <a href="about-us.html" class="block hover:text-[#005baa] transition">About</a>
+          <a href="product-page.html" class="block hover:text-[#005baa] transition">Products</a>
+          <a href="contact.html" class="block hover:text-[#005baa] transition">Contact</a>
         </div>
       </div>
 
       <!-- Address -->
       <div>
-        <h4 class="text-lg font-semibold text-[#00aeef] mb-2">Corporate office</h4>
-        <p class="text-gray-700 leading-relaxed">
-          Plot No -21, Gazipur Industrial Area,<br>
-          Sukhli Nehar, Sohna Road, Gazipur, Nit,<br>
-          Faridabad, Haryana, India 121005
-        </p>
-
-        <h4 class="text-lg font-semibold text-[#00aeef] mt-4 mb-2">Manufacturing</h4>
+        <h4 class="text-lg font-semibold text-[#005baa] mb-2">Corporate office</h4>
         <p class="text-gray-700 leading-relaxed">
           SB-R/1L/04/025 & 026A, 1ST FLOOR<br>
           M3M URBANA SECTOR-67 <br>
           GURGAON-122102 <br>
           Tel No. 0124-4966065
         </p>
+
+        <h4 class="text-lg font-semibold text-[#005baa] mt-4 mb-2">Manufacturing</h4>
+        <p class="text-gray-700 leading-relaxed">
+          Plot No -21, Gazipur Industrial Area,<br>
+          Sukhli Nehar, Sohna Road, Gazipur, Nit,<br>
+          Faridabad, Haryana, India 121005
+          </p>
       </div>
     </div>
 
     <!-- Social & Copyright -->
     <div class="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between text-sm">
-      <div class="flex gap-4 mb-4 md:mb-0 text-[#00aeef]">
+      <div class="flex gap-4 mb-4 md:mb-0 text-[#005baa]">
         <a href="#" class="hover:text-blue-600 transition" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
         <a href="#" class="hover:text-blue-400 transition" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
         <a href="#" class="hover:text-pink-500 transition" aria-label="Instagram"><i class="fab fa-instagram"></i></a>

@@ -7,10 +7,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function changeSlide(index) {
     slides.forEach(slide => slide.classList.remove('active'));
-    dots.forEach(dot => dot.classList.remove('opacity-100', 'bg-yellow-500'));
+    dots.forEach(dot => dot.classList.remove('opacity-100', 'bg-[#005baa]'));
 
     slides[index].classList.add('active');
-    dots[index].classList.add('opacity-100', 'bg-yellow-500');
+    dots[index].classList.add('opacity-100', 'bg-[#005baa]');
   }
 
   dots.forEach((dot, index) => {
