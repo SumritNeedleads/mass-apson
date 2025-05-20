@@ -4,7 +4,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Our Products | Apson Engineers</title>
   <link rel="icon" href="images/favicon.png" type="image/x-icon" />
   <script src="https://cdn.tailwindcss.com"></script>
@@ -51,8 +51,8 @@
 
       <!-- CTA Button -->
       <a href="/contact.html"
-                class="hidden md:inline-block bg-white text-[#005baa] px-4 py-2 rounded hover:bg-[#003c70] hover:text-white transition">Enquire
-                Now</a>
+        class="hidden md:inline-block bg-white text-[#005baa] px-4 py-2 rounded hover:bg-[#003c70] hover:text-white transition">Enquire
+        Now</a>
 
       <!-- Mobile Menu Button -->
       <button id="menu-toggle" class="md:hidden focus:outline-none">
@@ -94,8 +94,8 @@
   <section class="max-w-7xl mx-auto py-12 px-4">
     <div class="flex items-center justify-between mb-6">
       <h2 class="text-2xl font-medium text-[#005baa]">APSON's Products</h2>
-      <a href="apson-products.html"
-        class="text-white bg-[#005baa] px-5 py-2 rounded hover:bg-[#003c70] transition">View All</a>
+      <a href="apson-products.html" class="text-white bg-[#005baa] px-5 py-2 rounded hover:bg-[#003c70] transition">View
+        All</a>
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
 
@@ -155,8 +155,8 @@
   <section class="max-w-7xl mx-auto py-12 px-4">
     <div class="flex items-center justify-between mb-6">
       <h2 class="text-2xl font-medium text-[#005baa]">BUNRI's Products</h2>
-      <a href="bunri-products.html"
-        class="text-white bg-[#005baa] px-5 py-2 rounded hover:bg-[#003c70] transition">View All</a>
+      <a href="bunri-products.html" class="text-white bg-[#005baa] px-5 py-2 rounded hover:bg-[#003c70] transition">View
+        All</a>
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
 
@@ -241,9 +241,64 @@
     </div>
   </section>
 
+  <!-- Get in Touch Form Section -->
+  <section class="py-16 px-6">
+    <div class="max-w-7xl mx-auto">
+
+      <!-- Heading -->
+      <div class="mb-8">
+        <h2 class="text-4xl font-bold">
+          <span class="text-black">Get</span>
+          <span class="text-[#005baa]">in Touch</span>
+        </h2>
+      </div>
+
+      <!-- Form -->
+      <form id="productContactForm" class="flex flex-col lg:flex-row items-center gap-4 flex-wrap">
+
+        <!-- Name -->
+        <input type="text" required placeholder="YOUR NAME"
+          class="flex-1 min-w-[240px] border border-gray-300 rounded-full px-6 py-3 text-gray-600 focus:outline-none focus:ring-2 focus:ring-[#005baa]" />
+
+        <!-- Email -->
+        <input type="email" required placeholder="YOUR BUSINESS EMAIL"
+          class="flex-1 min-w-[240px] border border-gray-300 rounded-full px-6 py-3 text-gray-600 focus:outline-none focus:ring-2 focus:ring-[#005baa]" />
+
+        <!-- Phone -->
+        <input type="tel" required maxlength="10" pattern="\d{10}" inputmode="numeric" placeholder="YOUR PHONE"
+          class="flex-1 min-w-[240px] border border-gray-300 rounded-full px-6 py-3 text-gray-600 focus:outline-none focus:ring-2 focus:ring-[#005baa]" />
+
+        <!-- Submit Button -->
+        <button type="submit"
+          class="flex items-center gap-2 bg-[#005baa] text-white font-semibold px-8 py-3 rounded-full hover:bg-gray-800 transition">
+          GET STARTED
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-white" viewBox="0 0 24 24">
+            <path
+              d="M20 4H4a2 2 0 00-2 2v12c0 1.104.896 2 2 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 2v.511L12 13 4 6.511V6h16zM4 18v-9.367l7.445 6.642a1 1 0 001.11 0L20 8.633V18H4z" />
+          </svg>
+        </button>
+      </form>
+
+      <!-- Acknowledgment message -->
+      <p id="productAck" class="mt-4 text-green-600 font-semibold hidden">Thanks! We'll contact you shortly.</p>
+
+    </div>
+  </section>
+
   <!-- Footer Section -->
   <footer class="bg-white text-gray-800 pt-12 shadow-md border-t border-gray-200">
-    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10 border-b border-gray-300 pb-8">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10 border-b border-gray-300 pb-8">
+
+      <!-- Company logo and content -->
+      <div>
+        <a href="index.html"><img src="images/logo.png" alt="Company Logo" class="w-32 mb-4"></a>
+
+        <p class="text-gray-700">
+          Mass Apson is a young & dynamic technology solution provider which deals in Coolant tanks, Conveyors, magnetic
+          separator, paper filter, Hyd Power pack etc. Founded in 2013 with state-of-the-art manufacturing facility in
+          Faridabad, Haryana.
+        </p>
+      </div>
 
       <!-- Quick Links -->
       <div>
@@ -260,6 +315,7 @@
       <div>
         <h4 class="text-lg font-semibold text-[#005baa] mb-2">Corporate office</h4>
         <p class="text-gray-700 leading-relaxed">
+          <b>GURGAON</b> <br>
           SB-R/1L/04/025 & 026A, 1ST FLOOR<br>
           M3M URBANA SECTOR-67 <br>
           GURGAON-122102 <br>
@@ -268,26 +324,32 @@
 
         <h4 class="text-lg font-semibold text-[#005baa] mt-4 mb-2">Manufacturing</h4>
         <p class="text-gray-700 leading-relaxed">
+          <b>Faridabad</b> <br>
           Plot No -21, Gazipur Industrial Area,<br>
           Sukhli Nehar, Sohna Road, Gazipur, Nit,<br>
           Faridabad, Haryana, India 121005
-          </p>
+        </p>
       </div>
     </div>
 
     <!-- Social & Copyright -->
-    <div class="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between text-sm">
+    <div class="width-full px-52 py-6 flex flex-col md:flex-row items-center justify-between text-sm bg-[#005baa]">
       <div class="flex gap-4 mb-4 md:mb-0 text-[#005baa]">
-        <a href="#" class="hover:text-blue-600 transition" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="hover:text-blue-400 transition" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-        <a href="#" class="hover:text-pink-500 transition" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" class="hover:text-red-600 transition" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-        <a href="#" class="hover:text-blue-700 transition" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="hover:text-blue-600 transition text-white" aria-label="Facebook"><i
+            class="fab fa-facebook-f"></i></a>
+        <a href="#" class="hover:text-blue-400 transition text-white" aria-label="Twitter"><i
+            class="fab fa-twitter"></i></a>
+        <a href="#" class="hover:text-pink-500 transition text-white" aria-label="Instagram"><i
+            class="fab fa-instagram"></i></a>
+        <a href="#" class="hover:text-red-600 transition text-white" aria-label="YouTube"><i
+            class="fab fa-youtube"></i></a>
+        <a href="#" class="hover:text-blue-700 transition text-white" aria-label="LinkedIn"><i
+            class="fab fa-linkedin-in"></i></a>
       </div>
-      <div class="text-gray-500 text-center md:text-right">
+      <div class="text-white text-center md:text-right">
         Developed and Designed by
         <a href="https://www.theneedleads.com/" target="_blank"
-          class="font-semibold text-gray-700 hover:text-blue-700 transition">
+          class="font-semibold text-text-white hover:text-blue-700 transition">
           Needleads Technologies</a>.
       </div>
     </div>
@@ -297,10 +359,33 @@
     document.addEventListener("DOMContentLoaded", function () {
       const toggleButton = document.getElementById("menu-toggle");
       const mobileMenu = document.getElementById("mobile-menu");
-  
+
       toggleButton.addEventListener("click", () => {
         mobileMenu.classList.toggle("hidden");
       });
+    });
+  </script>
+
+  <script>
+    document.getElementById('productContactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      // Show acknowledgment
+      document.getElementById('productAck').classList.remove('hidden');
+
+      // Reset form
+      this.reset();
+
+      // Hide message after 5 seconds
+      setTimeout(() => {
+        document.getElementById('productAck').classList.add('hidden');
+      }, 5000);
+    });
+
+    // Allow only digits in phone input
+    const phoneInput = document.querySelector('input[type="tel"]');
+    phoneInput.addEventListener('input', function () {
+      this.value = this.value.replace(/\D/g, '').slice(0, 10);
     });
   </script>
 

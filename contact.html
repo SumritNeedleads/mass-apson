@@ -166,7 +166,10 @@
       <!-- Google Map -->
       <div class="map flex flex-col gap-[110px]">
         <div class="rounded-2xl overflow-hidden shadow-lg h-[400px] flex">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1755.3822829944486!2d77.2622159552423!3d28.365966695469776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cdf02ecc02765%3A0xa715d4fd77758a1a!2sAPSON%20ENGINEERS!5e0!3m2!1sen!2sin!4v1747394944314!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1755.3822829944486!2d77.2622159552423!3d28.365966695469776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cdf02ecc02765%3A0xa715d4fd77758a1a!2sAPSON%20ENGINEERS!5e0!3m2!1sen!2sin!4v1747394944314!5m2!1sen!2sin"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div class="rounded-2xl overflow-hidden shadow-lg h-[400px] flex">
           <iframe
@@ -195,7 +198,7 @@
       </div>
 
       <!-- Contact Form -->
-      <form class="bg-white shadow-xl rounded-2xl p-8 space-y-6 w-full">
+      <form id="contactForm" class="bg-white shadow-xl rounded-2xl p-8 space-y-6 w-full">
 
         <div>
           <label class="block font-semibold mb-2">Please describe your requirements :</label>
@@ -215,15 +218,12 @@
           <div class="flex items-center gap-3">
             <input required type="text" placeholder="Type your city here ..."
               class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#f95702]" />
-            <button type="button"
-              class="bg-[#00aeef] text-white text-xs px-3 py-2 rounded-lg shadow hover:bg-[#008ecc] transition">City Not
-              Found?</button>
           </div>
         </div>
 
         <div>
           <label class="block font-semibold mb-1 text-sm text-red-600">* Phone / Mobile :</label>
-          <input required type="text" placeholder="Your Contact no."
+          <input required type="tel" pattern="\d{10}" maxlength="10" inputmode="numeric" placeholder="Your Contact no."
             class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#f95702]" />
         </div>
 
@@ -238,6 +238,9 @@
           Submit
         </button>
 
+        <!-- Acknowledgment Message (Hidden by default) -->
+        <p id="ackMsg" class="text-green-600 font-semibold hidden">Thank you! Your message has been received.</p>
+
       </form>
     </div>
   </section>
@@ -245,7 +248,18 @@
 
   <!-- Footer Section -->
   <footer class="bg-white text-gray-800 pt-12 shadow-md border-t border-gray-200">
-    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10 border-b border-gray-300 pb-8">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10 border-b border-gray-300 pb-8">
+
+      <!-- Company logo and content -->
+      <div>
+        <a href="index.html"><img src="images/logo.png" alt="Company Logo" class="w-32 mb-4"></a>
+
+        <p class="text-gray-700">
+          Mass Apson is a young & dynamic technology solution provider which deals in Coolant tanks, Conveyors, magnetic
+          separator, paper filter, Hyd Power pack etc. Founded in 2013 with state-of-the-art manufacturing facility in
+          Faridabad, Haryana.
+        </p>
+      </div>
 
       <!-- Quick Links -->
       <div>
@@ -262,6 +276,7 @@
       <div>
         <h4 class="text-lg font-semibold text-[#005baa] mb-2">Corporate office</h4>
         <p class="text-gray-700 leading-relaxed">
+          <b>GURGAON</b> <br>
           SB-R/1L/04/025 & 026A, 1ST FLOOR<br>
           M3M URBANA SECTOR-67 <br>
           GURGAON-122102 <br>
@@ -270,6 +285,7 @@
 
         <h4 class="text-lg font-semibold text-[#005baa] mt-4 mb-2">Manufacturing</h4>
         <p class="text-gray-700 leading-relaxed">
+          <b>Faridabad</b> <br>
           Plot No -21, Gazipur Industrial Area,<br>
           Sukhli Nehar, Sohna Road, Gazipur, Nit,<br>
           Faridabad, Haryana, India 121005
@@ -278,18 +294,23 @@
     </div>
 
     <!-- Social & Copyright -->
-    <div class="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between text-sm">
+    <div class="width-full px-52 py-6 flex flex-col md:flex-row items-center justify-between text-sm bg-[#005baa]">
       <div class="flex gap-4 mb-4 md:mb-0 text-[#005baa]">
-        <a href="#" class="hover:text-blue-600 transition" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="hover:text-blue-400 transition" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-        <a href="#" class="hover:text-pink-500 transition" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" class="hover:text-red-600 transition" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-        <a href="#" class="hover:text-blue-700 transition" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="hover:text-blue-600 transition text-white" aria-label="Facebook"><i
+            class="fab fa-facebook-f"></i></a>
+        <a href="#" class="hover:text-blue-400 transition text-white" aria-label="Twitter"><i
+            class="fab fa-twitter"></i></a>
+        <a href="#" class="hover:text-pink-500 transition text-white" aria-label="Instagram"><i
+            class="fab fa-instagram"></i></a>
+        <a href="#" class="hover:text-red-600 transition text-white" aria-label="YouTube"><i
+            class="fab fa-youtube"></i></a>
+        <a href="#" class="hover:text-blue-700 transition text-white" aria-label="LinkedIn"><i
+            class="fab fa-linkedin-in"></i></a>
       </div>
-      <div class="text-gray-500 text-center md:text-right">
+      <div class="text-white text-center md:text-right">
         Developed and Designed by
         <a href="https://www.theneedleads.com/" target="_blank"
-          class="font-semibold text-gray-700 hover:text-blue-700 transition">
+          class="font-semibold text-text-white hover:text-blue-700 transition">
           Needleads Technologies</a>.
       </div>
     </div>
@@ -303,6 +324,31 @@
       toggleButton.addEventListener("click", () => {
         mobileMenu.classList.toggle("hidden");
       });
+    });
+  </script>
+
+  <!-- JavaScript -->
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      // Optional: Add your form submission logic here (e.g., API call)
+
+      // Show acknowledgment
+      document.getElementById('ackMsg').classList.remove('hidden');
+
+      // Optionally, clear the form
+      this.reset();
+
+      // Hide the message after 5 seconds
+      setTimeout(() => {
+        document.getElementById('ackMsg').classList.add('hidden');
+      }, 5000);
+    });
+
+    // Allow only digits in mobile input
+    document.querySelector('input[type="tel"]').addEventListener('input', function () {
+      this.value = this.value.replace(/\D/g, '').slice(0, 10);
     });
   </script>
 </body>
