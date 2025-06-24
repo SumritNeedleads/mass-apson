@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Semi-Automatic Coolant Filtration System (C-JAGUAR)</title>
+    <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="bg-white text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-[#005baa] text-white sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="/index.html">
+                <img src="/images/logo.png" alt="Apson Engineers Logo" class="h-10 w-auto" />
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-6 text-sm font-medium items-center">
+                <a href="/index.html" class="hover:scale-110">Home</a>
+                <a href="/about-us.html" class="hover:scale-110">About</a>
+
+                <!-- Products Hover Dropdown -->
+                <div class="relative group" id="products-dropdown">
+                    <a href="/product-page.html"><span
+                            class="hover:scale-110 flex items-center gap-1 cursor-pointer">
+                            Products
+                            <svg class="w-4 h-4 mt-[1px]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </span></a>
+                    <div class="absolute left-0 mt-2 w-40 bg-white text-[#005baa] rounded shadow-md py-2 z-40 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
+                        id="dropdown-menu">
+                        <a href="/apson-products.html"
+                            class="block px-4 py-2 hover:bg-[#005baa] hover:text-white">Apson</a>
+                        <a href="/bunri-products.html"
+                            class="block px-4 py-2 hover:bg-[#005baa] hover:text-white">Bunri</a>
+                        <a href="/nikuni-products.html"
+                            class="block px-4 py-2 hover:bg-[#005baa] hover:text-white">Nikuni</a>
+                    </div>
+                </div>
+
+                <a href="/gallery.html" class="hover:scale-110">Gallery</a>
+                <a href="/all-customers.html" class="hover:scale-110">List of Customers</a>
+                <a href="/collaboration.html" class="hover:scale-110">Collaboration</a>
+                <a href="/contact.html" class="hover:scale-110">Contact</a>
+            </nav>
+
+            <!-- CTA Button -->
+            <a href="/contact.html#contact_form"
+                class="hidden md:inline-block bg-white text-[#005baa] px-4 py-2 rounded hover:bg-[#003c70] hover:text-white transition">Enquire
+                Now</a>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-toggle" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2">
+            <a href="/index.html" class="block py-2 hover:scale-110">Home</a>
+            <a href="/about-us.html" class="block py-2 hover:scale-110">About</a>
+
+            <!-- Mobile Dropdown -->
+            <div>
+                <button onclick="document.getElementById('mobile-products').classList.toggle('hidden')"
+                    class="block py-2 w-full text-left hover:scale-110">Products</button>
+                <div id="mobile-products" class="hidden pl-4">
+                    <a href="/apson-products.html" class="block py-1 hover:scale-110">Apson</a>
+                    <a href="/bunri-products.html" class="block py-1 hover:scale-110">Bunri</a>
+                    <a href="/nikuni-products.html" class="block py-1 hover:scale-110">Nikuni</a>
+                </div>
+            </div>
+
+            <a href="/gallery.html" class="block py-2 hover:scale-110">Gallery</a>
+            <a href="/all-customers.html" class="block py-2 hover:scale-110">List of Customers</a>
+            <a href="/collaboration.html" class="block py-2 hover:scale-110">Collaboration</a>
+            <a href="/contact.html" class="block py-2 hover:scale-110">Contact</a>
+        </div>
+    </header>
+
+    <!-- Dynamic Product Detail Section -->
+    <section class="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+        <!-- Product Image -->
+        <div class="flex flex-col items-center mt-40 w-full">
+            <!-- Main Image -->
+            <div class="w-full border rounded overflow-hidden">
+                <img id="main-product-image" src="/images/cj-1.jpg" alt="Main Product"
+                    class="w-full h-[620px] object-contain" />
+            </div>
+
+            <!-- Thumbnails -->
+            <!-- <div class="flex space-x-4 mt-4">
+                <img src="/images/ccat-1.jpg" onclick="changeImage(this)" alt="Thumbnail 1"
+                    class="w-20 h-20 object-cover border-2 border-[#005baa] cursor-pointer hover:opacity-80" />
+                <img src="/images/ccat-2.jpg" onclick="changeImage(this)" alt="Thumbnail 2"
+                    class="w-20 h-20 object-cover border-2 border-[#005baa] cursor-pointer hover:opacity-80" />
+            </div> -->
+        </div>
+
+        <!-- Product Details -->
+        <div>
+            <h1 id="product-title" class="text-3xl md:text-4xl font-bold text-[#005baa] mb-4">Semi-Automatic Coolant
+                Filtration System (C-JAGUAR)</h1>
+
+            <h3 class="text-xl font-bold text-gray-800 mb-3">Applications</h3>
+                <p class="text-gray-700 mb-6">
+                    High efficient filtration system with automatic purge system
+                </p>
+
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Kit Includes:</h3>
+                <p class="text-gray-700 mb-6">
+                    C-Jaguar Stand <br>
+                    Sludge Collection Tank <br>
+                    Nikuni Coolant Pump <br>
+                    Nikuni VDF Cyclone <br>
+                    Sludge Pod <br>
+                    PLC w/ Time Release Valve <br>
+                    Sludge Scraper
+                </p>
+
+        </div>
+    </section>
+
+    <section class="bg-gray-50 py-12 px-4">
+        <div class="max-w-6xl mx-auto">
+            <!-- Section Heading -->
+            <h2 class="text-3xl font-bold text-[#005baa] mb-8 w-fit">Performance</h2>
+
+            <div class="mb-8">
+                <img src="/images/cj-2.jpg" alt="Mechanism Diagram 1" class="w-full rounded-lg shadow-md">
+            </div>
+
+        </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 pt-12 pb-6">
+
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-2xl font-bold text-[#005baa] mb-6 border-b pb-2">Specification Data</h2>
+
+            <div class="">
+                <div class="overflow-x-auto py-4">
+                    <table class="table-auto border-collapse border border-gray-400 text-center text-sm min-w-[1000px]">
+                        <thead>
+                            <tr class="bg-gray-100">
+                                <th class="border border-gray-400 px-4 py-2">C-JAGUAR</th>
+                                <th class="border border-gray-400 px-4 py-2">Capacity L/min (50Hz / 60Hz)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border border-gray-400 px-4 py-2">C-JAGUAR-30LW--5/6</td>
+                                <td class="border border-gray-400 px-4 py-2">26</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border border-gray-400 px-4 py-2">C-JAGUAR-50LW--5/6</td>
+                                <td class="border border-gray-400 px-4 py-2">46</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-400 px-4 py-2">C-JAGUAR-700LW--5/6</td>
+                                <td class="border border-gray-400 px-4 py-2">68</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-400 px-4 py-2">C-JAGUAR-100LW--5/6</td>
+                                <td class="border border-gray-400 px-4 py-2">90</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-400 px-4 py-2">C-JAGUAR-200VL--5/6</td>
+                                <td class="border border-gray-400 px-4 py-2">190</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-400 px-4 py-2">C-JAGUAR-300VL--5/6</td>
+                                <td class="border border-gray-400 px-4 py-2">270</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="my-8">
+                    <img src="/images/cj-3.jpg" alt="Mechanism Diagram 1" class="w-full rounded-lg shadow-md">
+                </div>
+
+            </div>
+    </section>
+
+    <section class="bg-gray-50 pb-12 px-4">
+        <div class="max-w-6xl mx-auto">
+
+            <h2 class="text-3xl font-bold text-[#005baa] mb-4  border-b w-fit">Dimensions</h2>
+
+            <div class="mb-8">
+                <img src="/images/cj-4.jpg" alt="Mechanism Diagram 1" class="w-full rounded-lg shadow-md">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-white text-gray-800 pt-12 shadow-md border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10 border-b border-gray-300 pb-8">
+
+            <!-- Company logo and content -->
+            <div>
+                <a href="/index.html"><img src="/images/logo.png" alt="Company Logo" class="w-32 mb-4"></a>
+                
+                <p class="text-gray-700">
+                    Mass Apson is a young & dynamic technology solution provider which deals in Coolant tanks, Conveyors, magnetic separator, paper filter, Hyd Power pack etc. Founded in 2013 with state-of-the-art manufacturing facility in Faridabad, Haryana.
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="text-lg font-semibold text-[#005baa] mb-4">Quick Links</h4>
+                <div class="space-y-2">
+                    <a href="/index.html" class="block hover:text-[#005baa] transition">Home</a>
+                    <a href="/about-us.html" class="block hover:text-[#005baa] transition">About</a>
+                    <a href="/product-page.html" class="block hover:text-[#005baa] transition">Products</a>
+                    <a href="/contact.html" class="block hover:text-[#005baa] transition">Contact</a>
+                </div>
+            </div>
+
+            <!-- Address -->
+            <div>
+                <h4 class="text-lg font-semibold text-[#005baa] mb-2">Corporate office</h4>
+                <p class="text-gray-700 leading-relaxed">
+                    <b>GURGAON</b> <br>
+                    SB-R/1L/04/025 & 026A, 1ST FLOOR<br>
+                    M3M URBANA SECTOR-67 <br>
+                    GURGAON-122102 <br>
+                    Tel No. 0124-4966065
+                </p>
+
+                <h4 class="text-lg font-semibold text-[#005baa] mt-4 mb-2">Manufacturing</h4>
+                <p class="text-gray-700 leading-relaxed">
+                    <b>Faridabad</b> <br>
+                    Plot No -21, Gazipur Industrial Area,<br>
+                    Sukhli Nehar, Sohna Road, Gazipur, Nit,<br>
+                    Faridabad, Haryana, India 121005
+                </p>
+            </div>
+        </div>
+
+        <!-- Social & Copyright -->
+        <div class="width-full px-52 py-6 flex flex-col md:flex-row items-center justify-between text-sm bg-[#005baa]">
+            <div class="flex gap-4 mb-4 md:mb-0 text-[#005baa]">
+                <a href="#" class="hover:text-blue-600 transition text-white" aria-label="Facebook"><i
+                        class="fab fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-blue-400 transition text-white" aria-label="Twitter"><i
+                        class="fab fa-twitter"></i></a>
+                <a href="#" class="hover:text-pink-500 transition text-white" aria-label="Instagram"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-red-600 transition text-white" aria-label="YouTube"><i
+                        class="fab fa-youtube"></i></a>
+                <a href="#" class="hover:text-blue-700 transition text-white" aria-label="LinkedIn"><i
+                        class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="text-white text-center md:text-right">
+                Developed and Designed by
+                <a href="https://www.theneedleads.com/" target="_blank"
+                    class="font-semibold text-text-white hover:text-blue-700 transition">
+                    Needleads Technologies</a>.
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/product-data.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
+
+        const product = productData[productId];
+
+        if (product) {
+            document.getElementById('product-title').innerText = product.title;
+            document.getElementById('price').innerText = product.price;
+            document.getElementById('unitMeasure').innerText = product.unitMeasure;
+            document.getElementById('unitPrice').innerText = product.unitPrice;
+
+            // Set main image
+            document.getElementById('main-image').innerHTML = `
+        <img src="${product.mainImage}" alt="${product.title}" class="w-full object-cover h-[400px]" />
+      `;
+
+            // Set thumbnails
+            const allThumbnails = [product.mainImage, ...product.thumbnails];
+            document.getElementById('thumbnails').innerHTML = allThumbnails.map(img => `
+                <img src="${img}" class="w-24 h-24 object-cover border rounded hover:scale-105 transition cursor-pointer"
+                onclick="document.getElementById('main-image').innerHTML = '<img src=${img} class=\\'w-full object-cover h-[400px]\\' />'" />
+            `).join('');
+
+
+
+        } else {
+            document.body.innerHTML = '<div class="text-center mt-20 text-red-600 text-xl">Product not found</div>';
+        }
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const toggleButton = document.getElementById("menu-toggle");
+            const mobileMenu = document.getElementById("mobile-menu");
+
+            toggleButton.addEventListener("click", () => {
+                mobileMenu.classList.toggle("hidden");
+            });
+        });
+    </script>
+
+    <script>
+        function changeImage(thumb) {
+            const mainImage = document.getElementById('main-product-image');
+            mainImage.src = thumb.src;
+
+            // Optional: Add active border
+            const thumbnails = document.querySelectorAll('[onclick="changeImage(this)"]');
+            thumbnails.forEach(img => img.classList.remove('border-[#005baa]'));
+            thumb.classList.add('border-[#005baa]');
+        }
+    </script>
+
+
+</body>
+
+</html>
