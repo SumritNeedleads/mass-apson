@@ -13,118 +13,7 @@
 <body class="bg-white text-gray-800">
 
     <!-- Header -->
-    <header class="bg-[#005baa] text-white sticky top-0 z-50 shadow-md">
-        <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-            <!-- Logo -->
-            <a href="/index.html">
-                <img src="/images/logo.png" alt="Apson Engineers Logo" class="h-10 w-auto" />
-            </a>
-
-            <!-- Desktop Navigation -->
-            <nav class="hidden md:flex space-x-6 text-sm font-medium items-center">
-                <a href="/index.html" class="hover:scale-110">Home</a>
-                <a href="/about-us.html" class="hover:scale-110">About</a>
-
-                <!-- Products Hover Dropdown -->
-                <div class="relative group" id="products-dropdown">
-                    <a href="/product-page.html"><span
-                            class="hover:scale-110 flex items-center gap-1 cursor-pointer">
-                            Products
-                            <svg class="w-4 h-4 mt-[1px]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7" />
-                            </svg>
-                        </span></a>
-                    <div class="absolute left-0 mt-2 w-40 bg-white text-[#005baa] rounded shadow-md py-2 z-40 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
-                        id="dropdown-menu">
-                        <a href="/apson-products.html"
-                            class="block px-4 py-2 hover:bg-[#005baa] hover:text-white">Apson</a>
-                        <a href="/bunri-products.html"
-                            class="block px-4 py-2 hover:bg-[#005baa] hover:text-white">Bunri</a>
-                        <a href="/nikuni-products.html"
-                            class="block px-4 py-2 hover:bg-[#005baa] hover:text-white">Nikuni</a>
-                    </div>
-                </div>
-
-                <a href="/gallery.html" class="hover:scale-110">Gallery</a>
-                <a href="/all-customers.html" class="hover:scale-110">List of Customers</a>
-                <a href="/collaboration.html" class="hover:scale-110">Collaboration</a>
-                <a href="/contact.html" class="hover:scale-110">Contact</a>
-            </nav>
-
-            <!-- CTA Button -->
-            <a href="/contact.html#contact_form"
-                class="hidden md:inline-block bg-white text-[#005baa] px-4 py-2 rounded hover:bg-[#003c70] hover:text-white transition">Enquire
-                Now</a>
-
-            <!-- Mobile Menu Button -->
-            <button id="menu-toggle" class="md:hidden focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2">
-            <a href="/index.html" class="block py-2 hover:scale-110">Home</a>
-            <a href="/about-us.html" class="block py-2 hover:scale-110">About</a>
-
-            <!-- Mobile Dropdown -->
-            <div>
-                <button onclick="document.getElementById('mobile-products').classList.toggle('hidden')"
-                    class="block py-2 w-full text-left hover:scale-110">Products</button>
-                <div id="mobile-products" class="hidden pl-4">
-                    <a href="/apson-products.html" class="block py-1 hover:scale-110">Apson</a>
-                    <a href="/bunri-products.html" class="block py-1 hover:scale-110">Bunri</a>
-                    <a href="/nikuni-products.html" class="block py-1 hover:scale-110">Nikuni</a>
-                </div>
-            </div>
-
-            <a href="/gallery.html" class="block py-2 hover:scale-110">Gallery</a>
-            <a href="/all-customers.html" class="block py-2 hover:scale-110">List of Customers</a>
-            <a href="/collaboration.html" class="block py-2 hover:scale-110">Collaboration</a>
-            <a href="/contact.html" class="block py-2 hover:scale-110">Contact</a>
-        </div>
-    </header>
-
-    <!-- Dynamic Product Detail Section -->
-    <section class="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
-        <!-- Product Image -->
-        <div class="flex flex-col items-start mt-20">
-            <img src="/images/MSP-1.webp" alt="Phoenix NEO" class="w-full">
-        </div>
-
-        <!-- Product Details -->
-        <div>
-            <h1 id="product-title" class="text-3xl md:text-4xl font-bold text-[#005baa] mb-4">Magnetic Separator Phoenix
-                NEO</h1>
-            <p id="product-description" class="text-gray-700 mb-6">
-                Magnetic separator using rare earths, which has about 10 times the magnetic energy* of ferrite.
-                By renewing the drive mechanism of the magnetic separator, there is no wear due to sludge or abrasive
-                grains.
-                A lineup of four models is provided to suit your requirements.
-            </p>
-
-            <h3 class="text-xl font-bold text-gray-800 mb-3">Features</h3>
-            <ul id="product-features" class="list-disc list-inside text-gray-700 space-y-2">
-                <li>Typical coolant filtration unit that filters grinding sludge of magnetic materials.</li>
-                <li>Because the driving part (chain/sprocket) is installed outside the main body, there is no wear due
-                    to sludge or abrasive grains. In addition, parts replacement and maintenance are easy.</li>
-                <li>The magnetic drum has improved wear resistance due to surface hardening treatment.</li>
-                <li>Since it is a squeezing roll with a sprocket, it suppresses slip caused by sludge and oily coolant.
-                    In addition, by changing the adjustment mechanism of the squeezing roll, adjustment of the squeezing
-                    condition and maintenance have become easier.</li>
-                <li>This product does not use any consumables such as cartridge filters or paper filters, so no
-                    industrial waste is generated.</li>
-                <li>We have a lineup of four models with different strength magnets and magnetic drum diameters. It is
-                    possible to select the optimum separator to suit the customer's processing conditions and the
-                    required filtration accuracy.</li>
-            </ul>
-
-            <p class="text-xs mt-4 text-gray-500">* Maximum energy product</p>
-        </div>
-    </section>
+    <div id="header"></div>
 
     <!-- Product Specifications and Video Section -->
     <section class="bg-gray-50 py-12 px-4">
@@ -204,7 +93,10 @@
             <div class="text-center">
                 <h2 class="text-2xl font-bold text-[#005baa] mb-4">Product Introduction Video</h2>
                 <div class="aspect-w-16 aspect-h-9 max-w-3xl mx-auto rounded-lg overflow-hidden shadow-lg">
-                    <iframe width="100%" height="390" src="https://www.youtube.com/embed/05zu3VJpq9E" title="&quot;Magnetic separator Phoenix NEO&quot; Product introduction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe width="100%" height="390" src="https://www.youtube.com/embed/05zu3VJpq9E"
+                        title="&quot;Magnetic separator Phoenix NEO&quot; Product introduction" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -218,8 +110,7 @@
 
             <!-- Mechanism Image 1 -->
             <div class="mb-8">
-                <img src="/images/msp-2.webp" alt="Mechanism Diagram 1"
-                    class="w-full rounded-lg shadow-md">
+                <img src="/images/msp-2.webp" alt="Mechanism Diagram 1" class="w-full rounded-lg shadow-md">
             </div>
 
             <!-- Description Steps -->
@@ -244,8 +135,7 @@
 
             <!-- Mechanism Image 2 -->
             <div>
-                <img src="/images/msp-3.webp" alt="Mechanism Diagram 2"
-                    class="w-full rounded-lg shadow-md">
+                <img src="/images/msp-3.webp" alt="Mechanism Diagram 2" class="w-full rounded-lg shadow-md">
             </div>
         </div>
     </section>
@@ -269,8 +159,7 @@
 
             <!-- Image Placeholder for Comparison Table -->
             <div class="mb-6">
-                <img src="/images/msp-4.webp" alt="Comparison Table of 4 Types"
-                    class="w-full h-auto rounded shadow-lg">
+                <img src="/images/msp-4.webp" alt="Comparison Table of 4 Types" class="w-full h-auto rounded shadow-lg">
             </div>
         </div>
     </section>
@@ -299,8 +188,8 @@
             </div>
         </div>
     </section>
-    <section class="bg-gray-50 py-12 px-4" >
-        <div class="max-w-6xl mx-auto">        
+    <section class="bg-gray-50 py-12 px-4">
+        <div class="max-w-6xl mx-auto">
             <h2 class="text-3xl font-bold text-[#005baa] md:mt-6 border-b-4 border-[#005baa] w-fit">Specifications</h2>
 
             <h3 class="text-2xl font-semibold text-[#005baa] mt-6 mb-4 border-b-2 border-[#005baa] w-fit">Dimensional
@@ -340,29 +229,25 @@
                 <!-- PXK -->
                 <div class="text-center">
                     <h3 class="font-bold mb-2">PXK</h3>
-                    <img src="/images/msp-9.webp" alt="PXK Sludge Distribution"
-                        class="w-full h-auto rounded shadow">
+                    <img src="/images/msp-9.webp" alt="PXK Sludge Distribution" class="w-full h-auto rounded shadow">
                 </div>
 
                 <!-- PXH -->
                 <div class="text-center">
                     <h3 class="font-bold mb-2">PXH</h3>
-                    <img src="/images/msp-10.webp" alt="PXH Sludge Distribution"
-                        class="w-full h-auto rounded shadow">
+                    <img src="/images/msp-10.webp" alt="PXH Sludge Distribution" class="w-full h-auto rounded shadow">
                 </div>
 
                 <!-- PXN -->
                 <div class="text-center">
                     <h3 class="font-bold mb-2">PXN</h3>
-                    <img src="/images/msp-11.webp" alt="PXN Sludge Distribution"
-                        class="w-full h-auto rounded shadow">
+                    <img src="/images/msp-11.webp" alt="PXN Sludge Distribution" class="w-full h-auto rounded shadow">
                 </div>
 
                 <!-- PXP -->
                 <div class="text-center">
                     <h3 class="font-bold mb-2">PXP</h3>
-                    <img src="/images/msp-12.webp" alt="PXP Sludge Distribution"
-                        class="w-full h-auto rounded shadow">
+                    <img src="/images/msp-12.webp" alt="PXP Sludge Distribution" class="w-full h-auto rounded shadow">
                 </div>
             </div>
             <p class="text-sm md:mt-4 text-gray-500">
@@ -434,8 +319,8 @@
                 * Please contact us for details
             </p>
         </div>
-    </section> 
-    
+    </section>
+
     <section class="bg-white py-12 px-4">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-3xl font-bold text-[#005baa] md:mt-6 md:mb-2 border-b-4 border-[#005baa] w-fit">Model code
@@ -446,7 +331,7 @@
             </div>
         </div>
     </section>
-    
+
     <section class="bg-gray-50 py-12 px-4">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-3xl font-bold text-[#005baa] md:mt-6 md:mb-2 border-b-4 border-[#005baa] w-fit">Product
@@ -457,32 +342,28 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- PXK -->
                 <div class="text-center">
-                    <img src="/images/msp-14.webp" alt="PXK Sludge Distribution"
-                        class="w-full h-auto rounded shadow">
+                    <img src="/images/msp-14.webp" alt="PXK Sludge Distribution" class="w-full h-auto rounded shadow">
                     <p class="text-sm md:mt-2 md:mb-2 text-gray-500">
                         PXK-6bHT-NU</p>
                 </div>
 
                 <!-- PXH -->
                 <div class="text-center">
-                    <img src="/images/msp-15.webp" alt="PXH Sludge Distribution"
-                        class="w-full h-auto rounded shadow">
+                    <img src="/images/msp-15.webp" alt="PXH Sludge Distribution" class="w-full h-auto rounded shadow">
                     <p class="text-sm md:mt-2 md:mb-2 text-gray-500">
                         PXK-6bHT-NU</p>
                 </div>
 
                 <!-- PXN -->
                 <div class="text-center">
-                    <img src="/images/msp-16.webp" alt="PXN Sludge Distribution"
-                        class="w-full h-auto rounded shadow">
+                    <img src="/images/msp-16.webp" alt="PXN Sludge Distribution" class="w-full h-auto rounded shadow">
                     <p class="text-sm md:mt-2 md:mb-2 text-gray-500">
                         PXK-6bHT-NU</p>
                 </div>
 
                 <!-- PXP -->
                 <div class="text-center">
-                    <img src="/images/msp-17.webp" alt="PXP Sludge Distribution"
-                        class="w-full h-auto rounded shadow">
+                    <img src="/images/msp-17.webp" alt="PXP Sludge Distribution" class="w-full h-auto rounded shadow">
                     <p class="text-sm md:mt-2 md:mb-2 text-gray-500">
                         PXK-6bHT-NU</p>
                 </div>
@@ -493,16 +374,14 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- PXK -->
                 <div class="text-center">
-                    <img src="/images/msp-18.webp" alt="PXK Sludge Distribution"
-                        class="w-full h-auto rounded shadow">
+                    <img src="/images/msp-18.webp" alt="PXK Sludge Distribution" class="w-full h-auto rounded shadow">
                     <p class="text-sm md:mt-2 md:mb-2 text-gray-500">
                         PXP-6bHT-MYGHM</p>
                 </div>
 
                 <!-- PXH -->
                 <div class="text-center">
-                    <img src="/images/msp-19.webp" alt="PXH Sludge Distribution"
-                        class="w-full h-auto rounded shadow">
+                    <img src="/images/msp-19.webp" alt="PXH Sludge Distribution" class="w-full h-auto rounded shadow">
                     <p class="text-sm md:mt-2 md:mb-2 text-gray-500">
                         PXP-6bHT-MYGHM</p>
                 </div>
@@ -516,10 +395,10 @@
                 <p class="text-sm md:mt-2 md:mb-2 text-gray-500">
                     PXH-6aH-NU with tank, pump, and liquid level gauge</p>
             </div>
-        </div>    
+        </div>
 
     </section>
-    
+
     <section class="bg-white py-12 px-4">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-3xl font-bold text-[#005baa] md:mt-6 md:mb-2 border-b-4 border-[#005baa] w-fit">Chip
@@ -540,77 +419,8 @@
         </div>
     </section>
 
-
-
-
-
-    <!-- Footer Section -->
-    <footer class="bg-white text-gray-800 pt-12 shadow-md border-t border-gray-200">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10 border-b border-gray-300 pb-8">
-
-            <!-- Company logo and content -->
-            <div>
-                <a href="/index.html"><img src="/images/logo.png" alt="Company Logo" class="w-32 mb-4"></a>
-                
-                <p class="text-gray-700">
-                    Mass Apson is a young & dynamic technology solution provider which deals in Coolant tanks, Conveyors, magnetic separator, paper filter, Hyd Power pack etc. Founded in 2013 with state-of-the-art manufacturing facility in Faridabad, Haryana.
-                </p>
-            </div>
-
-            <!-- Quick Links -->
-            <div>
-                <h4 class="text-lg font-semibold text-[#005baa] mb-4">Quick Links</h4>
-                <div class="space-y-2">
-                    <a href="/index.html" class="block hover:text-[#005baa] transition">Home</a>
-                    <a href="/about-us.html" class="block hover:text-[#005baa] transition">About</a>
-                    <a href="/product-page.html" class="block hover:text-[#005baa] transition">Products</a>
-                    <a href="/contact.html" class="block hover:text-[#005baa] transition">Contact</a>
-                </div>
-            </div>
-
-            <!-- Address -->
-            <div>
-                <h4 class="text-lg font-semibold text-[#005baa] mb-2">Corporate office</h4>
-                <p class="text-gray-700 leading-relaxed">
-                    <b>GURGAON</b> <br>
-                    SB-R/1L/04/025 & 026A, 1ST FLOOR<br>
-                    M3M URBANA SECTOR-67 <br>
-                    GURGAON-122102 <br>
-                    Tel No. 0124-4966065
-                </p>
-
-                <h4 class="text-lg font-semibold text-[#005baa] mt-4 mb-2">Manufacturing</h4>
-                <p class="text-gray-700 leading-relaxed">
-                    <b>Faridabad</b> <br>
-                    Plot No -21, Gazipur Industrial Area,<br>
-                    Sukhli Nehar, Sohna Road, Gazipur, Nit,<br>
-                    Faridabad, Haryana, India 121005
-                </p>
-            </div>
-        </div>
-
-        <!-- Social & Copyright -->
-        <div class="width-full px-52 py-6 flex flex-col md:flex-row items-center justify-between text-sm bg-[#005baa]">
-            <div class="flex gap-4 mb-4 md:mb-0 text-[#005baa]">
-                <a href="#" class="hover:text-blue-600 transition text-white" aria-label="Facebook"><i
-                        class="fab fa-facebook-f"></i></a>
-                <a href="#" class="hover:text-blue-400 transition text-white" aria-label="Twitter"><i
-                        class="fab fa-twitter"></i></a>
-                <a href="#" class="hover:text-pink-500 transition text-white" aria-label="Instagram"><i
-                        class="fab fa-instagram"></i></a>
-                <a href="#" class="hover:text-red-600 transition text-white" aria-label="YouTube"><i
-                        class="fab fa-youtube"></i></a>
-                <a href="#" class="hover:text-blue-700 transition text-white" aria-label="LinkedIn"><i
-                        class="fab fa-linkedin-in"></i></a>
-            </div>
-            <div class="text-white text-center md:text-right">
-                Developed and Designed by
-                <a href="https://www.theneedleads.com/" target="_blank"
-                    class="font-semibold text-text-white hover:text-blue-700 transition">
-                    Needleads Technologies</a>.
-            </div>
-        </div>
-    </footer>
+    <!-- Footer -->
+    <div id="footer"></div>
 
     <script src="js/product-data.js"></script>
     <script>
@@ -644,16 +454,18 @@
         }
     </script>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const toggleButton = document.getElementById("menu-toggle");
-      const mobileMenu = document.getElementById("mobile-menu");
-  
-      toggleButton.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-      });
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('/header.html')
+        .then(res => res.text())
+        .then(html => document.getElementById('header').innerHTML = html);
+      fetch('/footer.html')
+        .then(res => res.text())
+        .then(html => document.getElementById('footer').innerHTML = html);
     });
   </script>
+
 
 </body>
 

@@ -14,76 +14,7 @@
 <body class="bg-white text-gray-800">
 
   <!-- Header -->
-  <header class="bg-[#005baa] text-white sticky top-0 z-50 shadow-md">
-    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-      <!-- Logo -->
-      <a href="index.html">
-        <img src="images/logo.png" alt="Apson Engineers Logo" class="h-10 w-auto" />
-      </a>
-
-      <!-- Desktop Navigation -->
-      <nav class="hidden md:flex space-x-6 text-sm font-medium items-center">
-        <a href="index.html" class="hover:scale-110">Home</a>
-        <a href="about-us.html" class="hover:scale-110">About</a>
-
-        <!-- Products Hover Dropdown -->
-        <div class="relative group" id="products-dropdown">
-          <a href="product-page.html"><span class="hover:scale-110 flex items-center gap-1 cursor-pointer">
-              Products
-              <svg class="w-4 h-4 mt-[1px]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-              </svg>
-            </span></a>
-          <div
-            class="absolute left-0 mt-2 w-40 bg-white text-[#005baa] rounded shadow-md py-2 z-40 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
-            id="dropdown-menu">
-            <a href="apson-products.html" class="block px-4 py-2 hover:bg-[#005baa] hover:text-white">Apson</a>
-            <a href="bunri-products.html" class="block px-4 py-2 hover:bg-[#005baa] hover:text-white">Bunri</a>
-            <a href="nikuni-products.html" class="block px-4 py-2 hover:bg-[#005baa] hover:text-white">Nikuni</a>
-          </div>
-        </div>
-
-        <a href="gallery.html" class="hover:scale-110">Gallery</a>
-        <a href="all-customers.html" class="hover:scale-110">List of Customers</a>
-        <a href="collaboration.html" class="hover:scale-110">Collaboration</a>
-        <a href="contact.html" class="hover:scale-110">Contact</a>
-      </nav>
-
-      <!-- CTA Button -->
-      <a href="/contact.html#contact_form"
-        class="hidden md:inline-block bg-white text-[#005baa] px-4 py-2 rounded hover:bg-[#003c70] hover:text-white transition">Enquire
-        Now</a>
-
-      <!-- Mobile Menu Button -->
-      <button id="menu-toggle" class="md:hidden focus:outline-none">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-      </button>
-    </div>
-
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2">
-      <a href="index.html" class="block py-2 hover:scale-110">Home</a>
-      <a href="about-us.html" class="block py-2 hover:scale-110">About</a>
-
-      <!-- Mobile Dropdown -->
-      <div>
-        <button onclick="document.getElementById('mobile-products').classList.toggle('hidden')"
-          class="block py-2 w-full text-left hover:scale-110">Products</button>
-        <div id="mobile-products" class="hidden pl-4">
-          <a href="apson-products.html" class="block py-1 hover:scale-110">Apson</a>
-          <a href="bunri-products.html" class="block py-1 hover:scale-110">Bunri</a>
-          <a href="nikuni-products.html" class="block py-1 hover:scale-110">Nikuni</a>
-        </div>
-      </div>
-
-      <a href="gallery.html" class="block py-2 hover:scale-110">Gallery</a>
-      <a href="all-customers.html" class="block py-2 hover:scale-110">List of Customers</a>
-      <a href="collaboration.html" class="block py-2 hover:scale-110">Collaboration</a>
-      <a href="contact.html" class="block py-2 hover:scale-110">Contact</a>
-    </div>
-  </header>
+    <div id="header"></div>
 
   <!-- Banner Section -->
   <section class="relative h-72 bg-cover bg-center" style="background-image: url('images/our_product-banner.jpg');">
@@ -102,32 +33,32 @@
       <a href="apson-products/hydraulic-power-pack.html"
         class="block border rounded-lg shadow hover:shadow-md transition p-4 text-center hover:scale-[1.02] duration-300">
         <img src="images/hpp-1.jpg" alt="Product 1" class="w-full h-40 object-contain mb-4 rounded" />
-        <h3 class="font-semibold text-lg mb-1">Hydraulic power Pack</h3>
+        <h3 class="font-semibold text-lg mb-1">Hydraulic Power Pack</h3>
       </a>
-      <a href="apson-products/bush-removal-machine.html"
+      <a href="/apson-products/standard-cts.html"
         class="block border rounded-lg shadow hover:shadow-md transition p-4 text-center hover:scale-[1.02] duration-300">
-        <img src="images/brm-1.jpg" alt="Product 2" class="w-full h-40 object-contain mb-4 rounded" />
-        <h3 class="font-semibold text-lg mb-1">Bush Removal Machine</h3>
+        <img src="/images/standard+cts-1.JPG" alt="Product 2" class="w-full h-40 object-contain mb-4 rounded" />
+        <h3 class="font-semibold text-lg mb-1">Standard + CTS</h3>
       </a>
       <a href="apson-products/belt-conveyor.html"
         class="block border rounded-lg shadow hover:shadow-md transition p-4 text-center hover:scale-[1.02] duration-300">
         <img src="images/lbc-3.png" alt="Product 2" class="w-full h-40 object-contain mb-4 rounded" />
         <h3 class="font-semibold text-lg mb-1">Belt Conveyor</h3>
       </a>
-      <a href="apson-products/piston-rod-washing-machine.html"
+      <a href="/apson-products/cyclone-filter.html"
         class="block border rounded-lg shadow hover:shadow-md transition p-4 text-center hover:scale-[1.02] duration-300">
-        <img src="images/prwm-1.jpg" alt="Product 2" class="w-full h-40 object-contain mb-4 rounded" />
+        <img src="/images/vdf-1.jpg" alt="Product 2" class="w-full h-40 object-contain mb-4 rounded" />
+        <h3 class="font-semibold text-lg mb-1">Cyclone Filter</h3>
+      </a>
+      <a href="/"
+        class="block border rounded-lg shadow hover:shadow-md transition p-4 text-center hover:scale-[1.02] duration-300">
+        <img src="/images/pub-1.png" alt="Product 2" class="w-full h-40 object-contain mb-4 rounded" />
+        <h3 class="font-semibold text-lg mb-1">PU Belt Type</h3>
+      </a>
+      <a href="/apson-products/piston-rod-washing-machine.html"
+        class="block border rounded-lg shadow hover:shadow-md transition p-4 text-center hover:scale-[1.02] duration-300">
+        <img src="/images/prwm-1.jpg" alt="Product 2" class="w-full h-40 object-contain mb-4 rounded" />
         <h3 class="font-semibold text-lg mb-1">Piston Rod Washing Machine</h3>
-      </a>
-      <a href="apson-products/break-disk-machine.html"
-        class="block border rounded-lg shadow hover:shadow-md transition p-4 text-center hover:scale-[1.02] duration-300">
-        <img src="images/bdm-1.jpeg" alt="Product 2" class="w-full h-40 object-contain mb-4 rounded" />
-        <h3 class="font-semibold text-lg mb-1">Break Disk Machine</h3>
-      </a>
-      <a href="apson-products/endurance-trolley.html"
-        class="block border rounded-lg shadow hover:shadow-md transition p-4 text-center hover:scale-[1.02] duration-300">
-        <img src="images/et-1.jpg" alt="Product 2" class="w-full h-40 object-contain mb-4 rounded" />
-        <h3 class="font-semibold text-lg mb-1">Endurance Trolley</h3>
       </a>
       <a href="apson-products/oil-machine.html"
         class="block border rounded-lg shadow hover:shadow-md transition p-4 text-center hover:scale-[1.02] duration-300">
@@ -250,6 +181,59 @@
     </div>
   </section>
 
+  <!-- Nissei's Products -->
+  <section class="max-w-7xl mx-auto py-12 px-4">
+    <div class="flex items-center justify-between mb-6">
+      <h2 class="text-2xl font-medium text-[#005baa]">NISSEI's Products</h2>
+      <a href="/nissei-products.html"
+        class="text-white bg-[#005baa] px-5 py-2 rounded hover:bg-[#003c70] transition">View All</a>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+      <!-- Clickable Product Card -->
+      <a href="/"
+        class="block border rounded-lg shadow hover:shadow-md transition p-4 text-center hover:scale-[1.02] duration-300">
+        <img src="/images/psg-1.webp" alt="Bunri Product 1" class="w-full h-40 object-contain mb-4 rounded" />
+        <h3 class="font-semibold text-lg mb-1">Parallel Shaft (G)(15W-90W)</h3>
+      </a>
+      <a href="nikuni-products/filtrastion-products/special-drump-pod-for-fine-sludge-wih-vdf-dpv.html"
+        class="block border rounded-lg shadow hover:shadow-md transition p-4 text-center hover:scale-[1.02] duration-300">
+        <img src="/images/rash-1.webp" alt="Bunri Product 2" class="w-full h-40 object-contain mb-4 rounded" />
+        <h3 class="font-semibold text-lg mb-1">Right Angle Shaft (H) (15W-90W)</h3>
+      </a>
+      <a href="nikuni-products/filtrastion-products/manual-type-coolant-filtration-system-c-cat.html"
+        class="block border rounded-lg shadow hover:shadow-md transition p-4 text-center hover:scale-[1.02] duration-300">
+        <img src="/images/crahbf2-1.webp" alt="Bunri Product 2" class="w-full h-40 object-contain mb-4 rounded" />
+        <h3 class="font-semibold text-lg mb-1">Concentric Right Angle Hollow Bore / Concentric Right Angle Shaft (F2) (15W-90W)</h3>
+      </a>
+      <a href="nikuni-products/filtrastion-products/semi-automatic-coolant-filtration-system-c-jaguar.html"
+        class="block border rounded-lg shadow hover:shadow-md transition p-4 text-center hover:scale-[1.02] duration-300">
+        <img src="/images/psg3-1.webp" alt="Bunri Product 2" class="w-full h-40 object-contain mb-4 rounded" />
+        <h3 class="font-semibold text-lg mb-1">Parallel Shaft (G3)(0.1kW-2.2kW)</h3>
+      </a>
+      <!-- <a href="nikuni-products/filtrastion-products/fully-automatic-coolant-filtration-system-nax-csii.html"
+        class="block border rounded-lg shadow hover:shadow-md transition p-4 text-center hover:scale-[1.02] duration-300">
+        <img src="/images/rash2-1.webp" alt="Bunri Product 2" class="w-full h-40 object-contain mb-4 rounded" />
+        <h3 class="font-semibold text-lg mb-1">Right Angle Shaft (H2) (0.1kW-2.2kW)</h3>
+      </a>
+      <a href="nikuni-products/filtrastion-products/portable-wet-to-dry-filtration-lax.html"
+        class="block border rounded-lg shadow hover:shadow-md transition p-4 text-center hover:scale-[1.02] duration-300">
+        <img src="/images/rahb-1.webp" alt="Bunri Product 2" class="w-full h-40 object-contain mb-4 rounded" />
+        <h3 class="font-semibold text-lg mb-1">Right Angle Hollow Bore / Right Angle Shaft (F/FA) (0.1kW-2.2kW)</h3>
+      </a>
+      <a href="nikuni-products/filtrastion-products/vcs3100-chiller-vsc.html"
+        class="block border rounded-lg shadow hover:shadow-md transition p-4 text-center hover:scale-[1.02] duration-300">
+        <img src="images/bunri-4.webp" alt="Bunri Product 2" class="w-full h-40 object-contain mb-4 rounded" />
+        <h3 class="font-semibold text-lg mb-1">VSC3100 Chiller (VSC)</h3>
+      </a>
+      <a href="nikuni-products/filtrastion-products/kasumi-oil-skimmer-osk.html"
+        class="block border rounded-lg shadow hover:shadow-md transition p-4 text-center hover:scale-[1.02] duration-300">
+        <img src="images/bunri-4.webp" alt="Bunri Product 2" class="w-full h-40 object-contain mb-4 rounded" />
+        <h3 class="font-semibold text-lg mb-1">KASUMI Oil Skimmer (OSK)</h3> -->
+      </a>
+    </div>
+  </section>
+
   <!-- Get in Touch Form Section -->
   <section class="py-16 px-6">
     <div class="max-w-7xl mx-auto">
@@ -364,16 +348,18 @@
     </div>
   </footer>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const toggleButton = document.getElementById("menu-toggle");
-      const mobileMenu = document.getElementById("mobile-menu");
-
-      toggleButton.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-      });
+  
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('/header.html')
+        .then(res => res.text())
+        .then(html => document.getElementById('header').innerHTML = html);
+      fetch('/footer.html')
+        .then(res => res.text())
+        .then(html => document.getElementById('footer').innerHTML = html);
     });
   </script>
+
 
   <script>
     document.getElementById('productContactForm').addEventListener('submit', function (e) {
