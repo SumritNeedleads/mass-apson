@@ -137,25 +137,56 @@
     </header>
 
 
-
     <!-- Hero Banner Slideshow -->
     <section class="relative overflow-hidden">
-        <div class="relative h-[80vh]" id="slider">
+        <div class="relative h-[80vh] w-full" id="slider">
             <!-- Slides -->
-            <div class="slide active" style="background-image: url('images/home-banner-1.jpg');"></div>
-            <div class="slide" style="background-image: url('images/home-banner-2.jpg');"></div>
-            <div class="slide" style="background-image: url('images/home-banner-3.jpg');"></div>
-            <div class="slide" style="background-image: url('images/home-banner-4.jpg');"></div>
-            <div class="slide" style="background-image: url('images/home-banner-5.jpg');"></div>
-            <div class="slide" style="background-image: url('images/home-banner-6.jpg');"></div>
-            <div class="slide" style="background-image: url('images/home-banner-7.jpg');"></div>
-            <div class="slide" style="background-image: url('images/home-banner-8.jpg');"></div>
+            <div class="slide absolute inset-0 bg-cover bg-center opacity-100 transition-opacity duration-1000 z-10"
+                style="background-image: url('images/home-banner-1.jpg');" data-title="Engineering Tomorrow"
+                data-subtitle="Turnkey industrial solutions from design to delivery.">
+            </div>
 
-            <!-- Text Overlay (same for all slides) -->
+            <div class="slide absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000 z-0"
+                style="background-image: url('images/home-banner-2.jpg');" data-title="	Coolant Tanks That Perform"
+                data-subtitle="Durable, corrosion-resistant tanks built for peak efficiency.">
+            </div>
+
+            <div class="slide absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000 z-0"
+                style="background-image: url('images/home-banner-3.jpg');" data-title="Streamlined Chip Conveyance"
+                data-subtitle="Conveyors & separators engineered to optimize production workflows.">
+            </div>
+
+            <div class="slide absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000 z-0"
+                style="background-image: url('images/home-banner-4.jpg');" data-title="Magnetic Precision"
+                data-subtitle="Magnetic separators that ensure purity and protect your machinery.">
+            </div>
+
+            <div class="slide absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000 z-0"
+                style="background-image: url('images/home-banner-5.jpg');" data-title="Filters That Foster Cleanliness"
+                data-subtitle="High-performance paper filters for contaminant-free systems.">
+            </div>
+
+            <div class="slide absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000 z-0"
+                style="background-image: url('images/home-banner-6.jpg');" data-title="Hydraulic Power. Simplified."
+                data-subtitle="Robust hydraulic packs engineered for reliability and efficiency.">
+            </div>
+
+            <div class="slide absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000 z-0"
+                style="background-image: url('images/home-banner-7.jpg');" data-title="	Custom Automation Solutions"
+                data-subtitle="From conveyors to SPMs—fully tailored assembly and press systems.">
+            </div>
+
+            <div class="slide absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000 z-0"
+                style="background-image: url('images/home-banner-8.jpg');" data-title="Quality. Passion. Performance."
+                data-subtitle="Driven by excellence, powered by innovation, committed to your success.">
+            </div>
+
+            <!-- Dynamic Text Overlay -->
             <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center text-center px-4 z-20">
-                <div class="text-white">
-                    <h2 class="text-3xl md:text-5xl font-bold mb-3">Engineering Tomorrow</h2>
-                    <p class="text-lg md:text-xl mb-4">Delivering trusted solutions for modern industries.</p>
+                <div class="text-white" id="overlay-content">
+                    <h2 id="banner-title" class="text-3xl md:text-5xl font-bold mb-3">Engineering Tomorrow</h2>
+                    <p id="banner-subtitle" class="text-lg md:text-xl mb-4">Delivering trusted solutions for modern
+                        industries.</p>
                     <a href="product-page.html"
                         class="bg-[#005baa] text-white px-6 py-3 rounded font-semibold hover:bg-[#003c70] transition">
                         Explore Our Products
@@ -165,17 +196,19 @@
 
             <!-- Dots -->
             <div class="absolute bottom-5 left-1/2 -translate-x-1/2 flex space-x-2 z-30">
-                <span class="dot w-3 h-3 bg-white rounded-full opacity-50 cursor-pointer"></span>
-                <span class="dot w-3 h-3 bg-white rounded-full opacity-50 cursor-pointer"></span>
-                <span class="dot w-3 h-3 bg-white rounded-full opacity-50 cursor-pointer"></span>
-                <span class="dot w-3 h-3 bg-white rounded-full opacity-50 cursor-pointer"></span>
-                <span class="dot w-3 h-3 bg-white rounded-full opacity-50 cursor-pointer"></span>
-                <span class="dot w-3 h-3 bg-white rounded-full opacity-50 cursor-pointer"></span>
-                <span class="dot w-3 h-3 bg-white rounded-full opacity-50 cursor-pointer"></span>
-                <span class="dot w-3 h-3 bg-white rounded-full opacity-50 cursor-pointer"></span>
+                <span class="dot w-3 h-3 bg-white rounded-full opacity-100 cursor-pointer transition"></span>
+                <span class="dot w-3 h-3 bg-white rounded-full opacity-50 cursor-pointer transition"></span>
+                <span class="dot w-3 h-3 bg-white rounded-full opacity-50 cursor-pointer transition"></span>
+                <span class="dot w-3 h-3 bg-white rounded-full opacity-50 cursor-pointer transition"></span>
+                <span class="dot w-3 h-3 bg-white rounded-full opacity-50 cursor-pointer transition"></span>
+                <span class="dot w-3 h-3 bg-white rounded-full opacity-50 cursor-pointer transition"></span>
+                <span class="dot w-3 h-3 bg-white rounded-full opacity-50 cursor-pointer transition"></span>
+                <span class="dot w-3 h-3 bg-white rounded-full opacity-50 cursor-pointer transition"></span>
             </div>
         </div>
     </section>
+
+
 
 
     <!-- Collaboration Products Slideshow Section -->
@@ -280,7 +313,8 @@
 
             <!-- Text Content -->
             <div class="lg:w-1/2 w-full">
-                <h2 class="text-3xl md:text-4xl font-bold text-[#0096c7] mb-6 flex items-center"><span class="text-[#005baa]">About</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-[#0096c7] mb-6 flex items-center"><span
+                        class="text-[#005baa]">About</span>
                     <img src="/images/logo.png" alt="logo" class="h-14 ml-3"></h2>
                 <p class="text-lg leading-relaxed mb-4">
                     Mass Apson is a young & dynamic technology solution provider dealing in Coolant Tanks, Conveyors,
@@ -607,15 +641,63 @@
     </script>
 
     <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const toggleButton = document.getElementById("menu-toggle");
-        const mobileMenu = document.getElementById("mobile-menu");
+        document.addEventListener("DOMContentLoaded", function () {
+            const toggleButton = document.getElementById("menu-toggle");
+            const mobileMenu = document.getElementById("mobile-menu");
 
-        toggleButton.addEventListener("click", () => {
-            mobileMenu.classList.toggle("hidden");
+            toggleButton.addEventListener("click", () => {
+                mobileMenu.classList.toggle("hidden");
+            });
         });
-    });
-</script>
+    </script>
+
+    <!-- Hero Banner -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const slides = document.querySelectorAll(".slide");
+            const dots = document.querySelectorAll(".dot");
+            const title = document.getElementById("banner-title");
+            const subtitle = document.getElementById("banner-subtitle");
+
+            let currentSlide = 0;
+
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    if (i === index) {
+                        slide.classList.add("opacity-100", "z-10");
+                        slide.classList.remove("opacity-0", "z-0");
+                    } else {
+                        slide.classList.remove("opacity-100", "z-10");
+                        slide.classList.add("opacity-0", "z-0");
+                    }
+                });
+
+                title.textContent = slides[index].dataset.title;
+                subtitle.textContent = slides[index].dataset.subtitle;
+
+                dots.forEach((dot, i) => {
+                    dot.classList.toggle("opacity-100", i === index);
+                    dot.classList.toggle("opacity-50", i !== index);
+                });
+
+                currentSlide = index;
+            }
+
+            // Auto Slide
+            setInterval(() => {
+                let next = (currentSlide + 1) % slides.length;
+                showSlide(next);
+            }, 4000);
+
+            // Manual Dot Click
+            dots.forEach((dot, index) => {
+                dot.addEventListener("click", () => showSlide(index));
+            });
+
+            showSlide(0);
+        });
+    </script>
+
 
 
 </body>
