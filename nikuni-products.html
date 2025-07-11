@@ -13,34 +13,35 @@
 <body class="bg-white text-gray-800 font-sans">
 
   <!-- Header -->
-<header class="bg-[#005baa] text-white sticky top-0 z-50 shadow-md" id="header">
-    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-        <!-- Logo -->
-            <a href="/index.html">
-                <img src="/images/logo.png" alt="Apson Engineers Logo" class="h-10 w-auto bg-white rounded-lg p-1" />
+    <header class="bg-white text-[#005baa] sticky top-0 z-50 shadow-md" id="header">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="index.html">
+                <img src="/images/logo.png" alt="Apson Engineers Logo" class="h-10 w-auto rounded-lg p-1" />
             </a>
 
-        <!-- Desktop Navigation -->
-        <nav class="hidden md:flex space-x-6 text-sm font-medium items-center">
-            <a href="/index.html" class="hover:scale-110">Home</a>
-            <a href="/about-us.html" class="hover:scale-110">About</a>
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-6 text-sm font-medium items-center">
+                <a href="/index.html" class="hover:scale-110">Home</a>
+                <a href="/about-us.html" class="hover:scale-110">About</a>
 
-            <!-- Products Hover Dropdown -->
-            <div class="relative group" id="products-dropdown">
-                <a href="/product-page.html"><span class="hover:scale-110 flex items-center gap-1 cursor-pointer">
-                        Products
-                        <svg class="w-4 h-4 mt-[1px]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </span></a>
-                </span>
+                <!-- Products Hover Dropdown -->
+                <div class="relative group" id="products-dropdown">
+                    <a href="/product-page.html"><span class="hover:scale-110 flex items-center gap-1 cursor-pointer">
+                            Products
+                            <svg class="w-4 h-4 mt-[1px]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </span></a>
+                    </span>
 
-                <!-- Horizontal Dropdown -->
+                    <!-- Horizontal Dropdown -->
                     <div
                         class="absolute left-0 mt-2 flex bg-white text-[#005baa] rounded shadow-md py-2 px-4 z-40 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 space-x-4 min-w-max">
                         <!-- Apson -->
                         <a href="/apson-products.html"
-                            class="flex items-center gap-2 border-2 border-white hover:border-[#005baa] hover:text-white rounded transition">
+                            class="flex items-center gap- border-2 border-white hover:border-[#005baa] hover:text-white rounded transition">
                             <img src="/images/logo.png" alt="Apson Logo" class="w-16 h-8 object-contain p-1">
                             <!-- <span>Apson</span> -->
                         </a>
@@ -66,34 +67,33 @@
                             <!-- <span>Nissei</span> -->
                         </a>
                     </div>
-            </div>
+                </div>
 
 
-            <a href="/gallery.html" class="hover:scale-110">Gallery</a>
-            <a href="/all-customers.html" class="hover:scale-110">List of Customers</a>
-            <a href="/collaboration.html" class="hover:scale-110">Collaboration</a>
-            <a href="/contact.html" class="hover:scale-110">Contact</a>
-        </nav>
+                <a href="/gallery.html" class="hover:scale-110">Gallery</a>
+                <a href="/all-customers.html" class="hover:scale-110">List of Customers</a>
+                <a href="/collaboration.html" class="hover:scale-110">Collaboration</a>
+                <a href="/contact.html" class="hover:scale-110">Contact</a>
+            </nav>
 
-        <!-- CTA Button -->
-        <a href="/contact.html#contact_form"
-            class="hidden md:inline-block bg-white text-[#005baa] px-4 py-2 rounded hover:bg-[#003c70] hover:text-white transition">Enquire
-            Now</a>
+            <!-- CTA Button -->
+            <a href="/contact.html#contact_form"
+                class="hidden md:inline-block bg-[#005baa] text-white px-4 py-2 rounded hover:bg-[#003c70] hover:text-white transition">Product Enquiry</a>
 
-        <!-- Mobile Menu Button -->
-        <button id="menu-toggle" class="md:hidden focus:outline-none">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-        </button>
-    </div>
+            <!-- Mobile Menu Button -->
+            <button id="menu-toggle" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
 
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2">
-        <a href="/index.html" class="block py-2 hover:scale-110">Home</a>
-        <a href="/about-us.html" class="block py-2 hover:scale-110">About</a>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2">
+            <a href="/index.html" class="block py-2 hover:scale-110">Home</a>
+            <a href="/about-us.html" class="block py-2 hover:scale-110">About</a>
 
-        <!-- Mobile Dropdown -->
+            <!-- Mobile Dropdown -->
             <div>
                 <button onclick="document.getElementById('mobile-products').classList.toggle('hidden')"
                     class="block py-2 w-full text-left hover:scale-110">Products</button>
@@ -118,14 +118,14 @@
             </div>
 
 
-        <a href="/gallery.html" class="block py-2 hover:scale-110">Gallery</a>
-        <a href="/all-customers.html" class="block py-2 hover:scale-110">List of Customers</a>
-        <a href="/collaboration.html" class="block py-2 hover:scale-110">Collaboration</a>
-        <a href="/contact.html" class="block py-2 hover:scale-110">Contact</a>
-    </div>
-</header>
+            <a href="/gallery.html" class="block py-2 hover:scale-110">Gallery</a>
+            <a href="/all-customers.html" class="block py-2 hover:scale-110">List of Customers</a>
+            <a href="/collaboration.html" class="block py-2 hover:scale-110">Collaboration</a>
+            <a href="/contact.html" class="block py-2 hover:scale-110">Contact</a>
+        </div>
+    </header>
 
-  
+
   <!-- Nikuni Product Heading -->
   <section class="max-w-7xl mx-auto p-6">
     <h1 class="text-3xl font-bold text-[#005baa] mb-4 text-center">NIKUNI Products</h1>
@@ -184,7 +184,7 @@
       <!-- Add more cards as needed -->
     </div>
   </section>
-  
+
   <!-- Micro-bubble Generator -->
   <section class="max-w-7xl mx-auto py-8 px-4">
     <div class="flex items-center justify-between mb-6">
@@ -209,16 +209,17 @@
   </section>
 
   <!-- Footer Section -->
-    <footer class="bg-white text-gray-800 pt-12 shadow-md border-t border-gray-200">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10 border-b border-gray-300 pb-8">
+    <footer class="bg-white text-gray-800 pt-12 shadow-md border-t border-gray-200" id="footer">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10 border-b border-gray-300 pb-8">
 
             <!-- Company logo and content -->
             <div>
-                <a href="index.html"><img src="images/logo.png" alt="Company Logo" class="w-32 mb-4"></a>
-                
-                <p class="text-gray-700">
-                    Mass Apson is a young & dynamic technology solution provider which deals in Coolant tanks, Conveyors, magnetic separator, paper filter, Hyd Power pack etc. Founded in 2013 with state-of-the-art manufacturing facility in Faridabad, Haryana.
-                </p>
+                <a href="/index.html"><img src="/images/logo.png" alt="Company Logo" class="w-64 mb-4"></a>
+
+                <!--p class="text-gray-700">
+                    Mass Apson is a young & dynamic technology solution provider which deals in Coolant tanks,
+                    Conveyors, magnetic separator, paper filter, Hyd Power pack etc.
+                </p-->
             </div>
 
             <!-- Quick Links -->
@@ -233,17 +234,18 @@
             </div>
 
             <!-- Address -->
-            <div>
-                <h4 class="text-lg font-semibold text-[#005baa] mb-2">Corporate office</h4>
+              <div>
+                <h4 class="text-lg font-semibold text-[#005baa] mb-4">Corporate office</h4>
                 <p class="text-gray-700 leading-relaxed">
-                    <b>GURGAON</b> <br>
-                    SB-R/1L/04/025 & 026A, 1ST FLOOR<br>
-                    M3M URBANA SECTOR-67 <br>
-                    GURGAON-122102 <br>
+                    <b>Gurgaon</b> <br>
+                    SB-R/1L/04/025 & 026A, 1ST Floor<br>
+                    M3M Urbana Sector-67, Gurgaon-122102 <br>
                     Tel No. 0124-4966065
                 </p>
+            </div>
+            <div>              
 
-                <h4 class="text-lg font-semibold text-[#005baa] mt-4 mb-2">Manufacturing</h4>
+                <h4 class="text-lg font-semibold text-[#005baa] mb-4">Manufacturing</h4>
                 <p class="text-gray-700 leading-relaxed">
                     <b>Faridabad</b> <br>
                     Plot No -21, Gazipur Industrial Area,<br>
@@ -252,7 +254,6 @@
                 </p>
             </div>
         </div>
-
         <!-- Social & Copyright -->
         <div class="width-full px-52 py-6 flex flex-col md:flex-row items-center justify-between text-sm bg-[#005baa]">
             <div class="flex gap-4 mb-4 md:mb-0 text-[#005baa]">
@@ -276,17 +277,17 @@
         </div>
     </footer>
 
-  
-    <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const toggleButton = document.getElementById("menu-toggle");
-        const mobileMenu = document.getElementById("mobile-menu");
 
-        toggleButton.addEventListener("click", () => {
-            mobileMenu.classList.toggle("hidden");
-        });
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggleButton = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      toggleButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
     });
-</script>
+  </script>
 
 
 </body>

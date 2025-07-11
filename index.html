@@ -17,19 +17,32 @@
             text-shadow: 0 2px 6px rgba(255 255 255 / 50%);
         }
     </style>
+
+    <style>
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .animate-scroll {
+            animation: scroll 40s linear infinite;
+        }
+    </style>
 </head>
 
 <body class="bg-white text-gray-800 font-sans">
-
-
     <!-- Header -->
-    <header class="bg-[#005baa] text-white sticky top-0 z-50 shadow-md" id="header">
+    <header class="bg-white text-[#005baa] sticky top-0 z-50 shadow-md" id="header">
         <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
             <!-- Logo -->
-            <a href="/index.html">
-                <img src="/images/logo.png" alt="Apson Engineers Logo" class="h-10 w-auto bg-white rounded-lg p-1" />
+            <a href="index.html">
+                <img src="/images/logo.png" alt="Apson Engineers Logo" class="h-10 w-auto rounded-lg p-1" />
             </a>
-
             <!-- Desktop Navigation -->
             <nav class="hidden md:flex space-x-6 text-sm font-medium items-center">
                 <a href="/index.html" class="hover:scale-110">Home</a>
@@ -51,45 +64,42 @@
                         class="absolute left-0 mt-2 flex bg-white text-[#005baa] rounded shadow-md py-2 px-4 z-40 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 space-x-4 min-w-max">
                         <!-- Apson -->
                         <a href="/apson-products.html"
-                            class="flex items-center gap-2 border-2 border-white hover:border-[#005baa] hover:text-white rounded transition">
-                            <img src="/images/logo.png" alt="Apson Logo" class="w-16 h-8 object-contain p-1">
+                            class="flex items-center gap- border-2 border-white hover:border-[#005baa] hover:text-white rounded transition">
+                            <img src="/images/logo1.png" alt="Apson Logo" class="w-16 h-8 object-contain p-1">
                             <!-- <span>Apson</span> -->
                         </a>
 
                         <!-- Bunri -->
                         <a href="/bunri-products.html"
                             class="flex items-center gap-2 border-2 border-white hover:border-[#005baa] hover:text-white rounded transition">
-                            <img src="/images/bunri_logo.svg" alt="Bunri Logo" class="w-16 h-8 object-contain p-1">
+                            <img src="/images/logo2.png" alt="Bunri Logo" class="w-16 h-8 object-contain p-1">
                             <!-- <span>Bunri</span> -->
                         </a>
 
                         <!-- Nikuni -->
                         <a href="/nikuni-products.html"
                             class="flex items-center gap-2 border-2 border-white hover:border-[#005baa] hover:text-white rounded transition">
-                            <img src="/images/nikuni-logo.png" alt="Nikuni Logo" class="w-16 h-8 object-contain p-1">
+                            <img src="/images/logo3.png" alt="Nikuni Logo" class="w-16 h-8 object-contain p-1">
                             <!-- <span>Nikuni</span> -->
                         </a>
 
                         <!-- Nissei -->
                         <a href="/nissei-products.html"
                             class="flex items-center gap-2 border-2 border-white hover:border-[#005baa] hover:text-white rounded transition">
-                            <img src="/images/nissei-logo.png" alt="Other Logo" class="w-16 h-8 object-contain p-1">
+                            <img src="/images/logo4.png" alt="Other Logo" class="w-16 h-8 object-contain p-1">
                             <!-- <span>Nissei</span> -->
                         </a>
                     </div>
                 </div>
-
-
                 <a href="/gallery.html" class="hover:scale-110">Gallery</a>
                 <a href="/all-customers.html" class="hover:scale-110">List of Customers</a>
                 <a href="/collaboration.html" class="hover:scale-110">Collaboration</a>
                 <a href="/contact.html" class="hover:scale-110">Contact</a>
             </nav>
-
             <!-- CTA Button -->
             <a href="/contact.html#contact_form"
-                class="hidden md:inline-block bg-white text-[#005baa] px-4 py-2 rounded hover:bg-[#003c70] hover:text-white transition">Product Enquiry</a>
-
+                class="hidden md:inline-block bg-[#005baa] text-white px-4 py-2 rounded hover:bg-[#003c70] hover:text-white transition">Product
+                Enquiry</a>
             <!-- Mobile Menu Button -->
             <button id="menu-toggle" class="md:hidden focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -141,8 +151,8 @@
         <div class="relative h-[80vh] w-full" id="slider">
             <!-- Slides -->
             <div class="slide absolute inset-0 bg-cover bg-center opacity-100 transition-opacity duration-1000 z-10"
-                style="background-image: url('images/home-banner-1.jpg');" data-title="Engineering Tomorrow"
-                data-subtitle="Turnkey industrial solutions from design to delivery.">
+                style="background-image: url('images/home-banner-1.jpg');" data-title="Smart Chip Handling for Smarter Manufacturing."
+                data-subtitle="Efficient. Reliable. Built for CNC excellence.">
             </div>
 
             <div class="slide absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000 z-0"
@@ -206,10 +216,6 @@
             </div>
         </div>
     </section>
-
-
-
-
     <!-- Collaboration Products Slideshow Section -->
     <section class="bg-gradient-to-br from-white via-[#516fc9] to-white py-16 px-4 sm:px-8 overflow-hidden">
         <div class="max-w-7xl mx-auto text-center mb-12">
@@ -224,146 +230,227 @@
         </div>
 
         <!-- Slideshow Wrapper -->
-        <div class="relative overflow-hidden">
-            <div id="product-slider" class="flex gap-8 animate-scroll whitespace-nowrap">
-                <!-- Product Card -->
+        <div class="relative overflow-hidden group">
+            <div id="product-slider"
+                class="flex gap-8 whitespace-nowrap will-change-transform animate-scroll group-hover:[animation-play-state:paused]">
+                <!-- Sample Product Cards -->
                 <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
-                    <img src="images/hpp-1.jpg" alt="Apson Product 1" class="w-full h-40 object-contain mb-2 rounded" />
-                    <h3 class="text-lg font-semibold text-[#294599]">Hydraulic Power Pack</h3>
+                    <img src="images/Japneese-visit/IMG-20250701-WA0091.jpg" alt="Apson Product 1"
+                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
+                    <!--h3 class="text-lg font-semibold text-[#294599]">Hydraulic Power Pack</h3-->
+                </div>
+
+
+                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
+                    <img src="images/Japneese-visit/IMG-20250701-WA0027.jpg" alt="Bunri Product 1"
+                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
+                    <!--h3 class="text-lg font-semibold text-[#294599]">Bush Removal Machine</h3-->
                 </div>
 
                 <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
-                    <img src="images/brm-1.jpg" alt="Bunri Product 1" class="w-full h-40 object-contain mb-2 rounded" />
-                    <h3 class="text-lg font-semibold text-[#294599]">Bush Removal Machine</h3>
+                    <img src="images/Japneese-visit/IMG-20250701-WA0029.jpg" alt="Apson Product 2"
+                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
+                    <!--h3 class="text-lg font-semibold text-[#294599]">Magnetic Separator Phoenix NEO</h3-->
                 </div>
 
                 <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
-                    <img src="images/MSP-1.webp" alt="Apson Product 2"
-                        class="w-full h-40 object-contain mb-2 rounded" />
-                    <h3 class="text-lg font-semibold text-[#294599]">Magnetic Separator Phoenix NEO</h3>
+                    <img src="images/Japneese-visit/IMG-20250701-WA0035.jpg" alt="Bunri Product 2"
+                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
+                    <!--h3 class="text-lg font-semibold text-[#294599]">Magnetic Drum Conveyor</h3-->
+                </div>
+                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
+                    <img src="images/Japneese-visit/IMG-20250701-WA0038.jpg" alt="Apson Product 2"
+                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
                 </div>
 
                 <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
-                    <img src="images/mdc-1.webp" alt="Bunri Product 2"
-                        class="w-full h-40 object-contain mb-2 rounded" />
-                    <h3 class="text-lg font-semibold text-[#294599]">Magnetic Drum Conveyor</h3>
-                </div>
-                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
-                    <img src="images/vdf-1.jpg" alt="Apson Product 2" class="w-full h-40 object-contain mb-2 rounded" />
-                    <h3 class="text-lg font-semibold text-[#294599]">Hydrocyclone Separator VDF</h3>
-                </div>
-
-                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
-                    <img src="images/ktm-1.jpg" alt="Bunri Product 2" class="w-full h-40 object-contain mb-2 rounded" />
-                    <h3 class="text-lg font-semibold text-[#294599]">Micro-bubble Generator (KTM)</h3>
+                    <img src="images/Japneese-visit/IMG-20250701-WA0039.jpg" alt="Bunri Product 2"
+                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
                 </div>
 
                 <!-- Duplicate cards to create infinite effect -->
                 <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
-                    <img src="images/hpp-1.jpg" alt="Apson Product 1" class="w-full h-40 object-contain mb-2 rounded" />
-                    <h3 class="text-lg font-semibold text-[#294599]">Hydraulic Power Pack</h3>
+                    <img src="images/Japneese-visit/IMG-20250701-WA0041.jpg" alt="Apson Product 1"
+                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
                 </div>
 
                 <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
-                    <img src="images/brm-1.jpg" alt="Bunri Product 1" class="w-full h-40 object-contain mb-2 rounded" />
-                    <h3 class="text-lg font-semibold text-[#294599]">Bush Removal Machine</h3>
+                    <img src="images/Japneese-visit/IMG-20250701-WA0044.jpg" alt="Bunri Product 1"
+                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
                 </div>
                 <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
-                    <img src="images/MSP-1.webp" alt="Apson Product 2"
-                        class="w-full h-40 object-contain mb-2 rounded" />
-                    <h3 class="text-lg font-semibold text-[#294599]">Magnetic Separator Phoenix NEO</h3>
+                    <img src="images/Japneese-visit/IMG-20250701-WA0045.jpg" alt="Apson Product 2"
+                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
                 </div>
 
                 <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
-                    <img src="images/mdc-1.webp" alt="Bunri Product 2"
-                        class="w-full h-40 object-contain mb-2 rounded" />
-                    <h3 class="text-lg font-semibold text-[#294599]">Magnetic Drum Conveyor</h3>
+                    <img src="images/Japneese-visit/IMG-20250701-WA0049.jpg" alt="Bunri Product 2"
+                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
                 </div>
                 <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
-                    <img src="images/vdf-1.jpg" alt="Apson Product 2" class="w-full h-40 object-contain mb-2 rounded" />
-                    <h3 class="text-lg font-semibold text-[#294599]">Hydrocyclone Separator VDF</h3>
+                    <img src="images/Japneese-visit/IMG-20250701-WA0051.jpg" alt="Apson Product 2"
+                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
                 </div>
 
                 <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
-                    <img src="images/ktm-1.jpg" alt="Bunri Product 2" class="w-full h-40 object-contain mb-2 rounded" />
-                    <h3 class="text-lg font-semibold text-[#294599]">Micro-bubble Generator (KTM)</h3>
+                    <img src="images/Japneese-visit/IMG-20250701-WA0054.jpg" alt="Bunri Product 2"
+                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
                 </div>
+
+                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
+                    <img src="images/Japneese-visit/IMG-20250701-WA0035.jpg" alt="Bunri Product 2"
+                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
+                    <!--h3 class="text-lg font-semibold text-[#294599]">Magnetic Drum Conveyor</h3-->
+                </div>
+                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
+                    <img src="images/Japneese-visit/IMG-20250701-WA0038.jpg" alt="Apson Product 2"
+                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
+                </div>
+
+                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
+                    <img src="images/Japneese-visit/IMG-20250701-WA0039.jpg" alt="Bunri Product 2"
+                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
+                </div>
+
+                <!-- Duplicate cards to create infinite effect -->
+                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
+                    <img src="images/Japneese-visit/IMG-20250701-WA0041.jpg" alt="Apson Product 1"
+                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
+                </div>
+
+                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
+                    <img src="images/Japneese-visit/IMG-20250701-WA0044.jpg" alt="Bunri Product 1"
+                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
+                </div>
+                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
+                    <img src="images/Japneese-visit/IMG-20250701-WA0045.jpg" alt="Apson Product 2"
+                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
+                </div>
+
+                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
+                    <img src="images/Japneese-visit/IMG-20250701-WA0049.jpg" alt="Bunri Product 2"
+                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
+                </div>
+                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
+                    <img src="images/Japneese-visit/IMG-20250701-WA0051.jpg" alt="Apson Product 2"
+                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
+                </div>
+
+                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
+                    <img src="images/Japneese-visit/IMG-20250701-WA0054.jpg" alt="Bunri Product 2"
+                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
+                </div>
+
+
+                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
+                    <img src="images/Japneese-visit/IMG-20250701-WA0056.jpg" alt="Bunri Product 2"
+                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
+                    <!--h3 class="text-lg font-semibold text-[#294599]">Magnetic Drum Conveyor</h3-->
+                </div>
+                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
+                    <img src="images/Japneese-visit/IMG-20250701-WA0057.jpg" alt="Apson Product 2"
+                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
+                </div>
+
+                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
+                    <img src="images/Japneese-visit/IMG-20250701-WA0058.jpg" alt="Bunri Product 2"
+                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
+                </div>
+
+                <!-- Duplicate cards to create infinite effect -->
+                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
+                    <img src="images/Japneese-visit/IMG-20250701-WA0059.jpg" alt="Apson Product 1"
+                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
+                </div>
+
+                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
+                    <img src="images/Japneese-visit/IMG-20250701-WA0060.jpg" alt="Bunri Product 1"
+                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
+                </div>
+                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
+                    <img src="images/Japneese-visit/IMG-20250701-WA0061.jpg" alt="Apson Product 2"
+                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
+                </div>
+
+                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
+                    <img src="images/Japneese-visit/IMG-20250701-WA0062.jpg" alt="Bunri Product 2"
+                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
+                </div>
+                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
+                    <img src="images/Japneese-visit/IMG-20250701-WA0064.jpg" alt="Apson Product 2"
+                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
+                </div>
+
+                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
+                    <img src="images/Japneese-visit/IMG-20250701-WA0067.jpg" alt="Bunri Product 2"
+                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
+                </div>
+
+
+
+                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
+                    <img src="images/Japneese-visit/IMG-20250701-WA0069.jpg" alt="Bunri Product 2"
+                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
+                    <!--h3 class="text-lg font-semibold text-[#294599]">Magnetic Drum Conveyor</h3-->
+                </div>
+                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
+                    <img src="images/Japneese-visit/IMG-20250701-WA0070.jpg" alt="Apson Product 2"
+                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
+                </div>
+
+                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
+                    <img src="images/Japneese-visit/IMG-20250701-WA0071.jpg" alt="Bunri Product 2"
+                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
+                </div>
+
+                <!-- Duplicate cards to create infinite effect -->
+                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
+                    <img src="images/Japneese-visit/IMG-20250701-WA0072.jpg" alt="Apson Product 1"
+                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
+                </div>
+
+                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
+                    <img src="images/Japneese-visit/IMG-20250701-WA0073.jpg" alt="Bunri Product 1"
+                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
+                </div>
+                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
+                    <img src="images/Japneese-visit/IMG-20250701-WA0076.jpg" alt="Apson Product 2"
+                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
+                </div>
+
+                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
+                    <img src="images/Japneese-visit/IMG-20250701-WA0078.jpg" alt="Bunri Product 2"
+                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
+                </div>
+                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
+                    <img src="images/Japneese-visit/IMG-20250701-WA0079.jpg" alt="Apson Product 2"
+                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
+                </div>
+
+                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
+                    <img src="images/Japneese-visit/IMG-20250701-WA0080.jpg" alt="Bunri Product 2"
+                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
+                </div>
+            </div>
+        </div>
+
+        <!-- Fullscreen Image Popup -->
+        <div id="imagePopup" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden">
+            <div class="relative max-w-4xl w-full">
+                <button id="closePopup"
+                    class="absolute top-2 right-2 text-white text-2xl font-bold bg-black bg-opacity-50 px-4 py-2 rounded">×</button>
+                <img id="popupImage" src="" alt="Popup Image" class="max-h-[90vh] mx-auto rounded shadow-lg" />
             </div>
         </div>
 
         <!-- Button -->
         <div class="text-center mt-12">
-            <a href="product-page.html"
+            <a href="gallery.html"
                 class="inline-block bg-[#516fc9] text-white px-6 py-3 text-lg rounded shadow hover:bg-[#294599] transition">
                 Explore Full Range →
             </a>
         </div>
     </section>
-
-
-    <!-- About Apson Engineers Section -->
-    <section class="bg-white py-16 px-4 md:px-12 lg:px-24 text-gray-800">
-        <div class="flex flex-col lg:flex-row items-center gap-10">
-
-            <!-- Image -->
-            <div class="lg:w-1/2 w-full">
-                <img src="images/home-about.png" alt="Apson Machine" class="w-[80%] rounded-xl shadow-lg" />
-            </div>
-
-            <!-- Text Content -->
-            <div class="lg:w-1/2 w-full">
-                <h2 class="text-3xl md:text-4xl font-bold text-[#0096c7] mb-6 flex items-center"><span
-                        class="text-[#005baa]">About</span>
-                    <img src="/images/logo.png" alt="logo" class="h-14 ml-3"></h2>
-                <p class="text-lg leading-relaxed mb-4">
-                    Mass Apson is a young & dynamic technology solution provider dealing in Coolant Tanks, Conveyors,
-                    Magnetic Separators, Paper Filters, Hydraulic Power Packs, and more.
-                    Founded in 2013 with a state-of-the-art facility in Faridabad, Haryana, we offer turnkey solutions
-                    from process engineering to execution.
-                </p>
-                <p class="text-lg leading-relaxed mb-4">
-                    We strive to be the premier engineering organization by achieving extraordinary results for our
-                    customers, building satisfying careers for our people, and earning a fair return on the value we
-                    deliver.
-                </p>
-            </div>
-        </div>
-
-        <!-- Core Values -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 mt-16">
-            <div class="p-6 bg-gray-50 border-l-4 border-[#005baa] rounded shadow hover:shadow-md transition">
-                <h3 class="text-xl font-semibold text-[#005baa] mb-2">Quality</h3>
-                <p>Committed to understanding customer needs and designing safe, user-friendly, and cost-effective
-                    products of consistent quality.</p>
-            </div>
-            <div class="p-6 bg-gray-50 border-l-4 border-[#005baa] rounded shadow hover:shadow-md transition">
-                <h3 class="text-xl font-semibold text-[#005baa] mb-2">Customer Service</h3>
-                <p>Extend excellent customer support and service at all times and ensure timely delivery.</p>
-            </div>
-            <div class="p-6 bg-gray-50 border-l-4 border-[#005baa] rounded shadow hover:shadow-md transition">
-                <h3 class="text-xl font-semibold text-[#005baa] mb-2">Expert</h3>
-                <p>Operate at the highest level in individual specialist markets.</p>
-            </div>
-            <div class="p-6 bg-gray-50 border-l-4 border-[#005baa] rounded shadow hover:shadow-md transition">
-                <h3 class="text-xl font-semibold text-[#005baa] mb-2">Passionate</h3>
-                <p>Grow long-term partnerships and collaborations with customers.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Our Footprints in India -->
-    <section class="bg-white py-16 px-4 md:px-12 lg:px-24 text-gray-800">
-        <div class="text-center mb-10">
-            <h2 class="text-3xl md:text-4xl font-bold text-[#005baa]">Our <span class="text-[#0096c7]">Footprints</span>
-                in India</h2>
-        </div>
-
-        <!-- Map Image -->
-        <div class="w-full flex justify-center">
-            <img src="images/india-map.png" alt="Apson Footprints Map" class="w-full max-w-6xl rounded-xl shadow-lg" />
-        </div>
-    </section>
-
     <!-- Collaboration with BUNRI -->
     <section class="relative bg-gradient-to-r from-white via-[#e8f3fb] to-white py-20 px-6 md:px-20 text-center"
         style="background-image: url('images/home_collaboration.jpg'); background-size: cover; background-position: center;">
@@ -406,6 +493,73 @@
         </div>
     </section>
 
+    <!-- About Apson Engineers Section -->
+    <section class="bg-white py-16 px-4 md:px-12 lg:px-24 text-gray-800">
+        <div class="flex flex-col lg:flex-row items-center gap-10">
+
+            <!-- Image -->
+            <div class="lg:w-1/2 w-full">
+                <img src="images/home-about.png" alt="Apson Machine" class="w-[80%] rounded-xl shadow-lg" />
+            </div>
+
+            <!-- Text Content -->
+            <div class="lg:w-1/2 w-full">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#0096c7] mb-6 flex items-center"><span
+                        class="text-[#005baa]">About</span>
+                    <img src="/images/logo.png" alt="logo" class="h-14 ml-3"></h2>
+                <p class="text-lg leading-relaxed mb-4">
+                    Mass Apson is a young & dynamic technology solution provider dealing in Coolant Tanks, Conveyors,
+                    Magnetic Separators, Paper Filters, Hydraulic Power Packs, and more.
+                    Founded in 2013 with a state-of-the-art facility in Faridabad, Haryana, we offer turnkey solutions
+                    from process engineering to execution.
+                </p>
+                <p class="text-lg leading-relaxed mb-4">
+                    We strive to be the premier engineering organization by achieving extraordinary results for our
+                    customers, building satisfying careers for our people, and earning a fair return on the value we
+                    deliver.
+                </p>
+                <a href="about-us.html"
+                    class="mt-6 inline-block text-white bg-[#005baa] hover:bg-[#003C70] px-10 py-2 rounded-full text-sm font-medium transition duration-300 animate__animated animate__fadeIn animate__delay-2s">Read
+                    More</a>
+            </div>
+        </div>
+
+        <!-- Core Values -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 mt-16">
+            <div class="p-6 bg-gray-50 border-l-4 border-[#005baa] rounded shadow hover:shadow-md transition">
+                <h3 class="text-xl font-semibold text-[#005baa] mb-2">Quality</h3>
+                <p>Committed to understanding customer needs and designing safe, user-friendly, and cost-effective
+                    products of consistent quality.</p>
+            </div>
+            <div class="p-6 bg-gray-50 border-l-4 border-[#005baa] rounded shadow hover:shadow-md transition">
+                <h3 class="text-xl font-semibold text-[#005baa] mb-2">Customer Service</h3>
+                <p>Extend excellent customer support and service at all times and ensure timely delivery.</p>
+            </div>
+            <div class="p-6 bg-gray-50 border-l-4 border-[#005baa] rounded shadow hover:shadow-md transition">
+                <h3 class="text-xl font-semibold text-[#005baa] mb-2">Expert</h3>
+                <p>Operate at the highest level in individual specialist markets.</p>
+            </div>
+            <div class="p-6 bg-gray-50 border-l-4 border-[#005baa] rounded shadow hover:shadow-md transition">
+                <h3 class="text-xl font-semibold text-[#005baa] mb-2">Passionate</h3>
+                <p>Grow long-term partnerships and collaborations with customers.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Footprints in India -->
+    <section class="bg-white py-16 px-4 md:px-12 lg:px-24 text-gray-800">
+        <div class="text-center mb-10">
+            <h2 class="text-3xl md:text-4xl font-bold text-[#005baa]">Our <span class="text-[#0096c7]">Footprints</span>
+                in India</h2>
+        </div>
+
+        <!-- Map Image -->
+        <div class="w-full flex justify-center">
+            <img src="images/india-map.png" alt="Apson Footprints Map" class="w-full max-w-6xl rounded-xl shadow-lg" />
+        </div>
+    </section>
+
+
     <!-- Customer Carousel Section -->
     <section class="bg-white py-12">
         <div class="max-w-7xl mx-auto px-4">
@@ -413,10 +567,6 @@
                 <h2 class="text-3xl font-bold">
                     <span class="text-[#005baa]">Our</span> Customers
                 </h2>
-                <a href="all-customers.html"
-                    class="bg-[#005baa] text-white px-4 py-2 rounded hover:bg-[#008fcc] transition">
-                    View All
-                </a>
             </div>
 
             <!-- Carousel Container -->
@@ -453,6 +603,13 @@
                     <img src="images/end-user/dana.jpg" alt="dana" class="h-16 w-auto object-contain" />
                 </div>
             </div>
+            <div class="flex items-center place-content-end mt-4 mb-8">
+                <a href="all-customers.html"
+                    class="bg-[#005baa] text-white px-6 py-2 rounded hover:bg-[#008fcc] transition">
+                    View All
+                </a>
+            </div>
+
         </div>
     </section>
 
@@ -460,11 +617,8 @@
     <!-- Group of Companies Section -->
     <section class="bg-[#005baa] py-12">
         <div class="max-w-7xl mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold text-white mb-10">
-                Group of Companies
-            </h2>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+            <h2 class="text-3xl font-bold text-white mb-10">Group of Companies</h2>
+            <div class="flex flex-col md:flex-row place-content-center gap-8">
                 <!-- Company Card -->
                 <a href="">
                     <div class="bg-white rounded-xl shadow-md p-4 hover:shadow-xl transition duration-300">
@@ -473,24 +627,10 @@
                     </div>
                 </a>
 
-                <a href="">
+                <a href="https://www.apsonengineers.com/">
                     <div class="bg-white rounded-xl shadow-md p-4 hover:shadow-xl transition duration-300">
-                        <img src="images/gc2.jpg" alt="ASE" class="h-20 mx-auto mb-4 object-contain">
-                        <p class="text-gray-700 font-medium text-sm">Automation Systems & Engineering</p>
-                    </div>
-                </a>
-
-                <a href="http://www.devashishgroup.com/" target="_blank">
-                    <div class="bg-white rounded-xl shadow-md p-4 hover:shadow-xl transition duration-300">
-                        <img src="images/gc3.jpg" alt="Devashish Engineering" class="h-20 mx-auto mb-4 object-contain">
-                        <p class="text-gray-700 font-medium text-sm">Devashish Engineering Products LLP</p>
-                    </div>
-                </a>
-
-                <a href="">
-                    <div class="bg-white rounded-xl shadow-md p-4 hover:shadow-xl transition duration-300">
-                        <img src="images/gc4.jpg" alt="Advance Engineering" class="h-20 mx-auto mb-4 object-contain">
-                        <p class="text-gray-700 font-medium text-sm">Advance Engineering</p>
+                        <img src="images/about-logo.png" alt="ASE" class="h-20 mx-auto mb-4 object-contain">
+                        <p class="text-gray-700 font-medium text-sm">APSON Engineers</p>
                     </div>
                 </a>
             </div>
@@ -503,15 +643,22 @@
         <div>
             <h2 class="text-2xl md:text-3xl font-bold text-[#005baa] mb-6 text-center">AWARDS</h2>
             <div class="relative">
-                <div id="awards-carousel" class="overflow-hidden rounded-lg">
-                    <div class="flex transition-transform duration-500" id="awards-track">
-                        <img src="images/bdm-1.jpeg" class="w-full object-cover rounded" />
-                        <img src="images/bdm-1.jpeg" class="w-full object-cover rounded" />
-                        <img src="images/bdm-1.jpeg" class="w-full object-cover rounded" />
-                        <!-- Add more images as needed -->
-                    </div>
+
+                <div class="flex transition-transform duration-500" id="awards-track">
+                    <img src="images/award.jpeg" class="w-full object-cover rounded" />
+                    <!-- Add more images as needed -->
                 </div>
-                <!-- Navigation Buttons -->
+
+
+                <!--div id="awards-carousel" class="overflow-hidden rounded-lg">
+                    <div class="flex transition-transform duration-500" id="awards-track">
+                        <img src="images/award.jpeg" class="w-full object-cover rounded" />
+                        <img src="images/bdm-1.jpeg" class="w-full object-cover rounded" />
+                        <img src="images/bdm-1.jpeg" class="w-full object-cover rounded" />
+                         Add more images as needed -
+                    </div>
+                </div-->
+                <!-- Navigation Buttons 
                 <button onclick="slideCarousel('awards', -1)"
                     class="absolute top-1/2 left-1 transform -translate-y-1/2 bg-white shadow px-3 py-1 rounded hover:bg-gray-200">
                     &#8592;
@@ -519,23 +666,29 @@
                 <button onclick="slideCarousel('awards', 1)"
                     class="absolute top-1/2 right-1 transform -translate-y-1/2 bg-white shadow px-3 py-1 rounded hover:bg-gray-200">
                     &#8594;
-                </button>
+                </button>-->
             </div>
         </div>
 
         <!-- Right Column: Certifications -->
+
         <div>
             <h2 class="text-2xl md:text-3xl font-bold text-[#005baa] mb-6 text-center">CERTIFICATIONS</h2>
             <div class="relative">
-                <div id="certs-carousel" class="overflow-hidden rounded-lg">
+                <div class="flex transition-transform duration-500" id="awards-track">
+                    <img src="images/award.jpeg" class="w-full object-cover rounded" />
+                    <!-- Add more images as needed -->
+                </div>
+
+                <!--div id="certs-carousel" class="overflow-hidden rounded-lg">
                     <div class="flex transition-transform duration-500" id="certs-track">
                         <img src="images/bdm-1.jpeg" class="w-full object-cover rounded" />
                         <img src="images/bdm-1.jpeg" class="w-full object-cover rounded" />
                         <img src="images/bdm-1.jpeg" class="w-full object-cover rounded" />
-                        <!-- Add more images as needed -->
-                    </div>
-                </div>
-                <!-- Navigation Buttons -->
+                        < Add more images as needed>
+                    </div-->
+                </div-->
+                <!-- Navigation Buttons >
                 <button onclick="slideCarousel('certs', -1)"
                     class="absolute top-1/2 left-1 transform -translate-y-1/2 bg-white shadow px-3 py-1 rounded hover:bg-gray-200">
                     &#8592;
@@ -543,24 +696,23 @@
                 <button onclick="slideCarousel('certs', 1)"
                     class="absolute top-1/2 right-1 transform -translate-y-1/2 bg-white shadow px-3 py-1 rounded hover:bg-gray-200">
                     &#8594;
-                </button>
+                </button-->
             </div>
         </div>
     </section>
 
     <!-- Footer Section -->
     <footer class="bg-white text-gray-800 pt-12 shadow-md border-t border-gray-200" id="footer">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10 border-b border-gray-300 pb-8">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10 border-b border-gray-300 pb-8">
 
             <!-- Company logo and content -->
             <div>
-                <a href="/index.html"><img src="/images/logo.png" alt="Company Logo" class="w-32 mb-4"></a>
+                <a href="/index.html"><img src="/images/logo.png" alt="Company Logo" class="w-64 mb-4"></a>
 
-                <p class="text-gray-700">
+                <!--p class="text-gray-700">
                     Mass Apson is a young & dynamic technology solution provider which deals in Coolant tanks,
-                    Conveyors, magnetic separator, paper filter, Hyd Power pack etc. Founded in 2013 with
-                    state-of-the-art manufacturing facility in Faridabad, Haryana.
-                </p>
+                    Conveyors, magnetic separator, paper filter, Hyd Power pack etc.
+                </p-->
             </div>
 
             <!-- Quick Links -->
@@ -576,16 +728,17 @@
 
             <!-- Address -->
             <div>
-                <h4 class="text-lg font-semibold text-[#005baa] mb-2">Corporate office</h4>
+                <h4 class="text-lg font-semibold text-[#005baa] mb-4">Corporate office</h4>
                 <p class="text-gray-700 leading-relaxed">
-                    <b>GURGAON</b> <br>
-                    SB-R/1L/04/025 & 026A, 1ST FLOOR<br>
-                    M3M URBANA SECTOR-67 <br>
-                    GURGAON-122102 <br>
+                    <b>Gurgaon</b> <br>
+                    SB-R/1L/04/025 & 026A, 1ST Floor<br>
+                    M3M Urbana Sector-67, Gurgaon-122102 <br>
                     Tel No. 0124-4966065
                 </p>
+            </div>
+            <div>
 
-                <h4 class="text-lg font-semibold text-[#005baa] mt-4 mb-2">Manufacturing</h4>
+                <h4 class="text-lg font-semibold text-[#005baa] mb-4">Manufacturing</h4>
                 <p class="text-gray-700 leading-relaxed">
                     <b>Faridabad</b> <br>
                     Plot No -21, Gazipur Industrial Area,<br>
@@ -594,7 +747,6 @@
                 </p>
             </div>
         </div>
-
         <!-- Social & Copyright -->
         <div class="width-full px-52 py-6 flex flex-col md:flex-row items-center justify-between text-sm bg-[#005baa]">
             <div class="flex gap-4 mb-4 md:mb-0 text-[#005baa]">
@@ -697,7 +849,49 @@
         });
     </script>
 
+    <script>
+        // Image popup logic
+        const popup = document.getElementById("imagePopup");
+        const popupImage = document.getElementById("popupImage");
+        const closeBtn = document.getElementById("closePopup");
+        const triggers = document.querySelectorAll(".image-popup-trigger");
 
+        triggers.forEach(img => {
+            img.addEventListener("click", () => {
+                popupImage.src = img.src;
+                popup.classList.remove("hidden");
+            });
+        });
+
+        closeBtn.addEventListener("click", () => {
+            popup.classList.add("hidden");
+            popupImage.src = "";
+        });
+
+        // Close popup on ESC key
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape") {
+                popup.classList.add("hidden");
+                popupImage.src = "";
+            }
+        });
+    </script>
+
+    <script>
+        function showNextImage() {
+            const images = Array.from(document.querySelectorAll(".image-popup-trigger"));
+            const currentIndex = images.findIndex(img => img.src === popupImage.src);
+            const nextIndex = (currentIndex + 1) % images.length;
+            popupImage.src = images[nextIndex].src;
+        }
+
+        function showPrevImage() {
+            const images = Array.from(document.querySelectorAll(".image-popup-trigger"));
+            const currentIndex = images.findIndex(img => img.src === popupImage.src);
+            const prevIndex = (currentIndex - 1 + images.length) % images.length;
+            popupImage.src = images[prevIndex].src;
+        }
+    </script>
 
 </body>
 
