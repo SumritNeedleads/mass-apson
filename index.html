@@ -44,7 +44,7 @@
                 <img src="/images/logo.png" alt="Apson Engineers Logo" class="h-10 w-auto rounded-lg p-1" />
             </a>
             <!-- Desktop Navigation -->
-            <nav class="hidden md:flex space-x-6 text-sm font-medium items-center">
+            <nav class="hidden md:flex space-x-6 text-base font-medium items-center">
                 <a href="/index.html" class="hover:scale-110">Home</a>
                 <a href="/about-us.html" class="hover:scale-110">About</a>
 
@@ -65,34 +65,34 @@
                         <!-- Apson -->
                         <a href="/apson-products.html"
                             class="flex items-center gap- border-2 border-white hover:border-[#005baa] hover:text-white rounded transition">
-                            <img src="/images/logo1.png" alt="Apson Logo" class="w-16 h-8 object-contain p-1">
+                            <img src="/images/logo1.png" alt="Apson Logo" class="w-24 h-8 object-contain p-1">
                             <!-- <span>Apson</span> -->
                         </a>
 
                         <!-- Bunri -->
                         <a href="/bunri-products.html"
                             class="flex items-center gap-2 border-2 border-white hover:border-[#005baa] hover:text-white rounded transition">
-                            <img src="/images/logo2.png" alt="Bunri Logo" class="w-16 h-8 object-contain p-1">
+                            <img src="/images/logo2.png" alt="Bunri Logo" class="w-20 h-8 object-contain p-1">
                             <!-- <span>Bunri</span> -->
                         </a>
 
                         <!-- Nikuni -->
                         <a href="/nikuni-products.html"
                             class="flex items-center gap-2 border-2 border-white hover:border-[#005baa] hover:text-white rounded transition">
-                            <img src="/images/logo3.png" alt="Nikuni Logo" class="w-16 h-8 object-contain p-1">
+                            <img src="/images/logo3.png" alt="Nikuni Logo" class="w-20 h-8 object-contain p-1">
                             <!-- <span>Nikuni</span> -->
                         </a>
 
                         <!-- Nissei -->
                         <a href="/nissei-products.html"
                             class="flex items-center gap-2 border-2 border-white hover:border-[#005baa] hover:text-white rounded transition">
-                            <img src="/images/logo4.png" alt="Other Logo" class="w-16 h-8 object-contain p-1">
+                            <img src="/images/logo4.png" alt="Other Logo" class="w-20 h-8 object-contain p-1">
                             <!-- <span>Nissei</span> -->
                         </a>
                     </div>
                 </div>
                 <a href="/gallery.html" class="hover:scale-110">Gallery</a>
-                <a href="/all-customers.html" class="hover:scale-110">List of Customers</a>
+                <a href="/all-customers.html" class="hover:scale-110">Customers</a>
                 <a href="/collaboration.html" class="hover:scale-110">Collaboration</a>
                 <a href="/contact.html" class="hover:scale-110">Contact</a>
             </nav>
@@ -139,7 +139,7 @@
 
 
             <a href="/gallery.html" class="block py-2 hover:scale-110">Gallery</a>
-            <a href="/all-customers.html" class="block py-2 hover:scale-110">List of Customers</a>
+            <a href="/all-customers.html" class="block py-2 hover:scale-110">Customers</a>
             <a href="/collaboration.html" class="block py-2 hover:scale-110">Collaboration</a>
             <a href="/contact.html" class="block py-2 hover:scale-110">Contact</a>
         </div>
@@ -151,7 +151,8 @@
         <div class="relative h-[80vh] w-full" id="slider">
             <!-- Slides -->
             <div class="slide absolute inset-0 bg-cover bg-center opacity-100 transition-opacity duration-1000 z-10"
-                style="background-image: url('images/home-banner-1.jpg');" data-title="Smart Chip Handling for Smarter Manufacturing."
+                style="background-image: url('images/home-banner-1.jpg');"
+                data-title="Smart Chip Handling for Smarter Manufacturing."
                 data-subtitle="Efficient. Reliable. Built for CNC excellence.">
             </div>
 
@@ -161,7 +162,7 @@
             </div>
 
             <div class="slide absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000 z-0"
-                style="background-image: url('images/home-banner-3.jpg');" data-title="Streamlined Chip Conveyance"
+                style="background-image: url('images/home-banner-3.jpg');" data-title="Streamlined Chip Conveyor"
                 data-subtitle="Conveyors & separators engineered to optimize production workflows.">
             </div>
 
@@ -224,214 +225,28 @@
             </h2>
             <p class="mt-4 text-lg text-white max-w-2xl mx-auto">
                 We’re thrilled to announce our prestigious partnership with <strong class="text-black">BUNRI – Japan’s
-                    Leader in Coolant Filtration Technology</strong>. Only MASS APSON have Exclusiv rights.
+                    Leader in Coolant Filtration Technology</strong>. Only MASS APSON have Exclusive rights.
                 <i>Together, we deliver cutting-edge solutions to industries across India with unmatched quality.</i>
             </p>
         </div>
 
-        <!-- Slideshow Wrapper -->
-        <div class="relative overflow-hidden group">
-            <div id="product-slider"
-                class="flex gap-8 whitespace-nowrap will-change-transform animate-scroll group-hover:[animation-play-state:paused]">
-                <!-- Sample Product Cards -->
-                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
-                    <img src="images/Japneese-visit/IMG-20250701-WA0091.jpg" alt="Apson Product 1"
-                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
-                    <!--h3 class="text-lg font-semibold text-[#294599]">Hydraulic Power Pack</h3-->
-                </div>
+        <!-- Slider Container -->
+        <div class="relative overflow-hidden">
+            <!-- Slides Wrapper -->
+            <div id="custom-slider-track" class="flex transition-transform duration-500 ease-in-out"></div>
 
+            <!-- Navigation Buttons -->
+            <button id="custom-prev-btn"
+                class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white border rounded-full p-2 shadow-md z-10 hover:bg-gray-100">❮</button>
+            <button id="custom-next-btn"
+                class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white border rounded-full p-2 shadow-md z-10 hover:bg-gray-100">❯</button>
+        </div>
 
-                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
-                    <img src="images/Japneese-visit/IMG-20250701-WA0027.jpg" alt="Bunri Product 1"
-                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
-                    <!--h3 class="text-lg font-semibold text-[#294599]">Bush Removal Machine</h3-->
-                </div>
-
-                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
-                    <img src="images/Japneese-visit/IMG-20250701-WA0029.jpg" alt="Apson Product 2"
-                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
-                    <!--h3 class="text-lg font-semibold text-[#294599]">Magnetic Separator Phoenix NEO</h3-->
-                </div>
-
-                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
-                    <img src="images/Japneese-visit/IMG-20250701-WA0035.jpg" alt="Bunri Product 2"
-                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
-                    <!--h3 class="text-lg font-semibold text-[#294599]">Magnetic Drum Conveyor</h3-->
-                </div>
-                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
-                    <img src="images/Japneese-visit/IMG-20250701-WA0038.jpg" alt="Apson Product 2"
-                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
-                </div>
-
-                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
-                    <img src="images/Japneese-visit/IMG-20250701-WA0039.jpg" alt="Bunri Product 2"
-                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
-                </div>
-
-                <!-- Duplicate cards to create infinite effect -->
-                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
-                    <img src="images/Japneese-visit/IMG-20250701-WA0041.jpg" alt="Apson Product 1"
-                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
-                </div>
-
-                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
-                    <img src="images/Japneese-visit/IMG-20250701-WA0044.jpg" alt="Bunri Product 1"
-                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
-                </div>
-                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
-                    <img src="images/Japneese-visit/IMG-20250701-WA0045.jpg" alt="Apson Product 2"
-                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
-                </div>
-
-                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
-                    <img src="images/Japneese-visit/IMG-20250701-WA0049.jpg" alt="Bunri Product 2"
-                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
-                </div>
-                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
-                    <img src="images/Japneese-visit/IMG-20250701-WA0051.jpg" alt="Apson Product 2"
-                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
-                </div>
-
-                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
-                    <img src="images/Japneese-visit/IMG-20250701-WA0054.jpg" alt="Bunri Product 2"
-                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
-                </div>
-
-                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
-                    <img src="images/Japneese-visit/IMG-20250701-WA0035.jpg" alt="Bunri Product 2"
-                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
-                    <!--h3 class="text-lg font-semibold text-[#294599]">Magnetic Drum Conveyor</h3-->
-                </div>
-                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
-                    <img src="images/Japneese-visit/IMG-20250701-WA0038.jpg" alt="Apson Product 2"
-                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
-                </div>
-
-                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
-                    <img src="images/Japneese-visit/IMG-20250701-WA0039.jpg" alt="Bunri Product 2"
-                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
-                </div>
-
-                <!-- Duplicate cards to create infinite effect -->
-                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
-                    <img src="images/Japneese-visit/IMG-20250701-WA0041.jpg" alt="Apson Product 1"
-                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
-                </div>
-
-                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
-                    <img src="images/Japneese-visit/IMG-20250701-WA0044.jpg" alt="Bunri Product 1"
-                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
-                </div>
-                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
-                    <img src="images/Japneese-visit/IMG-20250701-WA0045.jpg" alt="Apson Product 2"
-                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
-                </div>
-
-                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
-                    <img src="images/Japneese-visit/IMG-20250701-WA0049.jpg" alt="Bunri Product 2"
-                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
-                </div>
-                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
-                    <img src="images/Japneese-visit/IMG-20250701-WA0051.jpg" alt="Apson Product 2"
-                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
-                </div>
-
-                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
-                    <img src="images/Japneese-visit/IMG-20250701-WA0054.jpg" alt="Bunri Product 2"
-                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
-                </div>
-
-
-                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
-                    <img src="images/Japneese-visit/IMG-20250701-WA0056.jpg" alt="Bunri Product 2"
-                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
-                    <!--h3 class="text-lg font-semibold text-[#294599]">Magnetic Drum Conveyor</h3-->
-                </div>
-                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
-                    <img src="images/Japneese-visit/IMG-20250701-WA0057.jpg" alt="Apson Product 2"
-                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
-                </div>
-
-                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
-                    <img src="images/Japneese-visit/IMG-20250701-WA0058.jpg" alt="Bunri Product 2"
-                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
-                </div>
-
-                <!-- Duplicate cards to create infinite effect -->
-                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
-                    <img src="images/Japneese-visit/IMG-20250701-WA0059.jpg" alt="Apson Product 1"
-                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
-                </div>
-
-                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
-                    <img src="images/Japneese-visit/IMG-20250701-WA0060.jpg" alt="Bunri Product 1"
-                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
-                </div>
-                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
-                    <img src="images/Japneese-visit/IMG-20250701-WA0061.jpg" alt="Apson Product 2"
-                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
-                </div>
-
-                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
-                    <img src="images/Japneese-visit/IMG-20250701-WA0062.jpg" alt="Bunri Product 2"
-                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
-                </div>
-                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
-                    <img src="images/Japneese-visit/IMG-20250701-WA0064.jpg" alt="Apson Product 2"
-                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
-                </div>
-
-                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
-                    <img src="images/Japneese-visit/IMG-20250701-WA0067.jpg" alt="Bunri Product 2"
-                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
-                </div>
-
-
-
-                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
-                    <img src="images/Japneese-visit/IMG-20250701-WA0069.jpg" alt="Bunri Product 2"
-                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
-                    <!--h3 class="text-lg font-semibold text-[#294599]">Magnetic Drum Conveyor</h3-->
-                </div>
-                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
-                    <img src="images/Japneese-visit/IMG-20250701-WA0070.jpg" alt="Apson Product 2"
-                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
-                </div>
-
-                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
-                    <img src="images/Japneese-visit/IMG-20250701-WA0071.jpg" alt="Bunri Product 2"
-                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
-                </div>
-
-                <!-- Duplicate cards to create infinite effect -->
-                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
-                    <img src="images/Japneese-visit/IMG-20250701-WA0072.jpg" alt="Apson Product 1"
-                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
-                </div>
-
-                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
-                    <img src="images/Japneese-visit/IMG-20250701-WA0073.jpg" alt="Bunri Product 1"
-                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
-                </div>
-                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
-                    <img src="images/Japneese-visit/IMG-20250701-WA0076.jpg" alt="Apson Product 2"
-                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
-                </div>
-
-                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
-                    <img src="images/Japneese-visit/IMG-20250701-WA0078.jpg" alt="Bunri Product 2"
-                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
-                </div>
-                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
-                    <img src="images/Japneese-visit/IMG-20250701-WA0079.jpg" alt="Apson Product 2"
-                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
-                </div>
-
-                <div class="min-w-[300px] bg-white border rounded-lg shadow-md text-center p-4">
-                    <img src="images/Japneese-visit/IMG-20250701-WA0080.jpg" alt="Bunri Product 2"
-                        class="w-full h-40 object-contain mb-2 rounded image-popup-trigger" />
-                </div>
-            </div>
+        <!-- Image Popup Modal -->
+        <div id="imagePopup" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden">
+            <button id="closePopup"
+                class="absolute top-4 right-4 text-white text-3xl font-bold bg-black/50 px-4 py-2 rounded hover:bg-black">×</button>
+            <img id="popupImage" src="" class="max-w-full max-h-[90vh] rounded shadow-lg" />
         </div>
 
         <!-- Fullscreen Image Popup -->
@@ -479,9 +294,9 @@
             <!-- BUNRI Logo with animation -->
             <div
                 class="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-10 animate__animated animate__fadeIn animate__delay-2s px-4">
-                <img src="images/bunri_logo.svg" alt="BUNRI Japan Logo" class="w-40 md:w-48 lg:w-64 h-auto" />
+                <img src="images/logo.png" alt="Company Logo" class="w-40 md:w-48 lg:w-80 h-auto bg-white" />
                 <p class="text-3xl md:text-4xl lg:text-5xl text-white">X</p>
-                <img src="images/logo.png" alt="Company Logo" class="w-40 md:w-48 lg:w-64 h-auto bg-white" />
+                <img src="images/bunri_logo.png" alt="BUNRI Japan Logo" class="w-40 md:w-48 lg:w-64 h-auto" />
             </div>
 
 
@@ -499,7 +314,8 @@
 
             <!-- Image -->
             <div class="lg:w-1/2 w-full">
-                <img src="images/home-about.png" alt="Apson Machine" class="w-[80%] rounded-xl shadow-lg" />
+                <img src="images/home-about.png" alt="Apson Machine"
+                    class="w-[80%] rounded-2xl shadow-lg border-4 border-[#005baa]" />
             </div>
 
             <!-- Text Content -->
@@ -508,15 +324,14 @@
                         class="text-[#005baa]">About</span>
                     <img src="/images/logo.png" alt="logo" class="h-14 ml-3"></h2>
                 <p class="text-lg leading-relaxed mb-4">
-                    Mass Apson is a young & dynamic technology solution provider dealing in Coolant Tanks, Conveyors,
-                    Magnetic Separators, Paper Filters, Hydraulic Power Packs, and more.
-                    Founded in 2013 with a state-of-the-art facility in Faridabad, Haryana, we offer turnkey solutions
-                    from process engineering to execution.
+                    Mass Apson was founded to develop and deliver high-quality products that meet Japanese standards at
+                    Indian prices.
+
+                    We are a reliable and active technical solution provider for Coolant Filtering Systems.
+
                 </p>
                 <p class="text-lg leading-relaxed mb-4">
-                    We strive to be the premier engineering organization by achieving extraordinary results for our
-                    customers, building satisfying careers for our people, and earning a fair return on the value we
-                    deliver.
+                   We seek to be the leading engineering company by delivering exceptional results for our customers, creating rewarding careers for our employees, and earning a fair return on the value we provide.
                 </p>
                 <a href="about-us.html"
                     class="mt-6 inline-block text-white bg-[#005baa] hover:bg-[#003C70] px-10 py-2 rounded-full text-sm font-medium transition duration-300 animate__animated animate__fadeIn animate__delay-2s">Read
@@ -644,21 +459,15 @@
             <h2 class="text-2xl md:text-3xl font-bold text-[#005baa] mb-6 text-center">AWARDS</h2>
             <div class="relative">
 
-                <div class="flex transition-transform duration-500" id="awards-track">
-                    <img src="images/award.jpeg" class="w-full object-cover rounded" />
-                    <!-- Add more images as needed -->
-                </div>
-
-
-                <!--div id="awards-carousel" class="overflow-hidden rounded-lg">
+                <div id="awards-carousel" class="overflow-hidden rounded-lg">
                     <div class="flex transition-transform duration-500" id="awards-track">
-                        <img src="images/award.jpeg" class="w-full object-cover rounded" />
-                        <img src="images/bdm-1.jpeg" class="w-full object-cover rounded" />
-                        <img src="images/bdm-1.jpeg" class="w-full object-cover rounded" />
-                         Add more images as needed -
+                        <img src="images/award.jpeg" class="max-w-1/2 object-cover rounded" />
+                        <img src="images/bdm-1.jpeg" class="max-w-1/2 object-cover rounded" />
+                        <img src="images/bdm-1.jpeg" class="max-w-1/2 object-cover rounded" />
+
                     </div>
-                </div-->
-                <!-- Navigation Buttons 
+                </div>
+                <!-- Navigation Buttons  -->
                 <button onclick="slideCarousel('awards', -1)"
                     class="absolute top-1/2 left-1 transform -translate-y-1/2 bg-white shadow px-3 py-1 rounded hover:bg-gray-200">
                     &#8592;
@@ -666,7 +475,7 @@
                 <button onclick="slideCarousel('awards', 1)"
                     class="absolute top-1/2 right-1 transform -translate-y-1/2 bg-white shadow px-3 py-1 rounded hover:bg-gray-200">
                     &#8594;
-                </button>-->
+                </button>
             </div>
         </div>
 
@@ -675,20 +484,15 @@
         <div>
             <h2 class="text-2xl md:text-3xl font-bold text-[#005baa] mb-6 text-center">CERTIFICATIONS</h2>
             <div class="relative">
-                <div class="flex transition-transform duration-500" id="awards-track">
-                    <img src="images/award.jpeg" class="w-full object-cover rounded" />
-                    <!-- Add more images as needed -->
-                </div>
 
-                <!--div id="certs-carousel" class="overflow-hidden rounded-lg">
+                <div id="certs-carousel" class="overflow-hidden rounded-lg">
                     <div class="flex transition-transform duration-500" id="certs-track">
-                        <img src="images/bdm-1.jpeg" class="w-full object-cover rounded" />
-                        <img src="images/bdm-1.jpeg" class="w-full object-cover rounded" />
-                        <img src="images/bdm-1.jpeg" class="w-full object-cover rounded" />
-                        < Add more images as needed>
-                    </div-->
-                </div-->
-                <!-- Navigation Buttons >
+                        <img src="images/bdm-1.jpeg" class="max-w-1/2 object-cover rounded" />
+                        <img src="images/bdm-1.jpeg" class="max-w-1/2 object-cover rounded" />
+                        <img src="images/bdm-1.jpeg" class="max-w-1/2 object-cover rounded" />
+                    </div>
+                </div>
+                 <!-- Navigation Buttons  -->
                 <button onclick="slideCarousel('certs', -1)"
                     class="absolute top-1/2 left-1 transform -translate-y-1/2 bg-white shadow px-3 py-1 rounded hover:bg-gray-200">
                     &#8592;
@@ -696,7 +500,7 @@
                 <button onclick="slideCarousel('certs', 1)"
                     class="absolute top-1/2 right-1 transform -translate-y-1/2 bg-white shadow px-3 py-1 rounded hover:bg-gray-200">
                     &#8594;
-                </button-->
+                </button>
             </div>
         </div>
     </section>
@@ -732,7 +536,7 @@
                 <p class="text-gray-700 leading-relaxed">
                     <b>Gurgaon</b> <br>
                     SB-R/1L/04/025 & 026A, 1ST Floor<br>
-                    M3M Urbana Sector-67, Gurgaon-122102 <br>
+                    M3M Urbana Sector-67, Gurgaon, <br> India 122102 <br>
                     Tel No. 0124-4966065
                 </p>
             </div>
@@ -838,7 +642,7 @@
             setInterval(() => {
                 let next = (currentSlide + 1) % slides.length;
                 showSlide(next);
-            }, 4000);
+            }, 6000);
 
             // Manual Dot Click
             dots.forEach((dot, index) => {
@@ -850,47 +654,134 @@
     </script>
 
     <script>
-        // Image popup logic
+        const allImages = [
+            "images/Japneese-visit/IMG-20250701-WA0091.jpg",
+            "images/Japneese-visit/IMG-20250701-WA0027.jpg",
+            "images/Japneese-visit/IMG-20250701-WA0029.jpg",
+            "images/Japneese-visit/IMG-20250701-WA0035.jpg",
+            "images/Japneese-visit/IMG-20250701-WA0038.jpg",
+            "images/Japneese-visit/IMG-20250701-WA0039.jpg",
+            "images/Japneese-visit/IMG-20250701-WA0041.jpg",
+            "images/Japneese-visit/IMG-20250701-WA0044.jpg",
+            "images/Japneese-visit/IMG-20250701-WA0045.jpg",
+            "images/Japneese-visit/IMG-20250701-WA0049.jpg",
+            "images/Japneese-visit/IMG-20250701-WA0051.jpg",
+            "images/Japneese-visit/IMG-20250701-WA0054.jpg",
+            "images/Japneese-visit/IMG-20250701-WA0056.jpg",
+            "images/Japneese-visit/IMG-20250701-WA0057.jpg",
+            "images/Japneese-visit/IMG-20250701-WA0058.jpg",
+            "images/Japneese-visit/IMG-20250701-WA0059.jpg",
+            "images/Japneese-visit/IMG-20250701-WA0060.jpg",
+            "images/Japneese-visit/IMG-20250701-WA0061.jpg",
+            "images/Japneese-visit/IMG-20250701-WA0062.jpg",
+            "images/Japneese-visit/IMG-20250701-WA0064.jpg",
+            "images/Japneese-visit/IMG-20250701-WA0067.jpg",
+            "images/Japneese-visit/IMG-20250701-WA0069.jpg",
+            "images/Japneese-visit/IMG-20250701-WA0070.jpg",
+            "images/Japneese-visit/IMG-20250701-WA0071.jpg",
+            "images/Japneese-visit/IMG-20250701-WA0072.jpg",
+            "images/Japneese-visit/IMG-20250701-WA0073.jpg",
+            "images/Japneese-visit/IMG-20250701-WA0076.jpg",
+            "images/Japneese-visit/IMG-20250701-WA0078.jpg",
+            "images/Japneese-visit/IMG-20250701-WA0079.jpg",
+            "images/Japneese-visit/IMG-20250701-WA0080.jpg"
+        ];
+
+        const sliderTrack = document.getElementById('custom-slider-track');
+        const prevBtn = document.getElementById('custom-prev-btn');
+        const nextBtn = document.getElementById('custom-next-btn');
+
         const popup = document.getElementById("imagePopup");
         const popupImage = document.getElementById("popupImage");
         const closeBtn = document.getElementById("closePopup");
-        const triggers = document.querySelectorAll(".image-popup-trigger");
 
-        triggers.forEach(img => {
-            img.addEventListener("click", () => {
-                popupImage.src = img.src;
-                popup.classList.remove("hidden");
-            });
+        let currentSlide = 0;
+        let imagesPerSlide = getImagesPerSlide();
+        let totalSlides;
+
+        function getImagesPerSlide() {
+            if (window.innerWidth < 640) return 1;
+            if (window.innerWidth < 1024) return 2;
+            return 4;
+        }
+
+        function buildSlides() {
+            sliderTrack.innerHTML = '';
+            imagesPerSlide = getImagesPerSlide();
+            totalSlides = Math.ceil(allImages.length / imagesPerSlide);
+
+            for (let i = 0; i < totalSlides; i++) {
+                const slideGroup = allImages.slice(i * imagesPerSlide, i * imagesPerSlide + imagesPerSlide);
+                const slide = document.createElement('div');
+                slide.className = 'flex-shrink-0 flex gap-4 w-full px-4';
+                slide.style.minWidth = '100%';
+
+                slideGroup.forEach(img => {
+                    slide.innerHTML += `
+          <div class="flex-1 bg-white border rounded-lg shadow-md text-center p-4">
+            <img src="${img}" alt="Gallery Image" class="w-full h-40 object-contain mb-2 rounded image-popup-trigger cursor-pointer" />
+          </div>
+        `;
+                });
+
+                sliderTrack.appendChild(slide);
+            }
+
+            bindImagePopup();
+        }
+
+        function updateSlider() {
+            const offset = currentSlide * sliderTrack.offsetWidth;
+            sliderTrack.style.transform = `translateX(-${offset}px)`;
+        }
+
+        nextBtn.addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlider();
         });
+
+        prevBtn.addEventListener('click', () => {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateSlider();
+        });
+
+        window.addEventListener('resize', () => {
+            currentSlide = 0;
+            buildSlides();
+            updateSlider();
+        });
+
+        // Auto-scroll
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlider();
+        }, 4000); // Every 4 seconds
+
+        function bindImagePopup() {
+            const triggers = document.querySelectorAll(".image-popup-trigger");
+            triggers.forEach(img => {
+                img.addEventListener("click", () => {
+                    popupImage.src = img.src;
+                    popup.classList.remove("hidden");
+                });
+            });
+        }
 
         closeBtn.addEventListener("click", () => {
             popup.classList.add("hidden");
             popupImage.src = "";
         });
 
-        // Close popup on ESC key
         document.addEventListener("keydown", (e) => {
             if (e.key === "Escape") {
                 popup.classList.add("hidden");
                 popupImage.src = "";
             }
         });
-    </script>
 
-    <script>
-        function showNextImage() {
-            const images = Array.from(document.querySelectorAll(".image-popup-trigger"));
-            const currentIndex = images.findIndex(img => img.src === popupImage.src);
-            const nextIndex = (currentIndex + 1) % images.length;
-            popupImage.src = images[nextIndex].src;
-        }
-
-        function showPrevImage() {
-            const images = Array.from(document.querySelectorAll(".image-popup-trigger"));
-            const currentIndex = images.findIndex(img => img.src === popupImage.src);
-            const prevIndex = (currentIndex - 1 + images.length) % images.length;
-            popupImage.src = images[prevIndex].src;
-        }
+        // Initial call
+        buildSlides();
+        updateSlider();
     </script>
 
 </body>
