@@ -9,122 +9,139 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .animate-scroll-slow {
+      animation: scroll 6000s linear infinite;
+      /* Increase 60s to slow down */
+    }
+  </style>
 </head>
 
 <body class="font-sans antialiased text-gray-800">
 
   <!-- Header -->
-    <header class="bg-white text-[#005baa] sticky top-0 z-50 shadow-md" id="header">
-        <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-            <!-- Logo -->
-            <a href="index.html">
-                <img src="/images/logo.png" alt="Apson Engineers Logo" class="h-10 w-auto rounded-lg p-1" />
+  <header class="bg-white text-[#005baa] sticky top-0 z-50 shadow-md" id="header">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="index.html">
+        <img src="/images/logo.png" alt="Apson Engineers Logo" class="h-10 w-auto rounded-lg p-1" />
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex space-x-6 text-sm font-medium items-center">
+        <a href="/index.html" class="hover:scale-110">Home</a>
+        <a href="/about-us.html" class="hover:scale-110">About</a>
+
+        <!-- Products Hover Dropdown -->
+        <div class="relative group" id="products-dropdown">
+          <a href="/product-page.html"><span class="hover:scale-110 flex items-center gap-1 cursor-pointer">
+              Products
+              <svg class="w-4 h-4 mt-[1px]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </span></a>
+          </span>
+
+          <!-- Horizontal Dropdown -->
+          <div
+            class="absolute left-0 mt-2 flex bg-white text-[#005baa] rounded shadow-md py-2 px-4 z-40 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 space-x-4 min-w-max">
+            <!-- Apson -->
+            <a href="/apson-products.html"
+              class="flex items-center gap- border-2 border-white hover:border-[#005baa] hover:text-white rounded transition">
+              <img src="/images/logo1.png" alt="Apson Logo" class="w-24 h-8 object-contain p-1">
+              <!-- <span>Apson</span> -->
             </a>
 
-            <!-- Desktop Navigation -->
-            <nav class="hidden md:flex space-x-6 text-sm font-medium items-center">
-                <a href="/index.html" class="hover:scale-110">Home</a>
-                <a href="/about-us.html" class="hover:scale-110">About</a>
+            <!-- Bunri -->
+            <a href="/bunri-products.html"
+              class="flex items-center gap-2 border-2 border-white hover:border-[#005baa] hover:text-white rounded transition">
+              <img src="/images/logo2.png" alt="Bunri Logo" class="w-20 h-8 object-contain p-1">
+              <!-- <span>Bunri</span> -->
+            </a>
 
-                <!-- Products Hover Dropdown -->
-                <div class="relative group" id="products-dropdown">
-                    <a href="/product-page.html"><span class="hover:scale-110 flex items-center gap-1 cursor-pointer">
-                            Products
-                            <svg class="w-4 h-4 mt-[1px]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7" />
-                            </svg>
-                        </span></a>
-                    </span>
+            <!-- Nikuni -->
+            <a href="/nikuni-products.html"
+              class="flex items-center gap-2 border-2 border-white hover:border-[#005baa] hover:text-white rounded transition">
+              <img src="/images/logo3.png" alt="Nikuni Logo" class="w-20 h-8 object-contain p-1">
+              <!-- <span>Nikuni</span> -->
+            </a>
 
-                    <!-- Horizontal Dropdown -->
-                    <div
-                        class="absolute left-0 mt-2 flex bg-white text-[#005baa] rounded shadow-md py-2 px-4 z-40 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 space-x-4 min-w-max">
-                        <!-- Apson -->
-                        <a href="/apson-products.html"
-                            class="flex items-center gap- border-2 border-white hover:border-[#005baa] hover:text-white rounded transition">
-                            <img src="/images/logo1.png" alt="Apson Logo" class="w-24 h-8 object-contain p-1">
-                            <!-- <span>Apson</span> -->
-                        </a>
-
-                        <!-- Bunri -->
-                        <a href="/bunri-products.html"
-                            class="flex items-center gap-2 border-2 border-white hover:border-[#005baa] hover:text-white rounded transition">
-                            <img src="/images/logo2.png" alt="Bunri Logo" class="w-20 h-8 object-contain p-1">
-                            <!-- <span>Bunri</span> -->
-                        </a>
-
-                        <!-- Nikuni -->
-                        <a href="/nikuni-products.html"
-                            class="flex items-center gap-2 border-2 border-white hover:border-[#005baa] hover:text-white rounded transition">
-                            <img src="/images/logo3.png" alt="Nikuni Logo" class="w-20 h-8 object-contain p-1">
-                            <!-- <span>Nikuni</span> -->
-                        </a>
-
-                        <!-- Nissei -->
-                        <a href="/nissei-products.html"
-                            class="flex items-center gap-2 border-2 border-white hover:border-[#005baa] hover:text-white rounded transition">
-                            <img src="/images/logo4.png" alt="Other Logo" class="w-20 h-8 object-contain p-1">
-                            <!-- <span>Nissei</span> -->
-                        </a>
-                    </div>
-                </div>
-
-
-                <a href="/gallery.html" class="hover:scale-110">Gallery</a>
-                <a href="/all-customers.html" class="hover:scale-110">Customers</a>
-                <a href="/collaboration.html" class="hover:scale-110">Collaboration</a>
-                <a href="/contact.html" class="hover:scale-110">Contact</a>
-            </nav>
-
-            <!-- CTA Button -->
-            <a href="/contact.html#contact_form"
-                class="hidden md:inline-block bg-[#005baa] text-white px-4 py-2 rounded hover:bg-[#003c70] hover:text-white transition">Product Enquiry</a>
-
-            <!-- Mobile Menu Button -->
-            <button id="menu-toggle" class="md:hidden focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
+            <!-- Nissei -->
+            <a href="/nissei-products.html"
+              class="flex items-center gap-2 border-2 border-white hover:border-[#005baa] hover:text-white rounded transition">
+              <img src="/images/logo4.png" alt="Other Logo" class="w-20 h-8 object-contain p-1">
+              <!-- <span>Nissei</span> -->
+            </a>
+          </div>
         </div>
 
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2">
-            <a href="/index.html" class="block py-2 hover:scale-110">Home</a>
-            <a href="/about-us.html" class="block py-2 hover:scale-110">About</a>
 
-            <!-- Mobile Dropdown -->
-            <div>
-                <button onclick="document.getElementById('mobile-products').classList.toggle('hidden')"
-                    class="block py-2 w-full text-left hover:scale-110">Products</button>
-                <div id="mobile-products" class="hidden pl-4">
-                    <a href="/apson-products.html" class="flex items-center gap-2 py-1 hover:scale-110">
-                        <img src="/images/logo.png" alt="Apson Logo" class="w-14 h-14 object-contain">
-                        <!-- <span>Apson</span> -->
-                    </a>
-                    <a href="/bunri-products.html" class="flex items-center gap-2 py-1 hover:scale-110">
-                        <img src="/images/bunri_logo.svg" alt="Bunri Logo" class="w-14 h-14 object-contain">
-                        <!-- <span>Bunri</span> -->
-                    </a>
-                    <a href="/nikuni-products.html" class="flex items-center gap-2 py-1 hover:scale-110">
-                        <img src="/images/nikuni-logo.png" alt="Nikuni Logo" class="w-14 h-14 object-contain">
-                        <!-- <span>Nikuni</span> -->
-                    </a>
-                    <a href="/nissei-products.html" class="flex items-center gap-2 py-1 hover:scale-110">
-                        <img src="/images/nissei-logo.png" alt="Nikuni Logo" class="w-14 h-14 object-contain">
-                        <!-- <span>Nissei</span> -->
-                    </a>
-                </div>
-            </div>
+        <a href="/gallery.html" class="hover:scale-110">Gallery</a>
+        <a href="/all-customers.html" class="hover:scale-110">Customers</a>
+        <a href="/collaboration.html" class="hover:scale-110">Collaboration</a>
+        <a href="/contact.html" class="hover:scale-110">Contact</a>
+      </nav>
 
+      <!-- CTA Button -->
+      <a href="/contact.html#contact_form"
+        class="hidden md:inline-block bg-[#005baa] text-white px-4 py-2 rounded hover:bg-[#003c70] hover:text-white transition">Product
+        Enquiry</a>
 
-            <a href="/gallery.html" class="block py-2 hover:scale-110">Gallery</a>
-            <a href="/all-customers.html" class="block py-2 hover:scale-110">Customers</a>
-            <a href="/collaboration.html" class="block py-2 hover:scale-110">Collaboration</a>
-            <a href="/contact.html" class="block py-2 hover:scale-110">Contact</a>
+      <!-- Mobile Menu Button -->
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2">
+      <a href="/index.html" class="block py-2 hover:scale-110">Home</a>
+      <a href="/about-us.html" class="block py-2 hover:scale-110">About</a>
+
+      <!-- Mobile Dropdown -->
+      <div>
+        <button onclick="document.getElementById('mobile-products').classList.toggle('hidden')"
+          class="block py-2 w-full text-left hover:scale-110">Products</button>
+        <div id="mobile-products" class="hidden pl-4">
+          <a href="/apson-products.html" class="flex items-center gap-2 py-1 hover:scale-110">
+            <img src="/images/logo.png" alt="Apson Logo" class="w-14 h-14 object-contain">
+            <!-- <span>Apson</span> -->
+          </a>
+          <a href="/bunri-products.html" class="flex items-center gap-2 py-1 hover:scale-110">
+            <img src="/images/bunri_logo.svg" alt="Bunri Logo" class="w-14 h-14 object-contain">
+            <!-- <span>Bunri</span> -->
+          </a>
+          <a href="/nikuni-products.html" class="flex items-center gap-2 py-1 hover:scale-110">
+            <img src="/images/nikuni-logo.png" alt="Nikuni Logo" class="w-14 h-14 object-contain">
+            <!-- <span>Nikuni</span> -->
+          </a>
+          <a href="/nissei-products.html" class="flex items-center gap-2 py-1 hover:scale-110">
+            <img src="/images/nissei-logo.png" alt="Nikuni Logo" class="w-14 h-14 object-contain">
+            <!-- <span>Nissei</span> -->
+          </a>
         </div>
-    </header>
+      </div>
+
+
+      <a href="/gallery.html" class="block py-2 hover:scale-110">Gallery</a>
+      <a href="/all-customers.html" class="block py-2 hover:scale-110">Customers</a>
+      <a href="/collaboration.html" class="block py-2 hover:scale-110">Collaboration</a>
+      <a href="/contact.html" class="block py-2 hover:scale-110">Contact</a>
+    </div>
+  </header>
 
   <!-- About Us Section -->
   <section class="bg-gray-50 py-16 px-6 md:px-20">
@@ -132,8 +149,7 @@
 
       <!-- Left Image -->
       <div class="w-full md:w-1/2">
-        <img src="images/about-logo.png" alt="About Apson Engineers"
-          class="rounded-lg shadow-lg w-full h-auto object-cover">
+        <img src="images/logo.png" alt="About Apson Engineers" class="rounded-lg shadow-lg w-full h-auto object-cover">
       </div>
 
       <!-- Right Text -->
@@ -152,7 +168,7 @@
           <li>Fabrication facility having advanced Laser cutting, CNC Bending, cutting & welding machines.</li>
           <li>Equipped with 3-D Design facility.</li>
           <li>In-house manufacturing & machining of all parts.</li>
-          <li>15000 sq. ft area for all operations.</li>
+          <li>21600 sq. ft area for all operations and 2000sq. ft for the Sales and Support Offices.</li>
           <li>62.5 kVA & 20 kVA DG set.</li>
           <li>15.0 HP air compressor</li>
           <li>35 Tonnes Hydraulic press machine.</li>
@@ -165,64 +181,90 @@
   <!-- 2. Vision -->
   <section class="bg-[#005baa] text-white py-16 px-6 md:px-16">
     <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-      <div>
+      <div class="text-center">
         <h2 class="text-4xl font-bold mb-4">Our Vision</h2>
         <p class="text-lg">
-          To be a global leader in manufacturing excellence by continuously innovating and setting benchmarks in
-          quality,
-          sustainability, and customer satisfaction.
-        </p>
+          "To Strive for Seamless Delivery and Commit to Perfection in all <br> </p>
+        <p class="font-bold text-center"> "WE DO"</p>
       </div>
       <img src="images/image.png" alt="Vision" class="rounded shadow-lg w-full h-auto">
     </div>
   </section>
 
-  <!-- 4. Mission -->
-  <section class="bg-[#ffffff] text-[#005baa] py-16 px-6 md:px-16">
-    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">      
-      <img src="images/image.jpg" alt="Vision" class="rounded shadow-lg w-full h-auto">
-      <div>
-        <h2 class="text-4xl font-bold mb-4">Our Mission</h2>
-        <p class="text-lg">
-          To be a global leader in manufacturing excellence by continuously innovating and setting benchmarks in
-          quality,
-          sustainability, and customer satisfaction.
-        </p>
+
+  <!-- Award and Certifications -->
+  <section class="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+    <!-- Left Column: Awards -->
+    <div>
+      <h2 class="text-2xl md:text-3xl font-bold text-[#005baa] mb-6 text-center">APPRECIATIONS</h2>
+      <div class="relative">
+
+        <div id="awards-carousel" class="overflow-hidden rounded-lg">
+          <div class="flex transition-transform duration-500" id="awards-track">
+            <img src="/images/Japneese-visit/IMG-20250701-WA0026.jpg" class="max-w-1/2 object-contain rounded" />
+            <img src="/images/Japneese-visit/IMG-20250701-WA0027.jpg" class="max-w-1/2 object-contain rounded" />
+            <img src="/images/Japneese-visit/IMG-20250701-WA0029.jpg" class="max-w-1/2 object-contain rounded" />
+            <img src="/images/Japneese-visit/IMG-20250701-WA0035.jpg" class="max-w-1/2 object-contain rounded" />
+            <img src="/images/Japneese-visit/IMG-20250701-WA0038.jpg" class="max-w-1/2 object-contain rounded" />
+          </div>
+        </div>
+        <!-- Navigation Buttons  -->
+        <button onclick="slideCarousel('awards', -1)"
+          class="absolute top-1/2 left-1 transform -translate-y-1/2 bg-white shadow px-3 py-1 rounded hover:bg-gray-200">
+          &#8592;
+        </button>
+        <button onclick="slideCarousel('awards', 1)"
+          class="absolute top-1/2 right-1 transform -translate-y-1/2 bg-white shadow px-3 py-1 rounded hover:bg-gray-200">
+          &#8594;
+        </button>
       </div>
     </div>
-  </section>
 
-  <!-- 5. Gallery -->
-  <section class="bg-white py-16 px-6 md:px-16">
-    <h2 class="text-4xl font-bold mb-10 text-[#005baa] text-center">Appreciations & Certifications</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto">
-      <img src="images/gallery-1.jpg" class="rounded shadow w-full" alt="Gallery 1">
-      <img src="images/gallery-2.jpg" class="rounded shadow w-full" alt="Gallery 2">
-      <img src="images/gallery-3.jpg" class="rounded shadow w-full" alt="Gallery 3">
-      <img src="images/gallery-4.jpg" class="rounded shadow w-full" alt="Gallery 4">
+    <!-- Right Column: Certifications -->
+
+    <div>
+      <h2 class="text-2xl md:text-3xl font-bold text-[#005baa] mb-6 text-center">CERTIFICATIONS</h2>
+      <div class="relative">
+
+        <div id="certs-carousel" class="overflow-hidden rounded-lg">
+          <div class="flex transition-transform duration-500" id="certs-track">
+            <img src="/images/bunri-certification_page-0001.jpg" class="max-w-1/2 object-cover rounded" />
+            <img src="/images/nikuni-certification_page-0001.jpg" class="max-w-1/2 object-cover rounded" />
+            <img src="/images/nissei-certification_page-0001.jpg" class="max-w-1/2 object-cover rounded" />
+          </div>
+        </div>
+        <!-- Navigation Buttons  -->
+        <button onclick="slideCarousel('certs', -1)"
+          class="absolute top-1/2 left-1 transform -translate-y-1/2 bg-white shadow px-3 py-1 rounded hover:bg-gray-200">
+          &#8592;
+        </button>
+        <button onclick="slideCarousel('certs', 1)"
+          class="absolute top-1/2 right-1 transform -translate-y-1/2 bg-white shadow px-3 py-1 rounded hover:bg-gray-200">
+          &#8594;
+        </button>
+      </div>
     </div>
   </section>
 
 
   <!-- 6. Collaboration with Bunri -->
   <section class="bg-gray-100 py-16 px-6 md:px-16">
-    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <div class="max-w-6xl mx-auto text-center items-center">
       <div>
-        <h2 class="text-4xl font-bold text-[#005baa] mb-4">Collaboration with BUNRI, NIKUNI, NISSEI</h2>
+        <h2 class="text-4xl font-bold text-[#005baa] mb-4 text-center">Collaboration With <br>
+          <div class="flex items-center justify-center gap-8 my-10">
+            <img src="images/bunri_logo.png" class="w-40 max-h-64 object-contain" alt="Bunri Collaboration">
+            <img src="images/nikuni-logo.png" class="w-40 max-h-64 object-contain" alt="NIKUNI Collaboration">
+            <img src="images/nissei-logo.png" class="w-40 max-h-64 object-contain" alt="NESSIECollaboration">
+          </div>
+        </h2>
         <p class="text-lg">
-          Mass Apson proudly partners with Japan-based <strong>BUNRI</strong> for advanced filtration technologies.
+          Mass Apson proudly partners with Japan-based <strong>Companies</strong> for advanced filtration technologies.
           This collaboration enables us to deliver world-class solutions in chip handling and coolant filtration
           systems,
           raising the bar for industrial standards.
         </p>
       </div>
-      <div class="flex items-center justify-center gap-8">
-        <img src="images/bunri_logo.svg" class="w-40 max-h-64 object-contain" alt="Bunri Collaboration">
-        <img src="images/nikuni-logo.png" class="w-40 max-h-64 object-contain" alt="Bunri Collaboration">
-        <img src="images/nissei-logo.png" class="w-40 max-h-64 object-contain" alt="Bunri Collaboration">
-      </div>
-      
-      
     </div>
   </section>
 
@@ -240,82 +282,140 @@
     <!-- Slider wrapper -->
     <div class="overflow-hidden relative">
       <div class="flex w-max animate-scroll whitespace-nowrap">
-        <!-- Product Set 1 -->
-        <img src="images/product-1.jpg" class="w-64 h-64 object-cover mx-4 rounded shadow inline-block" alt="Product 1">
-        <img src="images/product-2.jpg" class="w-64 h-64 object-cover mx-4 rounded shadow inline-block" alt="Product 2"> 
-        <img src="images/product-3.jpg" class="w-64 h-64 object-cover mx-4 rounded shadow inline-block" alt="Product 3">
-        <img src="images/product-4.jpg" class="w-64 h-64 object-cover mx-4 rounded shadow inline-block" alt="Product 4">
-        <img src="images/product-5.jpg" class="w-64 h-64 object-cover mx-4 rounded shadow inline-block" alt="Product 5">
-        <img src="images/product-6.jpg" class="w-64 h-64 object-cover mx-4 rounded shadow inline-block" alt="Product 6">
-        <img src="images/product-7.jpg" class="w-64 h-64 object-cover mx-4 rounded shadow inline-block" alt="Product 7">
-        <img src="images/product-8.jpg" class="w-64 h-64 object-cover mx-4 rounded shadow inline-block" alt="Product 8">
-        <img src="images/product-9.jpg" class="w-64 h-64 object-cover mx-4 rounded shadow inline-block" alt="Product 9">
-        <img src="images/product-10.jpg" class="w-64 h-64 object-cover mx-4 rounded shadow inline-block" alt="Product 10">
 
-        <!-- Product Set 2 (duplicate for infinite loop effect) -->
-        <img src="images/product-1.jpg" class="w-64 h-64 object-cover mx-4 rounded shadow inline-block" alt="Product 1">
-        <img src="images/product-2.jpg" class="w-64 h-64 object-cover mx-4 rounded shadow inline-block" alt="Product 2">
-        <img src="images/product-3.jpg" class="w-64 h-64 object-cover mx-4 rounded shadow inline-block" alt="Product 3">
-        <img src="images/product-4.jpg" class="w-64 h-64 object-cover mx-4 rounded shadow inline-block" alt="Product 4">
-        <img src="images/product-5.jpg" class="w-64 h-64 object-cover mx-4 rounded shadow inline-block" alt="Product 5">
-        <img src="images/product-6.jpg" class="w-64 h-64 object-cover mx-4 rounded shadow inline-block" alt="Product 6">
-        <img src="images/product-7.jpg" class="w-64 h-64 object-cover mx-4 rounded shadow inline-block" alt="Product 7">
-        <img src="images/product-8.jpg" class="w-64 h-64 object-cover mx-4 rounded shadow inline-block" alt="Product 8">
-        <img src="images/product-9.jpg" class="w-64 h-64 object-cover mx-4 rounded shadow inline-block" alt="Product 9">
-        <img src="images/product-10.jpg" class="w-64 h-64 object-cover mx-4 rounded shadow inline-block"
-          alt="Product 10">
+        <div class="w-64 mx-4 inline-block text-center">
+          <img src="images/product-1.jpg" class="w-full h-64 object-cover rounded shadow" alt="Product 1">
+          <p class="mt-2 text-base font-bold text-gray-700">Laser Cutting Machine</p>
+        </div>
+        <div class="w-64 mx-4 inline-block text-center">
+          <img src="images/product-2.jpg" class="w-full h-64 object-cover rounded shadow" alt="Product 1">
+          <p class="mt-2 text-base font-bold text-gray-700">62.5 kVA DG Set</p>
+        </div>
+        <div class="w-64 mx-4 inline-block text-center">
+          <img src="images/product-3.jpg" class="w-full h-64 object-cover rounded shadow" alt="Product 1">
+          <p class="mt-2 text-base font-bold text-gray-700">CNC Bending Machine</p>
+        </div>
+        <div class="w-64 mx-4 inline-block text-center">
+          <img src="images/product-4.jpg" class="w-full h-64 object-cover rounded shadow" alt="Product 1">
+          <p class="mt-2 text-base font-bold text-gray-700">CNC Cutting Machine</p>
+        </div>
+        <div class="w-64 mx-4 inline-block text-center">
+          <img src="images/product-5.jpg" class="w-full h-64 object-cover rounded shadow" alt="Product 1">
+          <p class="mt-2 text-base font-bold text-gray-700">MIG Welding Machine</p>
+        </div>
+        <div class="w-64 mx-4 inline-block text-center">
+          <img src="images/product-6.jpg" class="w-full h-64 object-cover rounded shadow" alt="Product 1">
+          <p class="mt-2 text-base font-bold text-gray-700">Milling Machine</p>
+        </div>
+        <div class="w-64 mx-4 inline-block text-center">
+          <img src="images/product-7.jpg" class="w-full h-64 object-cover rounded shadow" alt="Product 1">
+          <p class="mt-2 text-base font-bold text-gray-700">Lathe Machine</p>
+        </div>
+        <div class="w-64 mx-4 inline-block text-center">
+          <img src="images/product-8.jpg" class="w-full h-64 object-cover rounded shadow" alt="Product 1">
+          <p class="mt-2 text-base font-bold text-gray-700">Spot Welding Machine</p>
+        </div>
+        <div class="w-64 mx-4 inline-block text-center">
+          <img src="images/product-9.jpg" class="w-full h-64 object-cover rounded shadow" alt="Product 1">
+          <p class="mt-2 text-base font-bold text-gray-700">Surface Grinder</p>
+        </div>
+        <div class="w-64 mx-4 inline-block text-center">
+          <img src="images/product-10.jpg" class="w-full h-64 object-cover rounded shadow" alt="Product 1">
+          <p class="mt-2 text-base font-bold text-gray-700">Tig Welding Machine</p>
+        </div>
+
+        <div class="w-64 mx-4 inline-block text-center">
+          <img src="images/product-1.jpg" class="w-full h-64 object-cover rounded shadow" alt="Product 1">
+          <p class="mt-2 text-base font-bold text-gray-700">Laser Cutting Machine</p>
+        </div>
+        <div class="w-64 mx-4 inline-block text-center">
+          <img src="images/product-2.jpg" class="w-full h-64 object-cover rounded shadow" alt="Product 1">
+          <p class="mt-2 text-base font-bold text-gray-700">62.5 kVA DG Set</p>
+        </div>
+        <div class="w-64 mx-4 inline-block text-center">
+          <img src="images/product-3.jpg" class="w-full h-64 object-cover rounded shadow" alt="Product 1">
+          <p class="mt-2 text-base font-bold text-gray-700">CNC Bending Machine</p>
+        </div>
+        <div class="w-64 mx-4 inline-block text-center">
+          <img src="images/product-4.jpg" class="w-full h-64 object-cover rounded shadow" alt="Product 1">
+          <p class="mt-2 text-base font-bold text-gray-700">CNC Cutting Machine</p>
+        </div>
+        <div class="w-64 mx-4 inline-block text-center">
+          <img src="images/product-5.jpg" class="w-full h-64 object-cover rounded shadow" alt="Product 1">
+          <p class="mt-2 text-base font-bold text-gray-700">MIG Welding Machine</p>
+        </div>
+        <div class="w-64 mx-4 inline-block text-center">
+          <img src="images/product-6.jpg" class="w-full h-64 object-cover rounded shadow" alt="Product 1">
+          <p class="mt-2 text-base font-bold text-gray-700">Milling Machine</p>
+        </div>
+        <div class="w-64 mx-4 inline-block text-center">
+          <img src="images/product-7.jpg" class="w-full h-64 object-cover rounded shadow" alt="Product 1">
+          <p class="mt-2 text-base font-bold text-gray-700">Lathe Machine</p>
+        </div>
+        <div class="w-64 mx-4 inline-block text-center">
+          <img src="images/product-8.jpg" class="w-full h-64 object-cover rounded shadow" alt="Product 1">
+          <p class="mt-2 text-base font-bold text-gray-700">Spot Welding Machine</p>
+        </div>
+        <div class="w-64 mx-4 inline-block text-center">
+          <img src="images/product-9.jpg" class="w-full h-64 object-cover rounded shadow" alt="Product 1">
+          <p class="mt-2 text-base font-bold text-gray-700">Surface Grinder</p>
+        </div>
+        <div class="w-64 mx-4 inline-block text-center">
+          <img src="images/product-10.jpg" class="w-full h-64 object-cover rounded shadow" alt="Product 1">
+          <p class="mt-2 text-base font-bold text-gray-700">Tig Welding Machine</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Footer Section -->
-    <footer class="bg-white text-gray-800 pt-12 shadow-md border-t border-gray-200" id="footer">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10 border-b border-gray-300 pb-8">
+  <footer class="bg-white text-gray-800 pt-12 shadow-md border-t border-gray-200" id="footer">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10 border-b border-gray-300 pb-8">
 
-            <!-- Company logo and content -->
-            <div>
-                <a href="/index.html"><img src="/images/logo.png" alt="Company Logo" class="w-64 mb-4"></a>
+      <!-- Company logo and content -->
+      <div>
+        <a href="/index.html"><img src="/images/logo.png" alt="Company Logo" class="w-64 mb-4"></a>
 
-                <!--p class="text-gray-700">
+        <!--p class="text-gray-700">
                     Mass Apson is a young & dynamic technology solution provider which deals in Coolant tanks,
                     Conveyors, magnetic separator, paper filter, Hyd Power pack etc.
                 </p-->
-            </div>
+      </div>
 
-            <!-- Quick Links -->
-            <div>
-                <h4 class="text-lg font-semibold text-[#005baa] mb-4">Quick Links</h4>
-                <div class="space-y-2">
-                    <a href="/index.html" class="font-semibold block hover:text-[#005baa] transition w-fit">Home</a>
-                    <a href="/about-us.html" class="font-semibold block hover:text-[#005baa] transition w-fit">About</a>
-                    <a href="/product-page.html" class="font-semibold block hover:text-[#005baa] transition w-fit">Products</a>
-                    <a href="/contact.html" class="font-semibold block hover:text-[#005baa] transition w-fit">Contact</a>
-                </div>
-            </div>
-
-            <!-- Address -->
-              <div>
-                <h4 class="text-lg font-semibold text-[#005baa] mb-4">Corporate office</h4>
-                <p class="text-gray-700 leading-relaxed">
-                    <b>Gurgaon</b> <br>
-                    CustomersSB-R/1L/04/025 & 026A, 1ST Floor<br>
-                    M3M Urbana Sector-67, Gurgaon, <br> India 122102 <br>
-                    Tel No. 0124-4966065
-                </p>
-            </div>
-            <div>              
-
-                <h4 class="text-lg font-semibold text-[#005baa] mb-4">Manufacturing</h4>
-                <p class="text-gray-700 leading-relaxed">
-                    <b>Faridabad</b> <br>
-                   Plot No -21, Gazipur Industrial Area,<br>
-                    Sohna Road, Gazipur, NIT Faridabad, <br> Haryana, India 121005
-                </p>
-            </div>
+      <!-- Quick Links -->
+      <div>
+        <h4 class="text-lg font-semibold text-[#005baa] mb-4">Quick Links</h4>
+        <div class="space-y-2">
+          <a href="/index.html" class="font-semibold block hover:text-[#005baa] transition w-fit">Home</a>
+          <a href="/about-us.html" class="font-semibold block hover:text-[#005baa] transition w-fit">About</a>
+          <a href="/product-page.html" class="font-semibold block hover:text-[#005baa] transition w-fit">Products</a>
+          <a href="/contact.html" class="font-semibold block hover:text-[#005baa] transition w-fit">Contact</a>
         </div>
-        <!-- Social & Copyright -->
-        <div class="width-full px-52 py-6 flex flex-col md:flex-row items-center justify-between text-sm bg-[#005baa]">
-            <!-- <div class="flex gap-4 mb-4 md:mb-0 text-[#005baa]">
+      </div>
+
+      <!-- Address -->
+      <div>
+        <h4 class="text-lg font-semibold text-[#005baa] mb-4">Corporate office</h4>
+        <p class="text-gray-700 leading-relaxed">
+          <b>Gurgaon</b> <br>
+          CustomersSB-R/1L/04/025 & 026A, 1ST Floor<br>
+          M3M Urbana Sector-67, Gurgaon, <br> India 122102 <br>
+          Tel No. 0124-4966065
+        </p>
+      </div>
+      <div>
+
+        <h4 class="text-lg font-semibold text-[#005baa] mb-4">Manufacturing</h4>
+        <p class="text-gray-700 leading-relaxed">
+          <b>Faridabad</b> <br>
+          Plot No -21, Gazipur Industrial Area,<br>
+          Sohna Road, Gazipur, NIT Faridabad, <br> Haryana, India 121005
+        </p>
+      </div>
+    </div>
+    <!-- Social & Copyright -->
+    <div class="width-full px-52 py-6 flex flex-col md:flex-row items-center justify-between text-sm bg-[#005baa]">
+      <!-- <div class="flex gap-4 mb-4 md:mb-0 text-[#005baa]">
                 <a href="#" class="hover:text-blue-600 transition text-white" aria-label="Facebook"><i
                         class="fab fa-facebook-f"></i></a>
                 <a href="#" class="hover:text-blue-400 transition text-white" aria-label="Twitter"><i
@@ -327,15 +427,20 @@
                 <a href="#" class="hover:text-blue-700 transition text-white" aria-label="LinkedIn"><i
                         class="fab fa-linkedin-in"></i></a>
             </div> -->
-            <div class="text-white text-center md:text-right">
-                Developed and Designed by
-                <a href="https://www.theneedleads.com/" target="_blank"
-                    class="font-semibold text-text-white hover:text-blue-700 transition">
-                    Needleads Technologies</a>.
-            </div>
-        </div>
-    </footer>
+      <div class="text-white text-center md:text-right">
+        Developed and Designed by
+        <a href="https://www.theneedleads.com/" target="_blank"
+          class="font-semibold text-text-white hover:text-blue-700 transition">
+          Needleads Technologies</a>.
+      </div>
+    </div>
+  </footer>
 
+<!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919540928998" target="_blank" rel="noopener noreferrer"
+        class="fixed bottom-5 right-5 z-50 bg-green-500 hover:bg-green-600 text-white px-5 py-4 rounded-full shadow-lg transition duration-300 ease-in-out text-4xl">
+        <i class="fab fa-whatsapp"></i>
+    </a>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const toggleButton = document.getElementById("menu-toggle");
@@ -345,6 +450,27 @@
         mobileMenu.classList.toggle("hidden");
       });
     });
+  </script>
+
+  <!-- Award and Certifications -->
+  <script>
+    let positions = {
+      awards: 0,
+      certs: 0,
+    };
+
+    function slideCarousel(type, direction) {
+      const track = document.getElementById(`${type}-track`);
+      const slides = track.children.length;
+      const width = track.clientWidth;
+
+      positions[type] += direction;
+
+      if (positions[type] < 0) positions[type] = slides - 1;
+      if (positions[type] >= slides) positions[type] = 0;
+
+      track.style.transform = `translateX(-${positions[type] * 100}%)`;
+    }
   </script>
 
 </body>

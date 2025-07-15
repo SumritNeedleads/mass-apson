@@ -7,6 +7,13 @@
     <link rel="icon" href="images/favicon.png" type="image/x-icon" />
     <title>Collaboration | Apson</title>
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        #modalImage {
+            transform-origin: center center;
+            cursor: default;
+        }
+    </style>
 </head>
 
 <body class="bg-white text-gray-800 font-sans">
@@ -78,7 +85,8 @@
 
             <!-- CTA Button -->
             <a href="/contact.html#contact_form"
-                class="hidden md:inline-block bg-[#005baa] text-white px-4 py-2 rounded hover:bg-[#003c70] hover:text-white transition">Product Enquiry</a>
+                class="hidden md:inline-block bg-[#005baa] text-white px-4 py-2 rounded hover:bg-[#003c70] hover:text-white transition">Product
+                Enquiry</a>
 
             <!-- Mobile Menu Button -->
             <button id="menu-toggle" class="md:hidden focus:outline-none">
@@ -125,35 +133,79 @@
         </div>
     </header>
 
+    <!-- Collaboration Section -->
+    <section class="relative bg-cover bg-center bg-no-repeat text-white py-10 px-4"
+        style="background-image: url('/images/banner-for-collaboration.jpg');">
+        <div class="bg-black bg-opacity-60 absolute inset-0 z-0"></div>
+
+        <div class="relative z-10 max-w-6xl mx-auto text-center">
 
 
-    <section class="collaboration_heading my-10 px-4">
-        <h2 class="text-2xl md:text-3xl font-bold text-center text-[#005baa]">Our Collaborations</h2>
+
+            <!-- Headings -->
+            <h2 class="text-3xl md:text-5xl font-bold mb-4">Proud Partnership and Certifications</h2>
+            <p class="text-lg md:text-xl mb-10">We collaborate with global leaders to deliver excellence and
+                quality-assured solutions.</p>
+
+            <!-- Company Logo -->
+            <div class="mb-4">
+                <img src="/images/logo.png" alt="Company Logo" class="h-20 mx-auto bg-white">
+            </div>
+
+            <p class="font-bold text-5xl mx-auto mb-4">X</p>
+
+            <!-- Brand Logos -->
+            <div class="flex flex-wrap justify-center items-center gap-16 mb-10">
+                <img src="/images/nissei-logo.png" alt="Nissei" class="h-16 object-contain bg-white p-2">
+                <img src="/images/bunri-logo.png" alt="Bunri" class="h-16 object-contain bg-white p-2">
+                <img src="/images/nikuni-logo.png" alt="Nikuni" class="h-16 object-contain">
+            </div>
+
+            <!-- Certificate Images (Clickable) -->
+            <div class="flex flex-wrap justify-center items-center gap-[11.5rem]">
+                <img src="/images/nissei-certification_page-0001.jpg" alt="Certificate 1" class="h-48 cursor-pointer"
+                    onclick="openImage(this.src)">
+                <img src="/images/bunri-certification_page-0001.jpg" alt="Certificate 2" class="h-48 cursor-pointer"
+                    onclick="openImage(this.src)">
+                <img src="/images/nikuni-certification_page-0001.jpg" alt="Certificate 3" class="h-48 cursor-pointer"
+                    onclick="openImage(this.src)">
+            </div>
+
+            <div class="flex flex-wrap justify-center items-start gap-[11.5rem]">
+                <a href="/nissei-products.html"
+                    class=" text-[8px] top-[63%] py-[5px] px-[15px] mt-6 inline-block text-white bg-[#516fc9] hover:bg-[#294599] rounded-full text-sm font-medium transition duration-300 animate__animated animate__fadeIn animate__delay-2s">
+                    Explore Products
+                </a>
+                <a href="/bunri-products.html"
+                    class=" text-[8px] top-[63%] py-[5px] px-[15px] mt-6 inline-block text-white bg-[#516fc9] hover:bg-[#294599] rounded-full text-sm font-medium transition duration-300 animate__animated animate__fadeIn animate__delay-2s">
+                    Explore Products
+                </a>
+                <a href="/nikuni-products.html"
+                    class=" text-[8px] top-[63%] py-[5px] px-[15px] mt-6 inline-block text-white bg-[#516fc9] hover:bg-[#294599] rounded-full text-sm font-medium transition duration-300 animate__animated animate__fadeIn animate__delay-2s">
+                    Explore Products
+                </a>
+            </div>
+        </div>
     </section>
 
-    <!-- Collaboration with BUNRI -->
-    <section
-        class="relative bg-gradient-to-r from-white via-[#e8f3fb] to-white py-20 px-4 md:px-20 text-center mb-20 h-[96] md:h-[500px] bg-cover bg-center"
-        style="background-image: url('images/apsonxbunri.png');">
+    <!-- Fullscreen Image Modal with Zoom -->
+    <div id="imageModal"
+        class="fixed inset-0 bg-black bg-opacity-90 flex flex-col justify-center items-center hidden z-50">
+        <span class="absolute top-6 right-6 text-white text-3xl font-bold cursor-pointer z-50"
+            onclick="closeImage()">&times;</span>
 
-        <!-- Visit BUNRI Product Page Button -->
-        <a href="bunri-products.html"
-            class="absolute text-[8px] top-[63%] py-[5px] px-[15px] md:top-[80%] left-1/2 transform -translate-x-1/2 mt-6 inline-block text-white bg-[#516fc9] hover:bg-[#294599] px-6 py-2 rounded-full text-sm font-medium transition duration-300 animate__animated animate__fadeIn animate__delay-2s">
-            Explore Bunri Products
-        </a>
-    </section>
+        <!-- Zoom Controls -->
+        <div class="absolute top-6 left-6 z-50 space-x-2">
+            <button onclick="zoomImage(true)"
+                class="bg-white text-black px-3 py-1 rounded text-xl font-bold hover:bg-gray-200">+</button>
+            <button onclick="zoomImage(false)"
+                class="bg-white text-black px-3 py-1 rounded text-xl font-bold hover:bg-gray-200">−</button>
+        </div>
 
-    <!-- Collaboration with Nikuni -->
-    <section
-        class="relative bg-gradient-to-r from-white via-[#e8f3fb] to-white py-20 px-4 md:px-20 text-center mb-20 h-[96] md:h-[500px] bg-cover bg-center"
-        style="background-image: url('images/apsonxnikuni.png');">
+        <img id="modalImage" class="max-h-[80vh] max-w-full rounded shadow-lg transition-transform duration-300" src=""
+            alt="Certificate Full View" style="transform: scale(1);">
+    </div>
 
-        <!-- Visit Nikuni Product Page Button -->
-        <a href="nikuni-products.html"
-            class="absolute text-[8px] top-[60%] py-[5px] px-[15px] md:top-[75%] left-1/2 transform -translate-x-1/2 mt-6 inline-block text-white bg-[#516fc9] hover:bg-[#294599] px-6 py-2 rounded-full text-sm font-medium transition duration-300 animate__animated animate__fadeIn animate__delay-2s">
-            Explore Nikuni Products
-        </a>
-    </section>
 
 
     <!-- Footer Section -->
@@ -176,8 +228,10 @@
                 <div class="space-y-2">
                     <a href="/index.html" class="font-semibold block hover:text-[#005baa] transition w-fit">Home</a>
                     <a href="/about-us.html" class="font-semibold block hover:text-[#005baa] transition w-fit">About</a>
-                    <a href="/product-page.html" class="font-semibold block hover:text-[#005baa] transition w-fit">Products</a>
-                    <a href="/contact.html" class="font-semibold block hover:text-[#005baa] transition w-fit">Contact</a>
+                    <a href="/product-page.html"
+                        class="font-semibold block hover:text-[#005baa] transition w-fit">Products</a>
+                    <a href="/contact.html"
+                        class="font-semibold block hover:text-[#005baa] transition w-fit">Contact</a>
                 </div>
             </div>
 
@@ -195,7 +249,7 @@
                 <h4 class="text-lg font-semibold text-[#005baa] mb-4">Manufacturing</h4>
                 <p class="text-gray-700 leading-relaxed">
                     <b>Faridabad</b> <br>
-                   Plot No -21, Gazipur Industrial Area,<br>
+                    Plot No -21, Gazipur Industrial Area,<br>
                     Sohna Road, Gazipur, NIT Faridabad, <br> Haryana, India 121005
                 </p>
             </div>
@@ -223,6 +277,11 @@
         </div>
     </footer>
 
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919540928998" target="_blank" rel="noopener noreferrer"
+        class="fixed bottom-5 right-5 z-50 bg-green-500 hover:bg-green-600 text-white px-5 py-4 rounded-full shadow-lg transition duration-300 ease-in-out text-4xl">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -232,6 +291,42 @@
             toggleButton.addEventListener("click", () => {
                 mobileMenu.classList.toggle("hidden");
             });
+        });
+    </script>
+
+    <!-- Image Popup -->
+    <script>
+        let zoomLevel = 1;
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+
+        function openImage(src) {
+            modalImg.src = src;
+            modal.classList.remove('hidden');
+            zoomLevel = 1;
+            modalImg.style.transform = `scale(${zoomLevel})`;
+        }
+
+        function closeImage() {
+            modal.classList.add('hidden');
+            modalImg.src = "";
+            zoomLevel = 1;
+            modalImg.style.transform = `scale(1)`;
+        }
+
+        function zoomImage(zoomIn) {
+            if (zoomIn && zoomLevel < 3) {
+                zoomLevel += 0.2;
+            } else if (!zoomIn && zoomLevel > 0.5) {
+                zoomLevel -= 0.2;
+            }
+            modalImg.style.transform = `scale(${zoomLevel})`;
+        }
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') closeImage();
+            if (e.key === '+' || e.key === '=') zoomImage(true);
+            if (e.key === '-' || e.key === '_') zoomImage(false);
         });
     </script>
 

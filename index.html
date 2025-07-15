@@ -331,7 +331,8 @@
 
                 </p>
                 <p class="text-lg leading-relaxed mb-4">
-                   We seek to be the leading engineering company by delivering exceptional results for our customers, creating rewarding careers for our employees, and earning a fair return on the value we provide.
+                    We seek to be the leading engineering company by delivering exceptional results for our customers,
+                    creating rewarding careers for our employees, and earning a fair return on the value we provide.
                 </p>
                 <a href="about-us.html"
                     class="mt-6 inline-block text-white bg-[#005baa] hover:bg-[#003C70] px-10 py-2 rounded-full text-sm font-medium transition duration-300 animate__animated animate__fadeIn animate__delay-2s">Read
@@ -452,59 +453,6 @@
         </div>
     </section>
 
-    <!-- Award and Certifications -->
-    <section class="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-        <!-- Left Column: Awards -->
-        <div>
-            <h2 class="text-2xl md:text-3xl font-bold text-[#005baa] mb-6 text-center">AWARDS</h2>
-            <div class="relative">
-
-                <div id="awards-carousel" class="overflow-hidden rounded-lg">
-                    <div class="flex transition-transform duration-500" id="awards-track">
-                        <img src="images/award.jpeg" class="max-w-1/2 object-cover rounded" />
-                        <img src="images/bdm-1.jpeg" class="max-w-1/2 object-cover rounded" />
-                        <img src="images/bdm-1.jpeg" class="max-w-1/2 object-cover rounded" />
-
-                    </div>
-                </div>
-                <!-- Navigation Buttons  -->
-                <button onclick="slideCarousel('awards', -1)"
-                    class="absolute top-1/2 left-1 transform -translate-y-1/2 bg-white shadow px-3 py-1 rounded hover:bg-gray-200">
-                    &#8592;
-                </button>
-                <button onclick="slideCarousel('awards', 1)"
-                    class="absolute top-1/2 right-1 transform -translate-y-1/2 bg-white shadow px-3 py-1 rounded hover:bg-gray-200">
-                    &#8594;
-                </button>
-            </div>
-        </div>
-
-        <!-- Right Column: Certifications -->
-
-        <div>
-            <h2 class="text-2xl md:text-3xl font-bold text-[#005baa] mb-6 text-center">CERTIFICATIONS</h2>
-            <div class="relative">
-
-                <div id="certs-carousel" class="overflow-hidden rounded-lg">
-                    <div class="flex transition-transform duration-500" id="certs-track">
-                        <img src="images/bdm-1.jpeg" class="max-w-1/2 object-cover rounded" />
-                        <img src="images/bdm-1.jpeg" class="max-w-1/2 object-cover rounded" />
-                        <img src="images/bdm-1.jpeg" class="max-w-1/2 object-cover rounded" />
-                    </div>
-                </div>
-                 <!-- Navigation Buttons  -->
-                <button onclick="slideCarousel('certs', -1)"
-                    class="absolute top-1/2 left-1 transform -translate-y-1/2 bg-white shadow px-3 py-1 rounded hover:bg-gray-200">
-                    &#8592;
-                </button>
-                <button onclick="slideCarousel('certs', 1)"
-                    class="absolute top-1/2 right-1 transform -translate-y-1/2 bg-white shadow px-3 py-1 rounded hover:bg-gray-200">
-                    &#8594;
-                </button>
-            </div>
-        </div>
-    </section>
-
     <!-- Footer Section -->
     <footer class="bg-white text-gray-800 pt-12 shadow-md border-t border-gray-200" id="footer">
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10 border-b border-gray-300 pb-8">
@@ -525,8 +473,10 @@
                 <div class="space-y-2">
                     <a href="/index.html" class="font-semibold block hover:text-[#005baa] transition w-fit">Home</a>
                     <a href="/about-us.html" class="font-semibold block hover:text-[#005baa] transition w-fit">About</a>
-                    <a href="/product-page.html" class="font-semibold block hover:text-[#005baa] transition w-fit">Products</a>
-                    <a href="/contact.html" class="font-semibold block hover:text-[#005baa] transition w-fit">Contact</a>
+                    <a href="/product-page.html"
+                        class="font-semibold block hover:text-[#005baa] transition w-fit">Products</a>
+                    <a href="/contact.html"
+                        class="font-semibold block hover:text-[#005baa] transition w-fit">Contact</a>
                 </div>
             </div>
 
@@ -573,27 +523,11 @@
         </div>
     </footer>
 
-    <!-- Award and Certifications -->
-    <script>
-        let positions = {
-            awards: 0,
-            certs: 0,
-        };
-
-        function slideCarousel(type, direction) {
-            const track = document.getElementById(`${type}-track`);
-            const slides = track.children.length;
-            const width = track.clientWidth;
-
-            positions[type] += direction;
-
-            if (positions[type] < 0) positions[type] = slides - 1;
-            if (positions[type] >= slides) positions[type] = 0;
-
-            track.style.transform = `translateX(-${positions[type] * 100}%)`;
-        }
-    </script>
-
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919540928998" target="_blank" rel="noopener noreferrer"
+        class="fixed bottom-5 right-5 z-50 bg-green-500 hover:bg-green-600 text-white px-5 py-4 rounded-full shadow-lg transition duration-300 ease-in-out text-4xl">
+        <i class="fab fa-whatsapp"></i>
+    </a>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const toggleButton = document.getElementById("menu-toggle");

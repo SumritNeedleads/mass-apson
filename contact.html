@@ -14,117 +14,117 @@
 
 
   <!-- Header -->
-    <header class="bg-white text-[#005baa] sticky top-0 z-50 shadow-md" id="header">
-        <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-            <!-- Logo -->
-            <a href="index.html">
-                <img src="/images/logo.png" alt="Apson Engineers Logo" class="h-10 w-auto rounded-lg p-1" />
+  <header class="bg-white text-[#005baa] sticky top-0 z-50 shadow-md" id="header">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="index.html">
+        <img src="/images/logo.png" alt="Apson Engineers Logo" class="h-10 w-auto rounded-lg p-1" />
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex space-x-6 text-sm font-medium items-center">
+        <a href="/index.html" class="hover:scale-110">Home</a>
+        <a href="/about-us.html" class="hover:scale-110">About</a>
+
+        <!-- Products Hover Dropdown -->
+        <div class="relative group" id="products-dropdown">
+          <a href="/product-page.html"><span class="hover:scale-110 flex items-center gap-1 cursor-pointer">
+              Products
+              <svg class="w-4 h-4 mt-[1px]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </span></a>
+          </span>
+
+          <!-- Horizontal Dropdown -->
+          <div
+            class="absolute left-0 mt-2 flex bg-white text-[#005baa] rounded shadow-md py-2 px-4 z-40 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 space-x-4 min-w-max">
+            <!-- Apson -->
+            <a href="/apson-products.html"
+              class="flex items-center gap- border-2 border-white hover:border-[#005baa] hover:text-white rounded transition">
+              <img src="/images/logo1.png" alt="Apson Logo" class="w-24 h-8 object-contain p-1">
+              <!-- <span>Apson</span> -->
             </a>
 
-            <!-- Desktop Navigation -->
-            <nav class="hidden md:flex space-x-6 text-sm font-medium items-center">
-                <a href="/index.html" class="hover:scale-110">Home</a>
-                <a href="/about-us.html" class="hover:scale-110">About</a>
+            <!-- Bunri -->
+            <a href="/bunri-products.html"
+              class="flex items-center gap-2 border-2 border-white hover:border-[#005baa] hover:text-white rounded transition">
+              <img src="/images/logo2.png" alt="Bunri Logo" class="w-20 h-8 object-contain p-1">
+              <!-- <span>Bunri</span> -->
+            </a>
 
-                <!-- Products Hover Dropdown -->
-                <div class="relative group" id="products-dropdown">
-                    <a href="/product-page.html"><span class="hover:scale-110 flex items-center gap-1 cursor-pointer">
-                            Products
-                            <svg class="w-4 h-4 mt-[1px]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7" />
-                            </svg>
-                        </span></a>
-                    </span>
+            <!-- Nikuni -->
+            <a href="/nikuni-products.html"
+              class="flex items-center gap-2 border-2 border-white hover:border-[#005baa] hover:text-white rounded transition">
+              <img src="/images/logo3.png" alt="Nikuni Logo" class="w-20 h-8 object-contain p-1">
+              <!-- <span>Nikuni</span> -->
+            </a>
 
-                    <!-- Horizontal Dropdown -->
-                    <div
-                        class="absolute left-0 mt-2 flex bg-white text-[#005baa] rounded shadow-md py-2 px-4 z-40 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 space-x-4 min-w-max">
-                        <!-- Apson -->
-                        <a href="/apson-products.html"
-                            class="flex items-center gap- border-2 border-white hover:border-[#005baa] hover:text-white rounded transition">
-                            <img src="/images/logo1.png" alt="Apson Logo" class="w-24 h-8 object-contain p-1">
-                            <!-- <span>Apson</span> -->
-                        </a>
-
-                        <!-- Bunri -->
-                        <a href="/bunri-products.html"
-                            class="flex items-center gap-2 border-2 border-white hover:border-[#005baa] hover:text-white rounded transition">
-                            <img src="/images/logo2.png" alt="Bunri Logo" class="w-20 h-8 object-contain p-1">
-                            <!-- <span>Bunri</span> -->
-                        </a>
-
-                        <!-- Nikuni -->
-                        <a href="/nikuni-products.html"
-                            class="flex items-center gap-2 border-2 border-white hover:border-[#005baa] hover:text-white rounded transition">
-                            <img src="/images/logo3.png" alt="Nikuni Logo" class="w-20 h-8 object-contain p-1">
-                            <!-- <span>Nikuni</span> -->
-                        </a>
-
-                        <!-- Nissei -->
-                        <a href="/nissei-products.html"
-                            class="flex items-center gap-2 border-2 border-white hover:border-[#005baa] hover:text-white rounded transition">
-                            <img src="/images/logo4.png" alt="Other Logo" class="w-20 h-8 object-contain p-1">
-                            <!-- <span>Nissei</span> -->
-                        </a>
-                    </div>
-                </div>
-
-
-                <a href="/gallery.html" class="hover:scale-110">Gallery</a>
-                <a href="/all-customers.html" class="hover:scale-110">Customers</a>
-                <a href="/collaboration.html" class="hover:scale-110">Collaboration</a>
-                <a href="/contact.html" class="hover:scale-110">Contact</a>
-            </nav>
-
-            <!-- CTA Button -->
-            <a href="/contact.html#contact_form"
-                class="hidden md:inline-block bg-[#005baa] text-white px-4 py-2 rounded hover:bg-[#003c70] hover:text-white transition">Product Enquiry</a>
-
-            <!-- Mobile Menu Button -->
-            <button id="menu-toggle" class="md:hidden focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
+            <!-- Nissei -->
+            <a href="/nissei-products.html"
+              class="flex items-center gap-2 border-2 border-white hover:border-[#005baa] hover:text-white rounded transition">
+              <img src="/images/logo4.png" alt="Other Logo" class="w-20 h-8 object-contain p-1">
+              <!-- <span>Nissei</span> -->
+            </a>
+          </div>
         </div>
 
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2">
-            <a href="/index.html" class="block py-2 hover:scale-110">Home</a>
-            <a href="/about-us.html" class="block py-2 hover:scale-110">About</a>
 
-            <!-- Mobile Dropdown -->
-            <div>
-                <button onclick="document.getElementById('mobile-products').classList.toggle('hidden')"
-                    class="block py-2 w-full text-left hover:scale-110">Products</button>
-                <div id="mobile-products" class="hidden pl-4">
-                    <a href="/apson-products.html" class="flex items-center gap-2 py-1 hover:scale-110">
-                        <img src="/images/logo.png" alt="Apson Logo" class="w-14 h-14 object-contain">
-                        <!-- <span>Apson</span> -->
-                    </a>
-                    <a href="/bunri-products.html" class="flex items-center gap-2 py-1 hover:scale-110">
-                        <img src="/images/bunri_logo.svg" alt="Bunri Logo" class="w-14 h-14 object-contain">
-                        <!-- <span>Bunri</span> -->
-                    </a>
-                    <a href="/nikuni-products.html" class="flex items-center gap-2 py-1 hover:scale-110">
-                        <img src="/images/nikuni-logo.png" alt="Nikuni Logo" class="w-14 h-14 object-contain">
-                        <!-- <span>Nikuni</span> -->
-                    </a>
-                    <a href="/nissei-products.html" class="flex items-center gap-2 py-1 hover:scale-110">
-                        <img src="/images/nissei-logo.png" alt="Nikuni Logo" class="w-14 h-14 object-contain">
-                        <!-- <span>Nissei</span> -->
-                    </a>
-                </div>
-            </div>
+        <a href="/gallery.html" class="hover:scale-110">Gallery</a>
+        <a href="/all-customers.html" class="hover:scale-110">Customers</a>
+        <a href="/collaboration.html" class="hover:scale-110">Collaboration</a>
+        <a href="/contact.html" class="hover:scale-110">Contact</a>
+      </nav>
 
+      <!-- CTA Button -->
+      <a href="/contact.html#contact_form"
+        class="hidden md:inline-block bg-[#005baa] text-white px-4 py-2 rounded hover:bg-[#003c70] hover:text-white transition">Product
+        Enquiry</a>
 
-            <a href="/gallery.html" class="block py-2 hover:scale-110">Gallery</a>
-            <a href="/all-customers.html" class="block py-2 hover:scale-110">Customers</a>
-            <a href="/collaboration.html" class="block py-2 hover:scale-110">Collaboration</a>
-            <a href="/contact.html" class="block py-2 hover:scale-110">Contact</a>
+      <!-- Mobile Menu Button -->
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2">
+      <a href="/index.html" class="block py-2 hover:scale-110">Home</a>
+      <a href="/about-us.html" class="block py-2 hover:scale-110">About</a>
+
+      <!-- Mobile Dropdown -->
+      <div>
+        <button onclick="document.getElementById('mobile-products').classList.toggle('hidden')"
+          class="block py-2 w-full text-left hover:scale-110">Products</button>
+        <div id="mobile-products" class="hidden pl-4">
+          <a href="/apson-products.html" class="flex items-center gap-2 py-1 hover:scale-110">
+            <img src="/images/logo.png" alt="Apson Logo" class="w-14 h-14 object-contain">
+            <!-- <span>Apson</span> -->
+          </a>
+          <a href="/bunri-products.html" class="flex items-center gap-2 py-1 hover:scale-110">
+            <img src="/images/bunri_logo.svg" alt="Bunri Logo" class="w-14 h-14 object-contain">
+            <!-- <span>Bunri</span> -->
+          </a>
+          <a href="/nikuni-products.html" class="flex items-center gap-2 py-1 hover:scale-110">
+            <img src="/images/nikuni-logo.png" alt="Nikuni Logo" class="w-14 h-14 object-contain">
+            <!-- <span>Nikuni</span> -->
+          </a>
+          <a href="/nissei-products.html" class="flex items-center gap-2 py-1 hover:scale-110">
+            <img src="/images/nissei-logo.png" alt="Nikuni Logo" class="w-14 h-14 object-contain">
+            <!-- <span>Nissei</span> -->
+          </a>
         </div>
-    </header>
+      </div>
+
+
+      <a href="/gallery.html" class="block py-2 hover:scale-110">Gallery</a>
+      <a href="/all-customers.html" class="block py-2 hover:scale-110">Customers</a>
+      <a href="/collaboration.html" class="block py-2 hover:scale-110">Collaboration</a>
+      <a href="/contact.html" class="block py-2 hover:scale-110">Contact</a>
+    </div>
+  </header>
 
 
 
@@ -240,102 +240,110 @@
       </div>
 
       <!-- Contact Form -->
-      <form id="contactForm" class="bg-white shadow-xl rounded-2xl p-8 space-y-6 w-full">
+      <form id="contactForm" action="https://formsubmit.co/info@massapson.com" method="POST"
+        class="bg-white shadow-xl rounded-2xl p-8 space-y-6 w-full">
 
+        <!-- Hidden inputs -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_subject" value="New Contact Form Submission">
+
+
+        <!-- Requirements -->
         <div>
           <label class="block font-semibold mb-2">Please describe your requirements :</label>
-          <textarea required
+          <textarea name="requirements" required
             class="w-full border border-gray-300 rounded-lg p-3 h-28 focus:outline-none focus:ring-2 focus:ring-[#f95702]"
             placeholder="Your Requirements"></textarea>
         </div>
 
+        <!-- Name -->
         <div>
           <label class="block font-semibold mb-1 text-sm text-red-600">* Your Name :</label>
-          <input required type="text" placeholder="Your Name"
+          <input name="name" required type="text" placeholder="Your Name"
             class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#f95702]" />
         </div>
 
+        <!-- Location -->
         <div>
           <label class="block font-semibold mb-1 text-sm text-red-600">* Location :</label>
-          <div class="flex items-center gap-3">
-            <input required type="text" placeholder="Type your city here ..."
-              class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#f95702]" />
-          </div>
+          <input name="location" required type="text" placeholder="Type your city here ..."
+            class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#f95702]" />
         </div>
 
+        <!-- Phone -->
         <div>
           <label class="block font-semibold mb-1 text-sm text-red-600">* Phone / Mobile :</label>
-          <input required type="tel" pattern="\d{10}" maxlength="10" inputmode="numeric" placeholder="Your Contact no."
+          <input name="phone" required type="tel" pattern="\d{10}" maxlength="10" inputmode="numeric"
+            placeholder="Your Contact no."
             class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#f95702]" />
         </div>
 
+        <!-- Email -->
         <div>
           <label class="block font-semibold mb-1 text-sm text-red-600">* E-mail :</label>
-          <input required type="email" placeholder="Your Mail Id"
+          <input name="email" required type="email" placeholder="Your Mail Id"
             class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#f95702]" />
         </div>
 
+        <!-- Submit Button -->
         <button type="submit"
           class="bg-[#005baa] text-white font-semibold px-6 py-2 rounded-lg hover:bg-[#003c70] transition shadow-md">
           Submit
         </button>
-
-        <!-- Acknowledgment Message (Hidden by default) -->
-        <p id="ackMsg" class="text-green-600 font-semibold hidden">Thank you! Your message has been received.</p>
-
       </form>
     </div>
   </section>
 
 
   <!-- Footer Section -->
-    <footer class="bg-white text-gray-800 pt-12 shadow-md border-t border-gray-200" id="footer">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10 border-b border-gray-300 pb-8">
+  <footer class="bg-white text-gray-800 pt-12 shadow-md border-t border-gray-200" id="footer">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10 border-b border-gray-300 pb-8">
 
-            <!-- Company logo and content -->
-            <div>
-                <a href="/index.html"><img src="/images/logo.png" alt="Company Logo" class="w-64 mb-4"></a>
+      <!-- Company logo and content -->
+      <div>
+        <a href="/index.html"><img src="/images/logo.png" alt="Company Logo" class="w-64 mb-4"></a>
 
-                <!--p class="text-gray-700">
+        <!--p class="text-gray-700">
                     Mass Apson is a young & dynamic technology solution provider which deals in Coolant tanks,
                     Conveyors, magnetic separator, paper filter, Hyd Power pack etc.
                 </p-->
-            </div>
+      </div>
 
-            <!-- Quick Links -->
-            <div>
-                <h4 class="text-lg font-semibold text-[#005baa] mb-4">Quick Links</h4>
-                <div class="space-y-2">
-                    <a href="/index.html" class="font-semibold block hover:text-[#005baa] transition w-fit">Home</a>
-                    <a href="/about-us.html" class="font-semibold block hover:text-[#005baa] transition w-fit">About</a>
-                    <a href="/product-page.html" class="font-semibold block hover:text-[#005baa] transition w-fit">Products</a>
-                    <a href="/contact.html" class="font-semibold block hover:text-[#005baa] transition w-fit">Contact</a>
-                </div>
-            </div>
-
-            <!-- Address -->
-              <div>
-                <h4 class="text-lg font-semibold text-[#005baa] mb-4">Corporate office</h4>
-                <p class="text-gray-700 leading-relaxed">
-                    <b>Gurgaon</b> <br>
-                    CustomersSB-R/1L/04/025 & 026A, 1ST Floor<br>
-                    M3M Urbana Sector-67, Gurgaon, <br> India 122102 <br>
-                    Tel No. 0124-4966065
-                </p>
-            </div>
-            <div>              
-
-                <h4 class="text-lg font-semibold text-[#005baa] mb-4">Manufacturing</h4>
-                <p class="text-gray-700 leading-relaxed">
-                    <b>Faridabad</b> <br>
-                   Plot No -21, Gazipur Industrial Area,<br>
-                    Sohna Road, Gazipur, NIT Faridabad, <br> Haryana, India 121005
-                </p>
-            </div>
+      <!-- Quick Links -->
+      <div>
+        <h4 class="text-lg font-semibold text-[#005baa] mb-4">Quick Links</h4>
+        <div class="space-y-2">
+          <a href="/index.html" class="font-semibold block hover:text-[#005baa] transition w-fit">Home</a>
+          <a href="/about-us.html" class="font-semibold block hover:text-[#005baa] transition w-fit">About</a>
+          <a href="/product-page.html" class="font-semibold block hover:text-[#005baa] transition w-fit">Products</a>
+          <a href="/contact.html" class="font-semibold block hover:text-[#005baa] transition w-fit">Contact</a>
         </div>
-        <!-- Social & Copyright -->
-        <div class="width-full px-52 py-6 flex flex-col md:flex-row items-center justify-between text-sm bg-[#005baa]">
-            <!-- <div class="flex gap-4 mb-4 md:mb-0 text-[#005baa]">
+      </div>
+
+      <!-- Address -->
+      <div>
+        <h4 class="text-lg font-semibold text-[#005baa] mb-4">Corporate office</h4>
+        <p class="text-gray-700 leading-relaxed">
+          <b>Gurgaon</b> <br>
+          CustomersSB-R/1L/04/025 & 026A, 1ST Floor<br>
+          M3M Urbana Sector-67, Gurgaon, <br> India 122102 <br>
+          Tel No. 0124-4966065
+        </p>
+      </div>
+      <div>
+
+        <h4 class="text-lg font-semibold text-[#005baa] mb-4">Manufacturing</h4>
+        <p class="text-gray-700 leading-relaxed">
+          <b>Faridabad</b> <br>
+          Plot No -21, Gazipur Industrial Area,<br>
+          Sohna Road, Gazipur, NIT Faridabad, <br> Haryana, India 121005
+        </p>
+      </div>
+    </div>
+    <!-- Social & Copyright -->
+    <div class="width-full px-52 py-6 flex flex-col md:flex-row items-center justify-between text-sm bg-[#005baa]">
+      <!-- <div class="flex gap-4 mb-4 md:mb-0 text-[#005baa]">
                 <a href="#" class="hover:text-blue-600 transition text-white" aria-label="Facebook"><i
                         class="fab fa-facebook-f"></i></a>
                 <a href="#" class="hover:text-blue-400 transition text-white" aria-label="Twitter"><i
@@ -347,15 +355,20 @@
                 <a href="#" class="hover:text-blue-700 transition text-white" aria-label="LinkedIn"><i
                         class="fab fa-linkedin-in"></i></a>
             </div> -->
-            <div class="text-white text-center md:text-right">
-                Developed and Designed by
-                <a href="https://www.theneedleads.com/" target="_blank"
-                    class="font-semibold text-text-white hover:text-blue-700 transition">
-                    Needleads Technologies</a>.
-            </div>
-        </div>
-    </footer>
+      <div class="text-white text-center md:text-right">
+        Developed and Designed by
+        <a href="https://www.theneedleads.com/" target="_blank"
+          class="font-semibold text-text-white hover:text-blue-700 transition">
+          Needleads Technologies</a>.
+      </div>
+    </div>
+  </footer>
 
+<!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919540928998" target="_blank" rel="noopener noreferrer"
+        class="fixed bottom-5 right-5 z-50 bg-green-500 hover:bg-green-600 text-white px-5 py-4 rounded-full shadow-lg transition duration-300 ease-in-out text-4xl">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -371,28 +384,12 @@
 
   <!-- JavaScript -->
   <script>
-    document.getElementById('contactForm').addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      // Optional: Add your form submission logic here (e.g., API call)
-
-      // Show acknowledgment
-      document.getElementById('ackMsg').classList.remove('hidden');
-
-      // Optionally, clear the form
-      this.reset();
-
-      // Hide the message after 5 seconds
-      setTimeout(() => {
-        document.getElementById('ackMsg').classList.add('hidden');
-      }, 5000);
-    });
-
     // Allow only digits in mobile input
     document.querySelector('input[type="tel"]').addEventListener('input', function () {
       this.value = this.value.replace(/\D/g, '').slice(0, 10);
     });
   </script>
+
 </body>
 
 </html>
