@@ -14,117 +14,117 @@
 
 
   <!-- Header -->
-    <header class="bg-white text-[#005baa] sticky top-0 z-50 shadow-md" id="header">
-        <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-            <!-- Logo -->
-            <a href="index.html">
-                <img src="/images/logo.png" alt="Apson Engineers Logo" class="h-10 w-auto rounded-lg p-1" />
+  <header class="bg-white text-[#005baa] sticky top-0 z-50 shadow-md" id="header">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="index.html">
+        <img src="/images/logo.png" alt="Apson Engineers Logo" class="h-10 w-auto rounded-lg p-1" />
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex space-x-6 text-sm font-medium items-center">
+        <a href="/index.html" class="hover:scale-110">Home</a>
+        <a href="/about-us.html" class="hover:scale-110">About</a>
+
+        <!-- Products Hover Dropdown -->
+        <div class="relative group" id="products-dropdown">
+          <a href="/product-page.html"><span class="hover:scale-110 flex items-center gap-1 cursor-pointer">
+              Products
+              <svg class="w-4 h-4 mt-[1px]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </span></a>
+          </span>
+
+          <!-- Horizontal Dropdown -->
+          <div
+            class="absolute left-0 mt-2 flex bg-white text-[#005baa] rounded shadow-md py-2 px-4 z-40 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 space-x-4 min-w-max">
+            <!-- Apson -->
+            <a href="/apson-products.html"
+              class="flex items-center gap- border-2 border-white hover:border-[#005baa] hover:text-white rounded transition">
+              <img src="/images/logo1.png" alt="Apson Logo" class="w-24 h-8 object-contain p-1">
+              <!-- <span>Apson</span> -->
             </a>
 
-            <!-- Desktop Navigation -->
-            <nav class="hidden md:flex space-x-6 text-sm font-medium items-center">
-                <a href="/index.html" class="hover:scale-110">Home</a>
-                <a href="/about-us.html" class="hover:scale-110">About</a>
+            <!-- Bunri -->
+            <a href="/bunri-products.html"
+              class="flex items-center gap-2 border-2 border-white hover:border-[#005baa] hover:text-white rounded transition">
+              <img src="/images/logo2.png" alt="Bunri Logo" class="w-20 h-8 object-contain p-1">
+              <!-- <span>Bunri</span> -->
+            </a>
 
-                <!-- Products Hover Dropdown -->
-                <div class="relative group" id="products-dropdown">
-                    <a href="/product-page.html"><span class="hover:scale-110 flex items-center gap-1 cursor-pointer">
-                            Products
-                            <svg class="w-4 h-4 mt-[1px]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7" />
-                            </svg>
-                        </span></a>
-                    </span>
+            <!-- Nikuni -->
+            <a href="/nikuni-products.html"
+              class="flex items-center gap-2 border-2 border-white hover:border-[#005baa] hover:text-white rounded transition">
+              <img src="/images/logo3.png" alt="Nikuni Logo" class="w-20 h-8 object-contain p-1">
+              <!-- <span>Nikuni</span> -->
+            </a>
 
-                    <!-- Horizontal Dropdown -->
-                    <div
-                        class="absolute left-0 mt-2 flex bg-white text-[#005baa] rounded shadow-md py-2 px-4 z-40 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 space-x-4 min-w-max">
-                        <!-- Apson -->
-                        <a href="/apson-products.html"
-                            class="flex items-center gap- border-2 border-white hover:border-[#005baa] hover:text-white rounded transition">
-                            <img src="/images/logo1.png" alt="Apson Logo" class="w-24 h-8 object-contain p-1">
-                            <!-- <span>Apson</span> -->
-                        </a>
-
-                        <!-- Bunri -->
-                        <a href="/bunri-products.html"
-                            class="flex items-center gap-2 border-2 border-white hover:border-[#005baa] hover:text-white rounded transition">
-                            <img src="/images/logo2.png" alt="Bunri Logo" class="w-20 h-8 object-contain p-1">
-                            <!-- <span>Bunri</span> -->
-                        </a>
-
-                        <!-- Nikuni -->
-                        <a href="/nikuni-products.html"
-                            class="flex items-center gap-2 border-2 border-white hover:border-[#005baa] hover:text-white rounded transition">
-                            <img src="/images/logo3.png" alt="Nikuni Logo" class="w-20 h-8 object-contain p-1">
-                            <!-- <span>Nikuni</span> -->
-                        </a>
-
-                        <!-- Nissei -->
-                        <a href="/nissei-products.html"
-                            class="flex items-center gap-2 border-2 border-white hover:border-[#005baa] hover:text-white rounded transition">
-                            <img src="/images/logo4.png" alt="Other Logo" class="w-20 h-8 object-contain p-1">
-                            <!-- <span>Nissei</span> -->
-                        </a>
-                    </div>
-                </div>
-
-
-                <a href="/gallery.html" class="hover:scale-110">Gallery</a>
-                <a href="/all-customers.html" class="hover:scale-110">Customers</a>
-                <a href="/collaboration.html" class="hover:scale-110">Collaboration</a>
-                <a href="/contact.html" class="hover:scale-110">Contact</a>
-            </nav>
-
-            <!-- CTA Button -->
-            <a href="/contact.html#contact_form"
-                class="hidden md:inline-block bg-[#005baa] text-white px-4 py-2 rounded hover:bg-[#003c70] hover:text-white transition">Product Enquiry</a>
-
-            <!-- Mobile Menu Button -->
-            <button id="menu-toggle" class="md:hidden focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
+            <!-- Nissei -->
+            <a href="/nissei-products.html"
+              class="flex items-center gap-2 border-2 border-white hover:border-[#005baa] hover:text-white rounded transition">
+              <img src="/images/logo4.png" alt="Other Logo" class="w-20 h-8 object-contain p-1">
+              <!-- <span>Nissei</span> -->
+            </a>
+          </div>
         </div>
 
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2">
-            <a href="/index.html" class="block py-2 hover:scale-110">Home</a>
-            <a href="/about-us.html" class="block py-2 hover:scale-110">About</a>
 
-            <!-- Mobile Dropdown -->
-            <div>
-                <button onclick="document.getElementById('mobile-products').classList.toggle('hidden')"
-                    class="block py-2 w-full text-left hover:scale-110">Products</button>
-                <div id="mobile-products" class="hidden pl-4">
-                    <a href="/apson-products.html" class="flex items-center gap-2 py-1 hover:scale-110">
-                        <img src="/images/logo.png" alt="Apson Logo" class="w-14 h-14 object-contain">
-                        <!-- <span>Apson</span> -->
-                    </a>
-                    <a href="/bunri-products.html" class="flex items-center gap-2 py-1 hover:scale-110">
-                        <img src="/images/bunri_logo.svg" alt="Bunri Logo" class="w-14 h-14 object-contain">
-                        <!-- <span>Bunri</span> -->
-                    </a>
-                    <a href="/nikuni-products.html" class="flex items-center gap-2 py-1 hover:scale-110">
-                        <img src="/images/nikuni-logo.png" alt="Nikuni Logo" class="w-14 h-14 object-contain">
-                        <!-- <span>Nikuni</span> -->
-                    </a>
-                    <a href="/nissei-products.html" class="flex items-center gap-2 py-1 hover:scale-110">
-                        <img src="/images/nissei-logo.png" alt="Nikuni Logo" class="w-14 h-14 object-contain">
-                        <!-- <span>Nissei</span> -->
-                    </a>
-                </div>
-            </div>
+        <a href="/gallery.html" class="hover:scale-110">Gallery</a>
+        <a href="/all-customers.html" class="hover:scale-110">Customers</a>
+        <a href="/collaboration.html" class="hover:scale-110">Collaboration</a>
+        <a href="/contact.html" class="hover:scale-110">Contact</a>
+      </nav>
 
+      <!-- CTA Button -->
+      <a href="/contact.html#contact_form"
+        class="hidden md:inline-block bg-[#005baa] text-white px-4 py-2 rounded hover:bg-[#003c70] hover:text-white transition">Product
+        Enquiry</a>
 
-            <a href="/gallery.html" class="block py-2 hover:scale-110">Gallery</a>
-            <a href="/all-customers.html" class="block py-2 hover:scale-110">Customers</a>
-            <a href="/collaboration.html" class="block py-2 hover:scale-110">Collaboration</a>
-            <a href="/contact.html" class="block py-2 hover:scale-110">Contact</a>
+      <!-- Mobile Menu Button -->
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2">
+      <a href="/index.html" class="block py-2 hover:scale-110">Home</a>
+      <a href="/about-us.html" class="block py-2 hover:scale-110">About</a>
+
+      <!-- Mobile Dropdown -->
+      <div>
+        <button onclick="document.getElementById('mobile-products').classList.toggle('hidden')"
+          class="block py-2 w-full text-left hover:scale-110">Products</button>
+        <div id="mobile-products" class="hidden pl-4">
+          <a href="/apson-products.html" class="flex items-center gap-2 py-1 hover:scale-110">
+            <img src="/images/logo.png" alt="Apson Logo" class="w-14 h-14 object-contain">
+            <!-- <span>Apson</span> -->
+          </a>
+          <a href="/bunri-products.html" class="flex items-center gap-2 py-1 hover:scale-110">
+            <img src="/images/logo2.png" alt="Bunri Logo" class="w-14 h-14 object-contain">
+            <!-- <span>Bunri</span> -->
+          </a>
+          <a href="/nikuni-products.html" class="flex items-center gap-2 py-1 hover:scale-110">
+            <img src="/images/nikuni-logo.png" alt="Nikuni Logo" class="w-14 h-14 object-contain">
+            <!-- <span>Nikuni</span> -->
+          </a>
+          <a href="/nissei-products.html" class="flex items-center gap-2 py-1 hover:scale-110">
+            <img src="/images/nissei-logo.png" alt="Nikuni Logo" class="w-14 h-14 object-contain">
+            <!-- <span>Nissei</span> -->
+          </a>
         </div>
-    </header>
+      </div>
+
+
+      <a href="/gallery.html" class="block py-2 hover:scale-110">Gallery</a>
+      <a href="/all-customers.html" class="block py-2 hover:scale-110">Customers</a>
+      <a href="/collaboration.html" class="block py-2 hover:scale-110">Collaboration</a>
+      <a href="/contact.html" class="block py-2 hover:scale-110">Contact</a>
+    </div>
+  </header>
 
 
 
@@ -132,199 +132,213 @@
   <section class="relative h-72 bg-cover bg-center" style="background-image: url('images/our_gallery_banner.jpg');">
   </section>
 
-  <!-- Gallery Grid -->
+  <!-- GALLERY SECTION WITH POPUP -->
   <section class="py-16 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center text-[#005baa] mb-10">Latest Visits </h2>
+      <h2 class="text-3xl font-bold text-center text-[#005baa] mb-10">Latest Visits</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        <!-- 12 Placeholder Images -->
-        <img src="images/Japneese-visit/IMG-20250701-WA0026.jpg" alt="gallery_1"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
-        <img src="images/Japneese-visit/IMG-20250701-WA0027.jpg" alt="gallery_2"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
-        <img src="images/Japneese-visit/IMG-20250701-WA0029.jpg" alt="gallery_3"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
-        <img src="images/Japneese-visit/IMG-20250701-WA0035.jpg" alt="gallery_4"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
-        <img src="images/Japneese-visit/IMG-20250701-WA0038.jpg" alt="gallery_5"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
-        <img src="images/Japneese-visit/IMG-20250701-WA0039.jpg" alt="gallery_6"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
-        <img src="images/Japneese-visit/IMG-20250701-WA0041.jpg" alt="gallery_8"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
-        <img src="images/Japneese-visit/IMG-20250701-WA0044.jpg" alt="gallery_9"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
-        <img src="images/Japneese-visit/IMG-20250701-WA0045.jpg" alt="gallery_10"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
-        <img src="images/Japneese-visit/IMG-20250701-WA0049.jpg" alt="gallery_11"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
-        <img src="images/Japneese-visit/IMG-20250701-WA0051.jpg" alt="gallery_12"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
-        <img src="images/Japneese-visit/IMG-20250701-WA0054.jpg" alt="gallery_13"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
-        <img src="images/Japneese-visit/IMG-20250701-WA0056.jpg" alt="gallery_14"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
-        <img src="images/Japneese-visit/IMG-20250701-WA0057.jpg" alt="gallery_15"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
-        <img src="images/Japneese-visit/IMG-20250701-WA0058.jpg" alt="gallery_16"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
-        <img src="images/Japneese-visit/IMG-20250701-WA0059.jpg" alt="gallery_17"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
-        <img src="images/Japneese-visit/IMG-20250701-WA0060.jpg" alt="gallery_18"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
-        <img src="images/Japneese-visit/IMG-20250701-WA0061.jpg" alt="gallery_19"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
-        <img src="images/Japneese-visit/IMG-20250701-WA0062.jpg" alt="gallery_20"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
-        <img src="images/Japneese-visit/IMG-20250701-WA0064.jpg" alt="gallery_20"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
-        <img src="images/Japneese-visit/IMG-20250701-WA0067.jpg" alt="gallery_20"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
-        <img src="images/Japneese-visit/IMG-20250701-WA0069.jpg" alt="gallery_20"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
-        <img src="images/Japneese-visit/IMG-20250701-WA0070.jpg" alt="gallery_20"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
-        <img src="images/Japneese-visit/IMG-20250701-WA0071.jpg" alt="gallery_20"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
-        <img src="images/Japneese-visit/IMG-20250701-WA0072.jpg" alt="gallery_20"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
-        <img src="images/Japneese-visit/IMG-20250701-WA0073.jpg" alt="gallery_20"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
-        <img src="images/Japneese-visit/IMG-20250701-WA0076.jpg" alt="gallery_20"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
-        <img src="images/Japneese-visit/IMG-20250701-WA0078.jpg" alt="gallery_20"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
-        <img src="images/Japneese-visit/IMG-20250701-WA0079.jpg" alt="gallery_20"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
-        <img src="images/Japneese-visit/IMG-20250701-WA0080.jpg" alt="gallery_20"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
-        <img src="images/Japneese-visit/IMG-20250701-WA0081.jpg" alt="gallery_20"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
-        <img src="images/Japneese-visit/IMG-20250701-WA0086.jpg" alt="gallery_20"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
-        <img src="images/Japneese-visit/IMG-20250701-WA0089.jpg" alt="gallery_20"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
-        <img src="images/Japneese-visit/IMG-20250701-WA0090.jpg" alt="gallery_20"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
-        <img src="images/Japneese-visit/IMG-20250701-WA0091.jpg" alt="gallery_20"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
-        <img src="images/Japneese-visit/IMG-20250701-WA0092.jpg" alt="gallery_20"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
-        <img src="images/Japneese-visit/IMG-20250701-WA0094.jpg" alt="gallery_20"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
-        <img src="images/Japneese-visit/IMG-20250701-WA0095.jpg" alt="gallery_20"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
-        <img src="images/Japneese-visit/IMG-20250701-WA0097.jpg" alt="gallery_20"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
-        <img src="images/Japneese-visit/IMG-20250701-WA0098.jpg" alt="gallery_20"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
-        <img src="images/Japneese-visit/IMG-20250701-WA0101.jpg" alt="gallery_20"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
-        <img src="images/Japneese-visit/IMG-20250701-WA0102.jpg" alt="gallery_20"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
-        <img src="images/Japneese-visit/IMG-20250701-WA0103.jpg" alt="gallery_20"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
+        <!-- 48 Visit Images -->
+        <img src="images/Japneese-visit/IMG-20250701-WA0026.jpg"
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition cursor-pointer">
+        <img src="images/Japneese-visit/IMG-20250701-WA0027.jpg"
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition cursor-pointer">
+        <img src="images/Japneese-visit/IMG-20250701-WA0029.jpg"
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition cursor-pointer">
+        <img src="images/Japneese-visit/IMG-20250701-WA0035.jpg"
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition cursor-pointer">
+        <img src="images/Japneese-visit/IMG-20250701-WA0038.jpg"
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition cursor-pointer">
+        <img src="images/Japneese-visit/IMG-20250701-WA0039.jpg"
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition cursor-pointer">
+        <img src="images/Japneese-visit/IMG-20250701-WA0041.jpg"
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition cursor-pointer">
+        <img src="images/Japneese-visit/IMG-20250701-WA0044.jpg"
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition cursor-pointer">
+        <img src="images/Japneese-visit/IMG-20250701-WA0045.jpg"
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition cursor-pointer">
+        <img src="images/Japneese-visit/IMG-20250701-WA0049.jpg"
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition cursor-pointer">
+        <img src="images/Japneese-visit/IMG-20250701-WA0051.jpg"
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition cursor-pointer">
+        <img src="images/Japneese-visit/IMG-20250701-WA0054.jpg"
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition cursor-pointer">
+        <img src="images/Japneese-visit/IMG-20250701-WA0056.jpg"
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition cursor-pointer">
+        <img src="images/Japneese-visit/IMG-20250701-WA0057.jpg"
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition cursor-pointer">
+        <img src="images/Japneese-visit/IMG-20250701-WA0058.jpg"
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition cursor-pointer">
+        <img src="images/Japneese-visit/IMG-20250701-WA0059.jpg"
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition cursor-pointer">
+        <img src="images/Japneese-visit/IMG-20250701-WA0060.jpg"
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition cursor-pointer">
+        <img src="images/Japneese-visit/IMG-20250701-WA0061.jpg"
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition cursor-pointer">
+        <img src="images/Japneese-visit/IMG-20250701-WA0062.jpg"
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition cursor-pointer">
+        <img src="images/Japneese-visit/IMG-20250701-WA0064.jpg"
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition cursor-pointer">
+        <img src="images/Japneese-visit/IMG-20250701-WA0067.jpg"
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition cursor-pointer">
+        <img src="images/Japneese-visit/IMG-20250701-WA0069.jpg"
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition cursor-pointer">
+        <img src="images/Japneese-visit/IMG-20250701-WA0070.jpg"
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition cursor-pointer">
+        <img src="images/Japneese-visit/IMG-20250701-WA0071.jpg"
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition cursor-pointer">
+        <img src="images/Japneese-visit/IMG-20250701-WA0072.jpg"
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition cursor-pointer">
+        <img src="images/Japneese-visit/IMG-20250701-WA0073.jpg"
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition cursor-pointer">
+        <img src="images/Japneese-visit/IMG-20250701-WA0076.jpg"
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition cursor-pointer">
+        <img src="images/Japneese-visit/IMG-20250701-WA0078.jpg"
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition cursor-pointer">
+        <img src="images/Japneese-visit/IMG-20250701-WA0079.jpg"
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition cursor-pointer">
+        <img src="images/Japneese-visit/IMG-20250701-WA0080.jpg"
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition cursor-pointer">
+        <img src="images/Japneese-visit/IMG-20250701-WA0081.jpg"
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition cursor-pointer">
+        <img src="images/Japneese-visit/IMG-20250701-WA0086.jpg"
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition cursor-pointer">
+        <img src="images/Japneese-visit/IMG-20250701-WA0089.jpg"
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition cursor-pointer">
+        <img src="images/Japneese-visit/IMG-20250701-WA0090.jpg"
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition cursor-pointer">
+        <img src="images/Japneese-visit/IMG-20250701-WA0091.jpg"
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition cursor-pointer">
+        <img src="images/Japneese-visit/IMG-20250701-WA0092.jpg"
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition cursor-pointer">
+        <img src="images/Japneese-visit/IMG-20250701-WA0094.jpg"
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition cursor-pointer">
+        <img src="images/Japneese-visit/IMG-20250701-WA0095.jpg"
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition cursor-pointer">
+        <img src="images/Japneese-visit/IMG-20250701-WA0097.jpg"
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition cursor-pointer">
+        <img src="images/Japneese-visit/IMG-20250701-WA0098.jpg"
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition cursor-pointer">
+        <img src="images/Japneese-visit/IMG-20250701-WA0101.jpg"
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition cursor-pointer">
+        <img src="images/Japneese-visit/IMG-20250701-WA0102.jpg"
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition cursor-pointer">
+        <img src="images/Japneese-visit/IMG-20250701-WA0103.jpg"
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition cursor-pointer">
       </div>
     </div>
   </section>
+
+  <!-- Popup Modal -->
+  <div id="popup-modal" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center hidden z-50">
+    <span class="absolute top-4 right-4 text-white text-3xl cursor-pointer" id="popup-close">&times;</span>
+    <img id="popup-image" src="" class="max-w-full max-h-full rounded shadow-lg">
+  </div>
 
   <!-- Gallery Grid -->
   <section class="py-16 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4">
       <h2 class="text-3xl font-bold text-center text-[#005baa] mb-10">Memorable Moments at Mass Apson</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        <!-- 12 Placeholder Images -->
+        <!-- 20 Images -->
         <img src="images/g1.png" alt="gallery_1"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
         <img src="images/g2.png" alt="gallery_2"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
         <img src="images/g3.png" alt="gallery_3"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
         <img src="images/g4.png" alt="gallery_4"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
         <img src="images/g5.png" alt="gallery_5"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
         <img src="images/g6.png" alt="gallery_6"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
-        <img src="images/g7.png" alt="gallery_7" class="rounded shadow-md hover:scale-105 transition">
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
+        <img src="images/g7.png" alt="gallery_7"
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
         <img src="images/g8.png" alt="gallery_8"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
         <img src="images/g9.png" alt="gallery_9"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
         <img src="images/g10.png" alt="gallery_10"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
         <img src="images/g11.png" alt="gallery_11"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
         <img src="images/g12.png" alt="gallery_12"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
         <img src="images/g13.png" alt="gallery_13"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
         <img src="images/g14.png" alt="gallery_14"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
         <img src="images/g15.png" alt="gallery_15"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
         <img src="images/g16.png" alt="gallery_16"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
         <img src="images/g17.png" alt="gallery_17"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
         <img src="images/g18.png" alt="gallery_18"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
         <img src="images/g19.png" alt="gallery_19"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
         <img src="images/g20.png" alt="gallery_20"
-          class=" w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
+          class="gallery-img w-[290px] h-[220px] rounded shadow-md hover:scale-105 transition">
       </div>
     </div>
   </section>
 
+  <!-- Popup Modal -->
+  <div id="popup-modal" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center hidden z-50">
+    <span id="popup-close" class="absolute top-4 right-4 text-white text-4xl cursor-pointer select-none">&times;</span>
+    <img id="popup-image" src="" class="max-w-[90vw] max-h-[90vh] rounded shadow-lg object-contain">
+  </div>
+
   <!-- Footer Section -->
-    <footer class="bg-white text-gray-800 pt-12 shadow-md border-t border-gray-200" id="footer">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10 border-b border-gray-300 pb-8">
+  <footer class="bg-white text-gray-800 pt-12 shadow-md border-t border-gray-200" id="footer">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10 border-b border-gray-300 pb-8">
 
-            <!-- Company logo and content -->
-            <div>
-                <a href="/index.html"><img src="/images/logo.png" alt="Company Logo" class="w-64 mb-4"></a>
+      <!-- Company logo and content -->
+      <div>
+        <a href="/index.html"><img src="/images/logo.png" alt="Company Logo" class="w-64 mb-4"></a>
 
-                <!--p class="text-gray-700">
+        <!--p class="text-gray-700">
                     Mass Apson is a young & dynamic technology solution provider which deals in Coolant tanks,
                     Conveyors, magnetic separator, paper filter, Hyd Power pack etc.
                 </p-->
-            </div>
+      </div>
 
-            <!-- Quick Links -->
-            <div>
-                <h4 class="text-lg font-semibold text-[#005baa] mb-4">Quick Links</h4>
-                <div class="space-y-2">
-                    <a href="/index.html" class="font-semibold block hover:text-[#005baa] transition w-fit">Home</a>
-                    <a href="/about-us.html" class="font-semibold block hover:text-[#005baa] transition w-fit">About</a>
-                    <a href="/product-page.html" class="font-semibold block hover:text-[#005baa] transition w-fit">Products</a>
-                    <a href="/contact.html" class="font-semibold block hover:text-[#005baa] transition w-fit">Contact</a>
-                </div>
-            </div>
-
-            <!-- Address -->
-              <div>
-                <h4 class="text-lg font-semibold text-[#005baa] mb-4">Corporate office</h4>
-                <p class="text-gray-700 leading-relaxed">
-                    <b>Gurgaon</b> <br>
-                    CustomersSB-R/1L/04/025 & 026A, 1ST Floor<br>
-                    M3M Urbana Sector-67, Gurgaon, <br> India 122102 <br>
-                    Tel No. 0124-4966065
-                </p>
-            </div>
-            <div>              
-
-                <h4 class="text-lg font-semibold text-[#005baa] mb-4">Manufacturing</h4>
-                <p class="text-gray-700 leading-relaxed">
-                    <b>Faridabad</b> <br>
-                   Plot No -21, Gazipur Industrial Area,<br>
-                    Sohna Road, Gazipur, NIT Faridabad, <br> Haryana, India 121005
-                </p>
-            </div>
+      <!-- Quick Links -->
+      <div>
+        <h4 class="text-lg font-semibold text-[#005baa] mb-4">Quick Links</h4>
+        <div class="space-y-2">
+          <a href="/index.html" class="font-semibold block hover:text-[#005baa] transition w-fit">Home</a>
+          <a href="/about-us.html" class="font-semibold block hover:text-[#005baa] transition w-fit">About</a>
+          <a href="/product-page.html" class="font-semibold block hover:text-[#005baa] transition w-fit">Products</a>
+          <a href="/contact.html" class="font-semibold block hover:text-[#005baa] transition w-fit">Contact</a>
         </div>
-        <!-- Social & Copyright -->
-        <div class="width-full px-52 py-6 flex flex-col md:flex-row items-center justify-between text-sm bg-[#005baa]">
-            <!-- <div class="flex gap-4 mb-4 md:mb-0 text-[#005baa]">
+      </div>
+
+      <!-- Address -->
+      <div>
+        <h4 class="text-lg font-semibold text-[#005baa] mb-4">Corporate office</h4>
+        <p class="text-gray-700 leading-relaxed">
+          <b>Gurgaon</b> <br>
+          SB-R/1L/04/025 & 026A, 1ST Floor<br>
+          M3M Urbana Sector-67, Gurgaon, <br> Haryana, India 122102 <br>
+          Tel No. 0124-4966065
+        </p>
+      </div>
+      <div>
+
+        <h4 class="text-lg font-semibold text-[#005baa] mb-4">Manufacturing</h4>
+        <p class="text-gray-700 leading-relaxed">
+          <b>Faridabad</b> <br>
+          Plot No -21, Gazipur Industrial Area,<br>
+          Sohna Road, Gazipur, NIT Faridabad, <br> Haryana, India 121005 <br>
+                    Phn. No. +919911013200
+        </p>
+      </div>
+    </div>
+    <!-- Social & Copyright -->
+    <div class="width-full px-52 py-6 flex flex-col md:flex-row items-center justify-between text-sm bg-[#005baa]">
+      <!-- <div class="flex gap-4 mb-4 md:mb-0 text-[#005baa]">
                 <a href="#" class="hover:text-blue-600 transition text-white" aria-label="Facebook"><i
                         class="fab fa-facebook-f"></i></a>
                 <a href="#" class="hover:text-blue-400 transition text-white" aria-label="Twitter"><i
@@ -336,28 +350,61 @@
                 <a href="#" class="hover:text-blue-700 transition text-white" aria-label="LinkedIn"><i
                         class="fab fa-linkedin-in"></i></a>
             </div> -->
-            <div class="text-white text-center md:text-right">
-                Developed and Designed by
-                <a href="https://www.theneedleads.com/" target="_blank"
-                    class="font-semibold text-text-white hover:text-blue-700 transition">
-                    Needleads Technologies</a>.
-            </div>
-        </div>
-    </footer>
+      <div class="text-white text-center md:text-right">
+        Developed and Designed by
+        <a href="https://www.theneedleads.com/" target="_blank"
+          class="font-semibold text-text-white hover:text-blue-700 transition">
+          Needleads Technologies</a>.
+      </div>
+    </div>
+  </footer>
 
-<!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/919540928998" target="_blank" rel="noopener noreferrer"
-        class="fixed bottom-5 right-5 z-50 bg-green-500 hover:bg-green-600 text-white px-5 py-4 rounded-full shadow-lg transition duration-300 ease-in-out text-4xl">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/919540928998" target="_blank" rel="noopener noreferrer"
+    class="fixed bottom-5 right-5 z-50 bg-green-500 hover:bg-green-600 text-white px-5 py-4 rounded-full shadow-lg transition duration-300 ease-in-out text-4xl">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
+      // Mobile menu toggle
       const toggleButton = document.getElementById("menu-toggle");
       const mobileMenu = document.getElementById("mobile-menu");
 
       toggleButton.addEventListener("click", () => {
         mobileMenu.classList.toggle("hidden");
+      });
+
+      // Gallery Popup
+      const galleryImages = document.querySelectorAll('.gallery-img');
+      const popupModal = document.getElementById('popup-modal');
+      const popupImage = document.getElementById('popup-image');
+      const popupClose = document.getElementById('popup-close');
+
+      galleryImages.forEach(img => {
+        img.addEventListener('click', () => {
+          popupImage.src = img.src;
+          popupModal.classList.remove('hidden');
+        });
+      });
+
+      popupClose.addEventListener('click', () => {
+        popupModal.classList.add('hidden');
+        popupImage.src = '';
+      });
+
+      popupModal.addEventListener('click', (e) => {
+        if (e.target === popupModal) {
+          popupModal.classList.add('hidden');
+          popupImage.src = '';
+        }
+      });
+
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          popupModal.classList.add('hidden');
+          popupImage.src = '';
+        }
       });
     });
   </script>
